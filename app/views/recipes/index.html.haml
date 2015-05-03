@@ -1,0 +1,11 @@
+%h1 Recipes
+%ul
+- @recipes.each do |recipe|
+	%li
+		= link_to recipe.title, recipe
+		| 
+		= link_to "Edit", edit_recipe_path(recipe)
+		|
+		= link_to "Delete", recipe, method: :delete, data: { confirm: 'Are you sure?' }
+
+= link_to "New", new_recipe_path
