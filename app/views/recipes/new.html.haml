@@ -1,23 +1,5 @@
-= form_for @recipe do |f|
-	= f.label :title
-	%br/
-	= f.text_field :title 
-	%br/
-	= f.label :description
-	%br/
-	= f.text_area :description, rows: 10
-	%br/
-	= f.label :ingredients
-	%br/
-	= f.text_area :ingredients, rows: 10
-	%br/
-	= f.label :preparation
-	%br/
-	= f.text_area :preparation, rows: 10
-	%br/
-	= f.label :photo_url
-	%br/
-	= f.text_field :photo_url
-	%br/
-	%br/
-	= f.submit "Create"
+- content_for :title, "New recipe"
+
+%h1 New recipe
+
+= render partial: "form", locals: { recipe: @recipe }
