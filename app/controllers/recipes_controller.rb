@@ -14,7 +14,7 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.create(recipe_params)
     if @recipe.save
-      redirect_to @recipe, notice: "Recipe was successfully created."
+      redirect_to recipes_path, notice: "Recipe was successfully created."
     else
       render "new"
     end
@@ -25,7 +25,7 @@ class RecipesController < ApplicationController
 
   def update
     if @recipe.update(recipe_params)
-      redirect_to @recipe, notice: "Recipe was successfully edited."
+      redirect_to recipes_path, notice: "Recipe was successfully edited."
     else
       render "edit"
     end
@@ -43,6 +43,6 @@ class RecipesController < ApplicationController
     end
 
     def recipe_params
-      params.require(:recipe).permit(:title, :description, :ingredients, :preparation, :photo_url)
+      params.require(:recipe).permit(:title, :description, :ingredients, :preparation, :photo_url, :category_id)
     end
 end

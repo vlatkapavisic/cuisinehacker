@@ -1,23 +1,28 @@
 = form_for recipe do |f|
-	= f.label :title
-	%br/
-	= f.text_field :title 
-	%br/
-	= f.label :description
-	%br/
-	= f.text_area :description, rows: 10
-	%br/
-	= f.label :ingredients
-	%br/
-	= f.text_area :ingredients, rows: 10
-	%br/
-	= f.label :preparation
-	%br/
-	= f.text_area :preparation, rows: 10
-	%br/
-	= f.label :photo_url
-	%br/
-	= f.text_field :photo_url
-	%br/
-	%br/
-	= f.submit 
+	.row
+		.large-10.columns
+			= f.label :title
+			= f.text_field :title 
+	.row
+		.large-10.columns
+			= f.label :description
+			= f.text_area :description, rows: 10
+	.row
+		.large-10.columns
+			= f.label :ingredients
+			= f.text_area :ingredients, rows: 10
+	.row
+		.large-10.columns
+			= f.label :preparation
+			= f.text_area :preparation, rows: 10
+	.row
+		.large-10.columns
+			= f.label :photo_url
+			= f.text_field :photo_url
+	.row
+		.large-10.columns
+			= f.label :category
+			= f.select :category_id, options_from_collection_for_select(Category.all, :id, :name)
+	.row
+		.large-10.columns
+			= f.submit nil, class: "button small secondary"

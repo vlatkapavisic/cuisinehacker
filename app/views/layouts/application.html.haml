@@ -7,9 +7,15 @@
 		= javascript_include_tag 'application', 'data-turbolinks-track' => true
 		= javascript_include_tag 'vendor/modernizr'
 		= csrf_meta_tags
-		%meta name: 'viewport', content: 'width=device-width, initial-scale=1.0'
+		%meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
 
 	%body
-		= flash[:notice]
-		= yield
+		.row
+			.large-12.columns
+				- if flash[:notice]
+					.alert-box.info.radius{data: {alert: ''}}
+						= flash[:notice]
+						%a.close{href: '#'} &times;
+				= yield
+
 
