@@ -17,9 +17,7 @@
 				%td
 					= link_to recipe.title, recipe
 				%td
-					%a.button.secondary.tiny{href: edit_recipe_path(recipe)}
-						Edit
-					%a.button.secondary.tiny{href: recipe_path(recipe), data: {confirm: 'Are you sure?', method: :delete}, rel: 'nofollow'}
-						Delete
+					%a.button.secondary.tiny{href: edit_recipe_path(recipe)} Edit
+					%a.button.secondary.tiny{href: recipe_path(recipe), data: {confirm: 'Are you sure?', method: :delete}, rel: 'nofollow'} Delete
 
 

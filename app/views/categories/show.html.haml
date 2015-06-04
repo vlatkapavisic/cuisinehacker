@@ -1,0 +1,7 @@
+- content_for :title, @category.name
+
+%h1= @category.name
+
+- @category.recipes.each do |recipe|
+	%p
+		= link_to recipe.title, recipe
