@@ -22,7 +22,7 @@
 	.row
 		.large-10.columns
 			= f.label :category
-			= f.select :category_id, options_from_collection_for_select(Category.all, :id, :name)
+			= f.select :category_id, options_from_collection_for_select(Category.all, :id, :name, recipe.category_id)
 	.row
 		.large-10.columns
 			= f.submit nil, class: "button small secondary"

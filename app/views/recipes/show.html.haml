@@ -1,10 +1,8 @@
 - content_for :title, @recipe.title
 
-%h1= @recipe.title
+%h1.text-center= @recipe.title
 
-%p= image_tag @recipe.photo_url if @recipe.photo_url?
-
-.round.secondary.label= @recipe.category.name
+%p.text-center= image_tag @recipe.photo_url if @recipe.photo_url?
 
 %p Description: #{@recipe.description}
 

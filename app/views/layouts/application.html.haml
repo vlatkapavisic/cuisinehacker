@@ -16,6 +16,7 @@
 					.alert-box.info.radius{data: {alert: ''}}
 						= flash[:notice]
 						%a.close{href: '#'} &times;
+				= render partial: "layouts/navbar"
 				= yield
 
 

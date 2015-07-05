@@ -1,0 +1,32 @@
+%nav.top-bar{"data-topbar" => "", role: "navigation"}
+  %ul.title-area
+    %li.name
+      %h1
+        %a{href: root_path} 
+          Le blog
+
+  %section.top-bar-section
+    %ul.right
+      %li.has-dropdown
+        %a{href: "#"} 
+          Recipes
+        %ul.dropdown
+          %li
+            %a{href: category_path("breakfast")} 
+              Breakfast
+          %li
+            %a{href: category_path("lunch-dinner")} 
+              Lunch/dinner
+          %li
+            %a{href: category_path("other")} 
+              Other
+      %li.has-dropdown
+        %a{href: "#"} 
+          Posts
+        %ul.dropdown
+          %li
+            %a{href: "#"} 
+              Coming soon
+      %li
+        %a{href: "/about"} 
+          About

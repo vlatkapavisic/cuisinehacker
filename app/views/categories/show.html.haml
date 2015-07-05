@@ -2,6 +2,8 @@
 
 %h1= @category.name
 
-- @category.recipes.each do |recipe|
-	%p
-		= link_to recipe.title, recipe
+%ul.small-block-grid-2.medium-block-grid-5
+	- @category.recipes.each do |recipe|
+		%li
+			%a{href: recipe_path(recipe)}
+				= image_tag recipe.photo_url
