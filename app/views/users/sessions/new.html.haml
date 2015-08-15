@@ -1,0 +1,25 @@
+%h2.text-center Sign in
+
+.row
+	.large-4.columns.large-offset-4
+		.panel
+			= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+				.row
+					.large-12.columns
+						%label
+							Email
+							= f.email_field :email, autofocus: true
+				.row
+					.large-12.columns
+						%label
+							Password
+							= f.password_field :password, autocomplete: "off"
+				- if devise_mapping.rememberable?
+					.row
+						.large-12.columns
+							= f.check_box :remember_me
+							= f.label :remember_me
+				%div= f.submit "Sign in", class: 'button secondary expand'
+
+			= link_to "Forgot your password?", new_password_path(resource_name)
+

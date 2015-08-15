@@ -2,11 +2,23 @@
 
 %h1.text-center= @recipe.title
 
-%p.text-center= image_tag @recipe.photo_url if @recipe.photo_url?
+%p.text-center= image_tag @recipe.photo_url
 
-%p Description: #{@recipe.description}
+%p 
+	- if @recipe.original?
+		Original
+	- else
+		Recipe: 
+		%a{href: @recipe.recipe_url}= @recipe.recipe_url
 
 %p Ingredients: #{@recipe.ingredients}
 
-%p Preparation: #{@recipe.preparation}
+%p Description: #{@recipe.description}
+
+- if @recipe.original?
+	%p Preparation: #{@recipe.preparation}
+
+
+
+
 

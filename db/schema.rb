@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150604153906) do
+ActiveRecord::Schema.define(version: 20150815115503) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -38,16 +38,30 @@ ActiveRecord::Schema.define(version: 20150604153906) do
   create_table "recipes", force: true do |t|
     t.string   "title"
     t.text     "description"
-    t.text     "preparation"
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_url"
     t.string   "ingredients"
     t.string   "slug"
+    t.string   "recipe_url"
+    t.text     "preparation"
   end
 
   add_index "recipes", ["category_id"], name: "index_recipes_on_category_id"
   add_index "recipes", ["slug"], name: "index_recipes_on_slug", unique: true
+
+  create_table "users", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
