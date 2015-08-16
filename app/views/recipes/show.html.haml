@@ -5,7 +5,7 @@
 		= link_to "<< #{@recipe.category.name} recipes", category_path(@recipe.category)
 		%h1= @recipe.title
 
-		%p= image_tag @recipe.photo_url
+		%p= raw @recipe.photo_embed_code
 
 		%p 
 			- if @recipe.original?

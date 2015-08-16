@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150815115503) do
+ActiveRecord::Schema.define(version: 20150816141112) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20150815115503) do
     t.string   "slug"
     t.string   "recipe_url"
     t.text     "preparation"
+    t.text     "photo_embed_code"
   end
 
   add_index "recipes", ["category_id"], name: "index_recipes_on_category_id"
