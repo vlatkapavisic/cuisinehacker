@@ -1,22 +1,26 @@
 - content_for :title, @recipe.title
 
-%h1.text-center= @recipe.title
+.row
+	.large-9.columns
+		= link_to "<< #{@recipe.category.name} recipes", category_path(@recipe.category)
+		%h1= @recipe.title
 
-%p.text-center= image_tag @recipe.photo_url
+		%p= image_tag @recipe.photo_url
 
-%p 
-	- if @recipe.original?
-		Original
-	- else
-		Recipe: 
-		%a{href: @recipe.recipe_url}= @recipe.recipe_url
+		%p 
+			- if @recipe.original?
+				Original
+			- else
+				%a{href: @recipe.recipe_url, target: '_blank'} Link to the recipe
 
-%p Ingredients: #{@recipe.ingredients}
+		%p Ingredients: #{@recipe.ingredients}
 
-%p Description: #{@recipe.description}
+		%p Description: #{@recipe.description}
 
-- if @recipe.original?
-	%p Preparation: #{@recipe.preparation}
+		- if @recipe.original?
+			%p Preparation: #{@recipe.preparation}
+
+
 
 
 

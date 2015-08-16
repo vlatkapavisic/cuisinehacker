@@ -1,4 +1,4 @@
-%nav.top-bar{"data-topbar" => "", role: "navigation"}
+%nav.top-bar{"data-topbar" => "", role: "navigation", "data-options" => "is_hover: true"}
   %ul.title-area
     %li.name
       %h1
@@ -16,7 +16,7 @@
               %a{href: recipes_path}
                 Manage recipes
             %li
-              %a{href: destroy_user_session_path, method: :delete}
+              %a{href: destroy_user_session_path, "data-method" => :delete}
                 Logout
         %li.divider
       %li.has-dropdown
