@@ -1,11 +1,18 @@
 - content_for :title, @recipe.title
+- content_for :meta_tags do
+	%meta{property: 'og:url', content: request.original_url.split('?').first}
+	%meta{property: 'og:type', content: 'article'}
+	%meta{property: 'og:title', content: @recipe.title}
+	%meta{property: 'og:description', content: truncate(@recipe.description, length: 200, separator: ' ')}
+	%meta{property: 'og:image', content: @recipe.photo_url}
+
 
 .row
 	.large-9.columns
-		= link_to "<< #{@recipe.category.name} recipes", category_path(@recipe.category)
+		/= link_to "<< #{@recipe.category.name} recipes", category_path(@recipe.category)
 		%h1= @recipe.title
 
-		%p= raw @recipe.photo_embed_code
+		%p= image_tag @recipe.photo_url
 
 		%p 
 			- if @recipe.original?

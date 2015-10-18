@@ -1,4 +1,9 @@
 - content_for :title, @category.name
+- content_for :meta_tags do
+	%meta{property: 'og:url', content: request.original_url.split('?').first}
+	%meta{property: 'og:title', content: @category.name}
+	%meta{property: 'og:description', content: "#{@category.name} recipes"}
+	%meta{property: 'og:image', content: @category.recipes.first.photo_url}
 
 %h1= @category.name
 

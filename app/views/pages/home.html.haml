@@ -1,3 +1,9 @@
+- content_for :meta_tags do
+	%meta{property: 'og:url', content: request.original_url.split('?').first}
+	%meta{property: 'og:title', content: 'Le Blog'}
+	%meta{property: 'og:description', content: ''}
+	%meta{property: 'og:image', content: ''}
+
 #home-page
 	%ul{"data-orbit" => ""}
 		- @new_recipes.each do |new_recipe|

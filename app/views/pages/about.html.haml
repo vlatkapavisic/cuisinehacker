@@ -1,2 +1,9 @@
+- content_for :meta_tags do
+	%meta{property: 'og:url', content: request.original_url.split('?').first}
+	%meta{property: 'og:type', content: 'article'}
+	%meta{property: 'og:title', content: ''}
+	%meta{property: 'og:description', content: ''}
+	%meta{property: 'og:image', content: ''}
+
 %h1
 	Je suis Vlatka.
