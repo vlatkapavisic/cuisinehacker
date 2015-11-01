@@ -5,10 +5,32 @@
 	img
 		width: inherit
 
-#logout 
+#logout
 	margin-right: 10px
+
+#category-page
+	#recipes
+		a
+			position: relative
+			#recipe-title
+				display: none
+				position: absolute
+				top: 15px
+				left: 5px
+				color: #F8F8F8
+			&:hover
+				img
+					opacity: 0.3
+				#recipe-title
+					display: block
+
 
 li.has-dropdown
 	width: 110px
 	&:first-of-type
 		width: 125px
+
+body
+	background: linear-gradient(rgba(93, 93, 93, 0), rgba(93, 93, 93, 1)) fixed
+	*
+		font-family: Roboto Condensed !important
