@@ -12,13 +12,19 @@
 		= content_for :meta_tags
 
 	%body{id: (content_for :body_id if content_for? :body_id)}
-		.row
-			.large-12.columns
-				- if flash[:notice]
-					.alert-box.info.radius{data: {alert: ''}}
-						= flash[:notice]
-						%a.close{href: '#'} &times;
-				= render partial: "layouts/navbar"
-				= yield
+		.off-canvas-wrap{'data-offcanvas' => ''}
+			.inner-wrap
+				.row
+					.large-12.columns
+						- if flash[:notice]
+							.alert-box.info.radius{data: {alert: ''}}
+								= flash[:notice]
+								%a.close{href: '#'} &times;
+						= render 'layouts/navbar'
+						%section.main-section
+							= yield
+							= render 'layouts/footer'
+
+						%a.exit-off-canvas
 
 

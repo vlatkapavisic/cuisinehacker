@@ -6,7 +6,7 @@
 	%meta{property: 'og:image', content: @category.recipes.first.photo_url}
 - content_for :body_id, 'category-page'
 
-%h1= @category.name
+%h1#title= @category.name
 
 #recipes
 	%ul.small-block-grid-2.medium-block-grid-5

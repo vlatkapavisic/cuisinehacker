@@ -5,12 +5,13 @@
 	%meta{property: 'og:title', content: @recipe.title}
 	%meta{property: 'og:description', content: truncate(@recipe.description, length: 200, separator: ' ')}
 	%meta{property: 'og:image', content: @recipe.photo_url}
+- content_for :body_id, 'recipe-page'
 
 
 .row
-	.large-9.columns
+	.large-10.large-offset-1.columns
 		/= link_to "<< #{@recipe.category.name} recipes", category_path(@recipe.category)
-		%h1= @recipe.title
+		%h1#title= @recipe.title
 
 		%p= image_tag @recipe.photo_url
 
@@ -18,14 +19,17 @@
 			- if @recipe.original?
 				Original
 			- else
-				%a{href: @recipe.recipe_url, target: '_blank'} Link to the recipe
+				%a#recipe-link{href: @recipe.recipe_url, target: '_blank'} Link to the recipe
 
-		%p Ingredients: #{@recipe.ingredients}
+		%h3.subheader Ingredients
+		%p= @recipe.ingredients
 
-		%p Description: #{@recipe.description}
+		%h3.subheader Description
+		%p= @recipe.description
 
 		- if @recipe.original?
-			%p Preparation: #{@recipe.preparation}
+			%h3.subheader Preparation
+			%p= @recipe.preparation
 
 
 

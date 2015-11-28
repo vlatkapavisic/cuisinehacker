@@ -1,4 +1,4 @@
-%nav.top-bar{"data-topbar" => "", role: "navigation", "data-options" => "is_hover: true"}
+%nav.show-for-medium-up.top-bar{"data-topbar" => "", role: "navigation", "data-options" => "is_hover: true"}
   %ul.title-area
     %li.name
       %h1
@@ -42,3 +42,33 @@
       %li
         %a{href: "/about"} 
           About
+
+%nav.tab-bar.show-for-small-only
+  %section.middle.tab-bar-section
+    %h1.title Le blog
+  %section.right-small
+    %a.right-off-canvas-toggle.menu-icon{href: '#'}
+      %span
+
+%aside.right-off-canvas-menu.show-for-small-only
+  %ul.off-canvas-list
+    %li
+      %a{href: category_path("breakfast")} 
+        Breakfast
+    %li
+      %a{href: category_path("lunch-dinner")} 
+        Lunch/dinner
+    %li
+      %a{href: category_path("other")} 
+        Other
+    %li
+      %a{href: "#"} 
+        Posts
+    %li
+      %a{href: "/about"} 
+        About
+
+
+
+
+
