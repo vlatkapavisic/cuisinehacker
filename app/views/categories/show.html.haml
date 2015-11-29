@@ -6,15 +6,9 @@
 	%meta{property: 'og:image', content: @category.recipes.first.photo_url}
 - content_for :body_id, 'category-page'
 
-%h1#title= @category.name
+%h1.title= @category.name
 
-#recipes
-	%ul.small-block-grid-2.medium-block-grid-5
-		- @category.recipes.each do |recipe|
-			%li
-				%a{href: recipe_path(recipe)}
-					= image_tag recipe.photo_url
-					#recipe-title
-						= recipe.title
+= render partial: 'recipes/recipe_list', object: @category.recipes
+
 
 

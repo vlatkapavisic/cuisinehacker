@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: :show
+  before_action :authenticate_user!, except: [:show, :search]
 
   def index
     @recipes = Recipe.all
@@ -36,6 +36,10 @@ class RecipesController < ApplicationController
   def destroy
     @recipe.destroy
     redirect_to recipes_path, notice: "Recipe was successfully deleted."
+  end
+
+  def search
+    @results = Recipe.where("ingredients LIKE ?", "%#{params[:term].downcase}%") if params[:term]
   end
 
   private

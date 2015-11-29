@@ -8,7 +8,7 @@
   %section.top-bar-section
     %ul.right
       - if user_signed_in?
-        %li.has-dropdown
+        %li.has-dropdown#admin-dropdown
           %a{href: "#"}
             Admin
           %ul.dropdown
@@ -28,10 +28,13 @@
               Breakfast
           %li
             %a{href: category_path("lunch-dinner")} 
-              Lunch/dinner
+              Lunch/Dinner
           %li
             %a{href: category_path("other")} 
               Other
+          %li
+            %a{href: '/search'} 
+              Search
       %li.has-dropdown
         %a{href: "#"} 
           Posts
@@ -45,13 +48,16 @@
 
 %nav.tab-bar.show-for-small-only
   %section.middle.tab-bar-section
-    %h1.title Le blog
+    %h1 Le blog
   %section.right-small
     %a.right-off-canvas-toggle.menu-icon{href: '#'}
       %span
 
 %aside.right-off-canvas-menu.show-for-small-only
   %ul.off-canvas-list
+    %li
+      %a{href: '/search'} 
+        Search recipes
     %li
       %a{href: category_path("breakfast")} 
         Breakfast

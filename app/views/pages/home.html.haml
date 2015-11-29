@@ -5,9 +5,4 @@
 	%meta{property: 'og:image', content: ''}
 
 #home-page
-	%ul{"data-orbit" => ""}
-		- @new_recipes.each do |new_recipe|
-			%li
-				= image_tag new_recipe.photo_url
-				.orbit-caption
-					= new_recipe.title
+	%h1.title Bienvenue a mon blog

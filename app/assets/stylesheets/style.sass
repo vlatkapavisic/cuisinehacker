@@ -8,7 +8,7 @@
 #logout
 	margin-right: 10px
 
-h1#title
+h1.title
 	text-align: center
 	padding: 10px 0
 
@@ -19,7 +19,7 @@ footer
 	hr
 		border-color: #808080
 
-#category-page
+#category-page, #search-page
 	#recipes
 		a
 			position: relative
@@ -41,9 +41,18 @@ footer
 		&:hover
 			color: #b30059
 
+#search-page
+	input, button
+		border: none
+	#search-btn
+		background-color: #e60072
+		padding: 0 20px
+
 
 li.has-dropdown
 	width: 100px
+	&#admin-dropdown
+		width: 115px
 
 body
 	background: linear-gradient(rgba(89, 89, 89, 0), rgba(89, 89, 89, 1)) fixed

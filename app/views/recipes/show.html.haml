@@ -11,7 +11,7 @@
 .row
 	.large-10.large-offset-1.columns
 		/= link_to "<< #{@recipe.category.name} recipes", category_path(@recipe.category)
-		%h1#title= @recipe.title
+		%h1.title= @recipe.title
 
 		%p= image_tag @recipe.photo_url
 
