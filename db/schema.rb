@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150816141112) do
+ActiveRecord::Schema.define(version: 20151213182914) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(version: 20150816141112) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+  end
+
+  add_index "posts", ["slug"], name: "index_posts_on_slug", unique: true
+
   create_table "recipes", force: true do |t|
     t.string   "title"
     t.text     "description"
@@ -45,8 +55,9 @@ ActiveRecord::Schema.define(version: 20150816141112) do
     t.string   "ingredients"
     t.string   "slug"
     t.string   "recipe_url"
-    t.text     "preparation"
-    t.text     "photo_embed_code"
+    t.text     "algorithm"
+    t.string   "author"
+    t.string   "author_url"
   end
 
   add_index "recipes", ["category_id"], name: "index_recipes_on_category_id"

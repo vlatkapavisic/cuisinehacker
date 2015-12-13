@@ -1,0 +1,18 @@
+- content_for :title, @post.title
+- content_for :meta_tags do
+	%meta{property: 'og:url', content: request.original_url.split('?').first}
+	%meta{property: 'og:type', content: 'article'}
+	%meta{property: 'og:title', content: @post.title}
+	%meta{property: 'og:description', content: truncate(@post.content, length: 200, separator: ' ')}
+/%meta{property: 'og:image', content: @post.photo_url}
+- content_for :body_id, 'post-page'
+
+
+.row
+	.large-10.large-offset-1.columns
+		%h1.title= @post.title
+		%h6.subheader.text-center= "Published on #{@post.created_at.to_date.strftime('%d. %m. %Y.')}"
+
+		.content 
+			= @post.content.html_safe
+

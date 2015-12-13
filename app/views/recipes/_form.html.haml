@@ -13,16 +13,20 @@
 			= f.text_area :ingredients, rows: 2
 	.row
 		.large-10.columns
-			= f.label :preparation
-			= f.text_area :preparation, rows: 10
+			= f.label :algorithm
+			= f.text_area :algorithm, rows: 10
 	.row
 		.large-10.columns
 			= f.label :photo_url
 			= f.text_field :photo_url
 	.row
 		.large-10.columns
-			= f.label :photo_embed_code
-			= f.text_area :photo_embed_code, rows: 10
+			= f.label :author
+			= f.text_field :author
+	.row
+		.large-10.columns
+			= f.label :author_url
+			= f.text_field :author_url
 	.row
 		.large-10.columns
 			= f.label :recipe_url

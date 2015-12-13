@@ -10,12 +10,20 @@
 
 h1.title
 	text-align: center
+	border-top: 1px solid black
+	border-bottom: 1px solid black
 	padding: 10px 0
+	margin: 30px 0 20px 0
+
+.blog-link
+	color: #660033
+	&:hover
+		color: #b30059
 
 footer
 	color: #808080
 	text-align: center
-	padding: 20px 0
+	padding: 40px 0 20px 0
 	hr
 		border-color: #808080
 
@@ -36,10 +44,14 @@ footer
 					display: block
 
 #recipe-page
-	a#recipe-link
-		color: #660033
-		&:hover
-			color: #b30059
+	img
+		padding: 20px 0
+
+#post-page
+	.content
+		padding-top: 30px
+	img
+		padding: 20px 0
 
 #search-page
 	input, button
