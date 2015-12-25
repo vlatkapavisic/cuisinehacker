@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   devise_for :users, path: "admin", path_names: {sign_in: 'login', sign_out: 'logout'}
   root 'pages#home'
 
-  get '/about' => 'pages#about'
-  get '/search' => 'recipes#search'
+  get '/about' => 'pages#about', as: 'about'
+  get '/search' => 'recipes#search', as: 'search'
+  get '/posts-archive' => 'posts#archive', as: 'posts_archive'
 
   resources :recipes
   resources :categories, only: :show

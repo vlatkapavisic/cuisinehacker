@@ -9,9 +9,9 @@
 
 
 .row
-	.large-10.large-offset-1.columns
+	.large-10.columns
 		%h1.title= @post.title
-		%h6.subheader.text-center= "Published on #{@post.created_at.to_date.strftime('%d. %m. %Y.')}"
+		%h6.subheader= "Published on #{@post.created_at.to_date.strftime('%d. %m. %Y.')}"
 
 		.content 
 			= @post.content.html_safe

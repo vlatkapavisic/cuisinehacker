@@ -1,4 +1,4 @@
-%nav.show-for-medium-up.top-bar{"data-topbar" => "", role: "navigation", "data-options" => "is_hover: true"}
+%nav.show-for-medium-up.top-bar{'data-topbar' => '', role: 'navigation', 'data-options' => 'is_hover: true'}
   %ul.title-area
     %li.name
       %h1
@@ -9,41 +9,37 @@
     %ul.right
       - if user_signed_in?
         %li.has-dropdown#admin-dropdown
-          %a{href: "#"}
+          %a{href: '#'}
             Admin
           %ul.dropdown
             %li
               %a{href: recipes_path}
                 Manage recipes
             %li
-              %a{href: destroy_user_session_path, "data-method" => :delete}
+              %a{href: destroy_user_session_path, 'data-method' => :delete}
                 Logout
         %li.divider
       %li.has-dropdown
-        %a{href: "#"} 
+        %a{href: '#'} 
           Recipes
         %ul.dropdown
           %li
-            %a{href: category_path("breakfast")} 
+            %a{href: category_path('breakfast')} 
               Breakfast
           %li
-            %a{href: category_path("lunch-dinner")} 
+            %a{href: category_path('lunch-dinner')} 
               Lunch/Dinner
           %li
-            %a{href: category_path("other")} 
+            %a{href: category_path('other')} 
               Other
           %li
-            %a{href: '/search'} 
+            %a{href: search_path} 
               Search
-      %li.has-dropdown
-        %a{href: "#"} 
-          Posts
-        %ul.dropdown
-          %li
-            %a{href: "#"} 
-              Coming soon
       %li
-        %a{href: "/about"} 
+        %a{href: posts_archive_path} 
+          Posts
+      %li
+        %a{href: about_path} 
           About
 
 %nav.tab-bar.show-for-small-only
@@ -56,22 +52,22 @@
 %aside.right-off-canvas-menu.show-for-small-only
   %ul.off-canvas-list
     %li
-      %a{href: '/search'} 
+      %a{href: search_path} 
         Search recipes
     %li
-      %a{href: category_path("breakfast")} 
+      %a{href: category_path('breakfast')} 
         Breakfast
     %li
-      %a{href: category_path("lunch-dinner")} 
+      %a{href: category_path('lunch-dinner')} 
         Lunch/dinner
     %li
-      %a{href: category_path("other")} 
+      %a{href: category_path('other')} 
         Other
     %li
-      %a{href: "#"} 
+      %a{href: posts_archive_path} 
         Posts
     %li
-      %a{href: "/about"} 
+      %a{href: about_path} 
         About
 
 

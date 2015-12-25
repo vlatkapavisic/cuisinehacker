@@ -9,10 +9,10 @@
 
 
 .row
-	.large-10.large-offset-1.columns
+	.large-10.columns
 		/= link_to "<< #{@recipe.category.name} recipes", category_path(@recipe.category)
 		%h1.title= @recipe.title
-		%h6.subheader.text-center
+		%h6.subheader
 			= "Published on #{@recipe.created_at.to_date.strftime('%d. %m. %Y.')} | Recipe by "
 			- if @recipe.original?
 				= "me"

@@ -1,9 +1,12 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: :show
+  before_action :get_posts, only: [:index, :archive]
+  before_action :authenticate_user!, except: [:show, :archive]
 
   def index
-    @posts = Post.all
+  end
+
+  def archive
   end
 
   def show
@@ -42,6 +45,10 @@ class PostsController < ApplicationController
 
     def set_post
       @post = Post.friendly.find(params[:id])
+    end
+
+    def get_posts
+      @posts = Post.all
     end
 
     def post_params
