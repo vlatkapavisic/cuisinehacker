@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %title
+      = pagetitle
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Roboto+Condensed'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag 'vendor/modernizr'
+    = csrf_meta_tags
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+    = content_for :meta_tags
+
+  %body{id: (content_for :body_id if content_for? :body_id)}
+    .off-canvas-wrap{'data-offcanvas' => ''}
+      .inner-wrap
+        = render 'layouts/navbar_large'
+        - if flash[:notice]
+          .alert-box.info.radius{data: {alert: ''}}
+            = flash[:notice]
+            %a.close{href: '#'} &times;
+        = render 'layouts/navbar_small'
+        %section.main-section
+          = yield
+          = render 'layouts/footer'
+
+        %a.exit-off-canvas
+
+

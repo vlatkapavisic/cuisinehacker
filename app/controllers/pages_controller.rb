@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-  	@new_recipes = Recipe.last(3)
+  	render layout: 'home_layout'
   end
 
   def about

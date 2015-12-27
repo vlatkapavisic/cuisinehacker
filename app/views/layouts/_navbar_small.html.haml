@@ -1,0 +1,29 @@
+%nav.tab-bar.show-for-small-only
+  %section.middle.tab-bar-section
+    %h1 
+      %a{href: root_path} 
+        Le blog
+  %section.right-small
+    %a.right-off-canvas-toggle.menu-icon{href: '#'}
+      %span
+
+%aside.right-off-canvas-menu.show-for-small-only
+  %ul.off-canvas-list
+    %li
+      %a{href: search_path} 
+        Search recipes
+    %li
+      %a{href: category_path('breakfast')} 
+        Breakfast
+    %li
+      %a{href: category_path('lunch-dinner')} 
+        Lunch/dinner
+    %li
+      %a{href: category_path('other')} 
+        Other
+    %li
+      %a{href: posts_archive_path} 
+        Posts
+    %li
+      %a{href: about_path} 
+        About
