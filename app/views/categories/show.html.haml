@@ -8,7 +8,7 @@
 
 %h1.title= @category.name
 
-= render partial: 'recipes/recipe_list', object: @category.recipes
+= render partial: 'recipes/recipe_list', object: @category.recipes + @category.recipes
 
 
 

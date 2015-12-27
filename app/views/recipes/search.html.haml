@@ -10,7 +10,7 @@
 	%h1.title Search recipes by ingredient
 	= form_tag('/search', method: 'get') do 
 		.row.collapse
-			.large-5.columns
+			.large-5.large-offset-3.columns
 				= text_field_tag(:term)
 			.large-1.columns.end
 				%button{type: 'submit', class: 'postfix button', id:'search-btn'} Search

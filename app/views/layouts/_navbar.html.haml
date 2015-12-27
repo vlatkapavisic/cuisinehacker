@@ -16,6 +16,9 @@
               %a{href: recipes_path}
                 Manage recipes
             %li
+              %a{href: posts_path}
+                Manage posts
+            %li
               %a{href: destroy_user_session_path, 'data-method' => :delete}
                 Logout
         %li.divider
@@ -44,7 +47,9 @@
 
 %nav.tab-bar.show-for-small-only
   %section.middle.tab-bar-section
-    %h1 Le blog
+    %h1 
+      %a{href: root_path} 
+        Le blog
   %section.right-small
     %a.right-off-canvas-toggle.menu-icon{href: '#'}
       %span

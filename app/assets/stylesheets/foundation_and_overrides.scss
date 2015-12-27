@@ -104,17 +104,21 @@ $white       : #FFFFFF;
 // $smoke       : #EEEEEE;
 // $gainsboro   : #DDDDDD;
 // $iron        : #CCCCCC;
-// $base        : #AAAAAA;
+$base        : #AAAAAA;
 // $aluminum    : #999999;
 // $jumbo       : #888888;
-// $monsoon     : #777777;
+$monsoon     : #777777;
 // $steel       : #666666;
-// $charcoal    : #555555;
+$charcoal    : #555555;
 // $tuatara     : #444444;
 // $oil         : #333333;
 $jet         : #222222;
 // $black       : #000000;
-$hover-pink: #b30059;
+$lavander: #E6E6FA;
+$lavander-dark: #d5d5f6;
+$lavander-darker: #5252b2;
+$lavander-darkest: #2f2f6a;
+$lavander-hover: #9595d0;
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;
@@ -1365,7 +1369,7 @@ $hover-pink: #b30059;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: transparent;
+$topbar-bg-color: $lavander;
 $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -1380,7 +1384,7 @@ $topbar-bg: $topbar-bg-color;
 $topbar-dropdown-bg: $topbar-bg-color;
 $topbar-dropdown-link-color: $jet;
 $topbar-dropdown-link-bg: $topbar-bg-color;
-$topbar-dropdown-link-bg-hover: $topbar-bg-color;
+$topbar-dropdown-link-bg-hover: $lavander-dark;
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
 $topbar-dropdown-toggle-color: $jet;
@@ -1388,14 +1392,13 @@ $topbar-dropdown-toggle-alpha: 1;
 
 // Set the link colors and styles for top-level nav
 $topbar-link-color: $jet;
-$topbar-link-color-hover: $hover-pink;
-$topbar-link-color-active: $hover-pink;
-$topbar-link-color-active-hover: $hover-pink;
+$topbar-link-color-hover: $monsoon;
+$topbar-link-color-active: $monsoon;
+$topbar-link-color-active-hover: $monsoon;
 // $topbar-link-weight: $font-weight-normal;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 $topbar-link-bg: $topbar-bg;
-//$topbar-link-bg-color-hover: $charcoal;
 $topbar-link-bg-hover: $topbar-bg-color;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);

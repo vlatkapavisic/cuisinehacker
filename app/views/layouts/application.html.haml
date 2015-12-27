@@ -14,13 +14,13 @@
 	%body{id: (content_for :body_id if content_for? :body_id)}
 		.off-canvas-wrap{'data-offcanvas' => ''}
 			.inner-wrap
+				= render 'layouts/navbar'
 				.row
 					.large-12.columns
 						- if flash[:notice]
 							.alert-box.info.radius{data: {alert: ''}}
 								= flash[:notice]
 								%a.close{href: '#'} &times;
-						= render 'layouts/navbar'
 						%section.main-section
 							= yield
 							= render 'layouts/footer'

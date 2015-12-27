@@ -1,8 +1,28 @@
 .alert-box
 	margin: 20px 0
 
-.title-area a
-	padding: 0 !important
+.top-bar .name h1 a:hover
+	color: $monsoon
+
+.top-bar-section ul li a
+	transition: background 300ms ease
+
+.tab-bar, .right-off-canvas-menu
+	background: $lavander
+	.menu-icon span::after
+		box-shadow: 0 0 0 1px $jet, 0 7px 0 1px $jet, 0 14px 0 1px $jet
+	h1 a
+		color: $jet 
+		&:hover
+			color: $monsoon
+	ul.off-canvas-list 
+		li
+			a
+				color: $jet
+				border: none
+				&:hover
+					background: $lavander-dark
+					color: $monsoon
 
 #home-page
 	img
@@ -12,20 +32,23 @@
 	margin-right: 10px
 
 h1.title
+	text-align: center
+	border-top: 1px solid black
+	border-bottom: 1px solid black
 	padding: 10px 0
-	margin: 40px 0 20px 0
+	margin: 30px 0 20px 0
 
 .blog-link
-	color: #660033
+	color: $lavander-darker
 	&:hover
-		color: #b30059
+		color: $lavander-hover
 
 footer
-	color: #808080
+	color: $base
 	text-align: center
 	padding: 40px 0 20px 0
 	hr
-		border-color: #808080
+		border-color: $base
 
 #category-page, #search-page
 	#recipes
@@ -34,18 +57,17 @@ footer
 			#recipe-title
 				display: none
 				position: absolute
-				top: 15px
+				top: 0
 				left: 5px
-				color: #F8F8F8
+				color: $lavander-darker
+				font-size: 18px
 			&:hover
 				img
 					opacity: 0.3
+					transition: opacity 300ms ease
+					-webkit-transition: opacity 300ms ease
 				#recipe-title
 					display: block
-
-#category-page 
-	#recipes
-		margin-top: 70px
 
 #recipe-page
 	img
@@ -61,8 +83,11 @@ footer
 	input, button
 		border: none
 	#search-btn
-		background-color: #e60072
+		background-color: $lavander-dark
 		padding: 0 20px
+		transition-timing-function: ease
+		&:hover
+			background-color: $lavander-darker
 
 
 li.has-dropdown
@@ -71,7 +96,7 @@ li.has-dropdown
 		width: 115px
 
 body
-	background: linear-gradient(rgba(89, 89, 89, 0), rgba(89, 89, 89, 1)) fixed
+	background: linear-gradient(rgba(213, 213, 246, 0), rgba(213, 213, 246, 1)) fixed
 	*
 		font-family: Roboto Condensed !important
 

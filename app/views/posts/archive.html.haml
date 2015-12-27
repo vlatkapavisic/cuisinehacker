@@ -8,6 +8,8 @@
 
 %h1.title= 'Posts'
 
-%ul.no-bullet
-  - @posts.each do |post|
-    %li= link_to post.title, post, class: 'blog-link'
+.row
+  .large-6.large-offset-3.columns
+    %ul.no-bullet
+      - @posts.each do |post|
+        %li= link_to post.title, post, class: 'blog-link'
