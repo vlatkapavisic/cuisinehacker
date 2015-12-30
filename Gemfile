@@ -28,6 +28,7 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'devise'
 
 gem 'rails_serve_static_assets', group: :production
+gem 'puma'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
