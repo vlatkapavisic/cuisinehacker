@@ -24,6 +24,9 @@
 					background: $lavander-dark
 					color: $monsoon
 
+::selection
+	background-color: $lavander-dark
+
 #home-page
 	img
 		width: 100%
@@ -52,22 +55,23 @@ footer
 
 #category-page, #search-page
 	#recipes
-		a
+		.recipe
 			position: relative
+			a
+				position: relative
 			#recipe-title
-				display: none
 				position: absolute
-				top: 0
-				left: 5px
-				color: $lavander-darker
-				font-size: 18px
+				bottom: 0
+				background-color: rgba(185, 185, 185, 0.4)
+				text-align: center
+				width: 100%
+				padding: 5px
+				a
+					color: black
 			&:hover
-				img
-					opacity: 0.3
-					transition: opacity 300ms ease
-					-webkit-transition: opacity 300ms ease
-				#recipe-title
-					display: block
+				opacity: 0.5
+				transition: opacity 300ms ease
+				-webkit-transition: opacity 300ms ease
 
 #recipe-page
 	img

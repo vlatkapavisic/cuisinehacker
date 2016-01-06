@@ -2,7 +2,8 @@
 	%ul.small-block-grid-2.medium-block-grid-5
 		- recipe_list.each do |recipe|
 			%li
-				%a{href: recipe_path(recipe)}
-					= image_tag recipe.photo_url
+				.recipe
+					%a{href: recipe_path(recipe)}
+						= image_tag recipe.photo_url
 					#recipe-title
-						= recipe.title
+						= link_to recipe.title, recipe_path(recipe)
