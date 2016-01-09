@@ -15,7 +15,7 @@
 	- if @recipe.original?
 		= "me"
 	- else
-		= link_to @recipe.author, @recipe.author_url, class: 'blog-link'
+		= link_to @recipe.author, @recipe.author_url
 .row
 	.large-10.large-offset-1.columns
 		%p= image_tag @recipe.photo_url
@@ -30,5 +30,5 @@
 			%p= @recipe.algorithm
 		- else
 			%h3.subheader Recipe
-			= link_to @recipe.recipe_url, @recipe.recipe_url, class: 'blog-link', target: '_blank'
+			= link_to @recipe.recipe_url, @recipe.recipe_url, target: '_blank'
 

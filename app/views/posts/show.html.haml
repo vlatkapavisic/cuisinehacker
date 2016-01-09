@@ -4,7 +4,6 @@
 	%meta{property: 'og:type', content: 'article'}
 	%meta{property: 'og:title', content: @post.title}
 	%meta{property: 'og:description', content: truncate(@post.content, length: 200, separator: ' ')}
-/%meta{property: 'og:image', content: @post.photo_url}
 - content_for :body_id, 'post-page'
 
 %h1.title= @post.title
