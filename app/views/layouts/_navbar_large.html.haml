@@ -1,49 +1,36 @@
 %nav.show-for-medium-up.top-bar{'data-topbar' => '', role: 'navigation', 'data-options' => 'is_hover: true'}
   %ul.title-area
     %li.name
-      %h1
-        %a{href: root_path} 
-          lowcalhost:3000
+      %h1= link_to "#{blog_name}", root_path
 
   %section.top-bar-section
     %ul.right
       - if user_signed_in?
         %li.has-dropdown#admin-dropdown
-          %a{href: '#'}
-            Admin
+          = link_to 'Admin', '#'
           %ul.dropdown
             %li
-              %a{href: recipes_path}
-                Manage recipes
+              = link_to 'Manage recipes', recipes_path
             %li
-              %a{href: posts_path}
-                Manage posts
+              = link_to 'Manage posts', posts_path
             %li
-              %a{href: destroy_user_session_path, 'data-method' => :delete}
-                Logout
+              = link_to 'Logout', destroy_user_session_path, {'data-method' => :delete}
         %li.divider
       %li.has-dropdown
-        %a{href: '#'} 
-          Recipes
+        = link_to 'Recipes', '#'
         %ul.dropdown
           %li
-            %a{href: category_path('breakfast')} 
-              Breakfast
+            = link_to 'Breakfast', category_path('breakfast')
           %li
-            %a{href: category_path('lunch-dinner')} 
-              Lunch/Dinner
+            = link_to 'Lunch/Dinner', category_path('lunch-dinner')
           %li
-            %a{href: category_path('other')} 
-              Other
+            = link_to 'Other', category_path('other')
           %li
-            %a{href: search_path} 
-              Search
+            = link_to 'Search', search_path
       %li
-        %a{href: posts_archive_path} 
-          Posts
+        = link_to 'Posts', posts_archive_path
       %li
-        %a{href: about_path} 
-          About
+        = link_to 'About', about_path
 
 
 

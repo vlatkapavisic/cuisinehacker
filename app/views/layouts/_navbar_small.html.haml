@@ -1,8 +1,6 @@
 %nav.tab-bar.show-for-small-only
   %section.middle.tab-bar-section
-    %h1 
-      %a{href: root_path} 
-        lowcalhost:3000
+    %h1= link_to "#{blog_name}", root_path
   %section.right-small
     %a.right-off-canvas-toggle.menu-icon{href: '#'}
       %span
@@ -10,20 +8,14 @@
 %aside.right-off-canvas-menu.show-for-small-only
   %ul.off-canvas-list
     %li
-      %a{href: search_path} 
-        Search recipes
+      = link_to 'Search', search_path
     %li
-      %a{href: category_path('breakfast')} 
-        Breakfast
+      = link_to 'Breakfast', category_path('breakfast')
     %li
-      %a{href: category_path('lunch-dinner')} 
-        Lunch/dinner
+      = link_to 'Lunch/Dinner', category_path('lunch-dinner')
     %li
-      %a{href: category_path('other')} 
-        Other
+      = link_to 'Other', category_path('other')
     %li
-      %a{href: posts_archive_path} 
-        Posts
+      = link_to 'Posts', posts_archive_path
     %li
-      %a{href: about_path} 
-        About
+      = link_to 'About', about_path
