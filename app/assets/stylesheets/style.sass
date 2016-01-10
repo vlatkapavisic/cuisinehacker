@@ -1,3 +1,11 @@
+body
+	background: linear-gradient(rgba(213, 213, 246, 0), rgba(213, 213, 246, 1)) fixed
+	*
+		font-family: Roboto Condensed !important
+
+::selection
+	background-color: $lavander-dark
+
 .alert-box
 	margin: 20px 0
 
@@ -24,17 +32,10 @@
 					background: $lavander-dark
 					color: $monsoon
 
-::selection
-	background-color: $lavander-dark
-
-.main-section a
-	color: $lavander-darker
-	&:hover
-		color: $lavander-hover
-
-#home-page
-	img
-		width: 100%
+li.has-dropdown
+	width: 100px
+	&#admin-dropdown
+		width: 115px
 
 #logout
 	margin-right: 10px
@@ -52,6 +53,16 @@ footer
 	padding: 40px 0 20px 0
 	hr
 		border-color: $base
+
+.main-section a
+	color: $lavander-darker
+	&:hover
+		color: $lavander-hover
+
+
+#home-page
+	img
+		width: 100%
 
 #category-page, #search-page
 	#recipes
@@ -83,6 +94,10 @@ footer
 	img
 		padding: 20px 0
 
+#posts-archive-page
+	.main-section li
+		padding-top: 5px
+
 #search-page
 	input, button
 		border: none
@@ -94,14 +109,8 @@ footer
 			background-color: $lavander-darker
 
 
-li.has-dropdown
-	width: 100px
-	&#admin-dropdown
-		width: 115px
 
-body
-	background: linear-gradient(rgba(213, 213, 246, 0), rgba(213, 213, 246, 1)) fixed
-	*
-		font-family: Roboto Condensed !important
+
+
 
 
