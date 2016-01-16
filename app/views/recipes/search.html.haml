@@ -3,7 +3,9 @@
 - if params[:term]
 	- if @results.any?
 		%h1.title= "Recipes containing #{params[:term]}"
-		= render partial: 'recipe_list', object: @results
+		#recipes
+			%ul.small-block-grid-2.medium-block-grid-3.large-block-grid-4
+				= render partial: 'recipe_list', object: @results
 	- else
 		%h1.title= "Désolé, there aren't any recipes containing #{params[:term]} yet."
 - else

@@ -1,13 +1,29 @@
 - content_for :meta_tags do
 	%meta{property: 'og:url', content: request.original_url.split('?').first}
-	%meta{property: 'og:title', content: 'Le Blog'}
+	%meta{property: 'og:title', content: blog_name}
 	%meta{property: 'og:description', content: ''}
 	%meta{property: 'og:image', content: ''}
 
 #home-page
-	#first
-		= image_tag 'https://www.instagram.com/p/8O6wkIOo1P/media?size=l'
-	#second
-		= image_tag 'https://www.instagram.com/p/-X14Zsuo4p/media?size=l'
-	#third
-		= image_tag 'https://www.instagram.com/p/7BaZM_Oo5z/media?size=l'
+	#code
+		:plain
+			irb(main):001:0> app.get '/' <br><br><br>
+
+
+			Started GET "/" for 127.0.0.1 at 2016-01-16 17:18:20 +0100<br>
+			&nbsp;&nbsp;ActiveRecord::SchemaMigration Load (0.5ms)  SELECT "schema_migrations".* FROM "schema_migrations"<br>
+			Processing by PagesController#home as HTML<br>
+			Recipe Load (0.4ms)  SELECT  "recipes".* FROM "recipes"  LIMIT 3<br>
+			&nbsp;&nbsp;Rendered pages/home.html.haml within layouts/home_layout (7.7ms)<br>
+			&nbsp;&nbsp;Rendered layouts/_navbar_large.html.haml (15.7ms)<br>
+			&nbsp;&nbsp;Rendered layouts/_navbar_small.html.haml (2.7ms)<br>
+			&nbsp;&nbsp;Rendered layouts/_footer.html.haml (0.9ms)<br>
+			Completed 200 OK in 606ms (Views: 574.1ms | ActiveRecord: 1.8ms)<br>
+			=> 200<br>
+			irb(main):002:0> Recipe.last(4).reverse<br>
+			&nbsp;&nbsp;Recipe Load (0.9ms)  SELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 3<br>
+	#recipes
+		%ul.medium-block-grid-4.small-block-grid-2
+			= render partial: 'recipes/recipe_list', object: @new_recipes
+
+	= render 'layouts/footer'

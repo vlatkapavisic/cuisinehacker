@@ -59,30 +59,35 @@ footer
 	&:hover
 		color: $lavander-hover
 
+#recipes
+	.recipe
+		position: relative
+		a
+			position: relative
+		#recipe-title
+			position: absolute
+			bottom: -1px
+			background-color: rgba(100, 100, 100, 0.5)
+			text-align: center
+			width: 100%
+			padding: 5px
+			a
+				color: white
+		&:hover
+			opacity: 0.5
+			transition: opacity 300ms ease
+			-webkit-transition: opacity 300ms ease
+
 
 #home-page
-	img
-		width: 100%
-
-#category-page, #search-page
+	color: rgba(94, 177, 162, 0.83)
+	background-color: rgba(0, 0, 0, 0.9)
+	#code
+		font-family: Roboto Mono !important
+		font-size: 14px
+		padding: 15px
 	#recipes
-		.recipe
-			position: relative
-			a
-				position: relative
-			#recipe-title
-				position: absolute
-				bottom: -1px
-				background-color: rgba(100, 100, 100, 0.5)
-				text-align: center
-				width: 100%
-				padding: 5px
-				a
-					color: white
-			&:hover
-				opacity: 0.5
-				transition: opacity 300ms ease
-				-webkit-transition: opacity 300ms ease
+		padding: 15px
 
 #recipe-page
 	img
@@ -107,6 +112,8 @@ footer
 		transition-timing-function: ease
 		&:hover
 			background-color: $lavander-darker
+
+
 
 
 
