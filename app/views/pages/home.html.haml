@@ -22,7 +22,7 @@
 			=> 200<br>
 			irb(main):002:0> Recipe.last(4).reverse<br>
 			&nbsp;&nbsp;Recipe Load (0.9ms)  SELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 3<br>
-	#recipes
+	#recipes.last-four
 		%ul.medium-block-grid-4.small-block-grid-2
 			= render partial: 'recipes/recipe_list', object: @new_recipes
 

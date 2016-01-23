@@ -1,7 +1,12 @@
 body
-	background: linear-gradient(rgba(213, 213, 246, 0), rgba(213, 213, 246, 1)) fixed
 	*
 		font-family: Roboto Condensed !important
+
+.main-section 
+	*
+		line-height: 2 
+	h3
+		line-height: 1.4 
 
 ::selection
 	background-color: $lavander-dark
@@ -12,8 +17,20 @@ body
 .top-bar .name h1 a:hover
 	color: $monsoon
 
-.top-bar-section ul li a
-	transition: background 300ms ease
+.top-bar-section 
+	ul 
+		li
+			&#admin-dropdown
+				width: 125px 
+			&#recipes-dropdown
+				width: 115px
+			a
+				transition: background 300ms ease
+				
+
+.top-bar-section, .right-off-canvas-menu
+	ul li a 
+		text-transform: uppercase
 
 .tab-bar, .right-off-canvas-menu
 	background: $lavander
@@ -32,18 +49,12 @@ body
 					background: $lavander-dark
 					color: $monsoon
 
-li.has-dropdown
-	width: 100px
-	&#admin-dropdown
-		width: 115px
-
 #logout
 	margin-right: 10px
 
 h1.title
 	text-align: center
-	border-top: 1px solid black
-	border-bottom: 1px solid black
+	border-bottom: 1px solid #B9B9B9
 	padding: 10px 0
 	margin: 30px 0 20px 0
 
@@ -60,6 +71,7 @@ footer
 		color: $lavander-hover
 
 #recipes
+	padding-top: 60px
 	.recipe
 		position: relative
 		a
@@ -95,25 +107,38 @@ footer
 
 #post-page
 	.content
-		padding-top: 30px
+		padding-top: 20px
 	img
 		padding: 20px 0
 
 #posts-archive-page
-	.main-section li
-		padding-top: 5px
+	#posts
+		padding-top: 60px
+		li
+			padding-bottom: 5px
 
 #search-page
-	input, button
+	button
 		border: none
-	#search-btn
-		background-color: $lavander-dark
-		padding: 0 20px
-		transition-timing-function: ease
-		&:hover
-			background-color: $lavander-darker
+	#search-form
+		padding-top: 60px
+		#search-btn
+			background-color: $lavander-dark
+			padding: 0 5px 
+			margin-left: 5px
+			transition-timing-function: ease
+			&:hover
+				background-color: $lavander
+	h3
+		padding-top: 60px
 
+@media only screen and (max-width: 640px)
+	#search-page #search-form #search-btn
+		margin-left: 0
 
+@media only screen and (max-width: 350px)
+	h1
+		font-size: 24px
 
 
 

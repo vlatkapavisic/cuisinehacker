@@ -9,15 +9,16 @@
 
 
 /= link_to "<< #{@recipe.category.name} recipes", category_path(@recipe.category)
-%h1.title= @recipe.title
-%h6.subheader.text-center
-	= "Published on #{@recipe.created_at.to_date.strftime('%d. %m. %Y.')} | Recipe by "
-	- if @recipe.original?
-		= "me"
-	- else
-		= link_to @recipe.author, @recipe.author_url
+
 .row
 	.large-10.large-offset-1.columns
+		%h1.title= @recipe.title
+		%h6.subheader.text-center
+			= "Published on #{@recipe.created_at.to_date.strftime('%d. %m. %Y.')} &nbsp;|&nbsp; Recipe by ".html_safe
+			- if @recipe.original?
+				= "me"
+			- else
+				= link_to @recipe.author, @recipe.author_url
 		%p= image_tag @recipe.photo_url
 
 		%p= @recipe.description.html_safe

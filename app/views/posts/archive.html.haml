@@ -6,10 +6,13 @@
   %meta{property: 'og:image', content: ''}
 - content_for :body_id, 'posts-archive-page'
 
-%h1.title= 'Posts'
+.row
+  .large-10.large-offset-1.columns
+    %h1.title= 'Posts'
 
 .row
   .large-6.large-offset-3.columns
-    %ul.no-bullet
-      - @posts.each do |post|
-        %li= link_to post.title, post
+    #posts
+      %ul.no-bullet.text-center
+        - @posts.each do |post|
+          %li= link_to post.title, post

@@ -1,21 +1,26 @@
 - content_for :title, 'Search'
 - content_for :body_id, 'search-page'
-- if params[:term]
-	- if @results.any?
-		%h1.title= "Recipes containing #{params[:term]}"
-		#recipes
-			%ul.small-block-grid-2.medium-block-grid-3.large-block-grid-4
-				= render partial: 'recipe_list', object: @results
-	- else
-		%h1.title= "Désolé, there aren't any recipes containing #{params[:term]} yet."
-- else
-	%h1.title Search recipes by ingredient
-	= form_tag('/search', method: 'get') do 
-		.row.collapse
-			.large-5.large-offset-3.columns
-				= text_field_tag(:term)
-			.large-1.columns.end
-				%button{type: 'submit', class: 'postfix button', id:'search-btn'} Search
+
+.row
+	.large-10.large-offset-1.columns
+		%h1.title Search recipes by ingredient
+		#search-form
+			= form_tag('/search', method: 'get') do 
+				.row.collapse
+					.medium-5.medium-offset-3.columns
+						= text_field_tag(:term)
+					.medium-1.columns.end
+						%button{type: 'submit', class: 'postfix button', id:'search-btn'} Search
+		- if params[:term]
+			- if @results.any?
+				%h3.text-center= "Recipes containing #{params[:term]}"
+				#recipes
+					%ul.small-block-grid-2.medium-block-grid-3.large-block-grid-4
+						= render partial: 'recipe_list', object: @results
+			- else
+				%h3.text-center= "Désolé, there aren't any recipes containing #{params[:term]} yet."
+
+
 
 
 
