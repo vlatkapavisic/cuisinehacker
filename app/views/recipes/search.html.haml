@@ -7,7 +7,7 @@
 		#search-form
 			= form_tag('/search', method: 'get') do 
 				.row.collapse
-					.medium-5.medium-offset-3.columns
+					.medium-3.medium-offset-4.columns
 						= text_field_tag(:term)
 					.medium-1.columns.end
 						%button{type: 'submit', class: 'postfix button', id:'search-btn'} Search
