@@ -48,7 +48,7 @@ class PostsController < ApplicationController
     end
 
     def get_posts
-      @posts = Post.all
+      @posts = Post.all.reverse
     end
 
     def post_params

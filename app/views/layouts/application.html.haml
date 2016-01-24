@@ -18,14 +18,15 @@
 			.inner-wrap
 				= render 'layouts/navbar_large'
 				= render 'layouts/navbar_small'
-				.row
-					.large-12.columns
-						- if flash[:notice]
-							.alert-box.info.radius{data: {alert: ''}}
-								= flash[:notice]
-								%a.close{href: '#'} &times;
-						%section.main-section
-							= yield
+				#page-content
+					.row
+						.large-12.columns
+							- if flash[:notice]
+								.alert-box.info.radius{data: {alert: ''}}
+									= flash[:notice]
+									%a.close{href: '#'} &times;
+							%section.main-section
+								= yield
 				= render 'layouts/footer'
 
 				%a.exit-off-canvas
