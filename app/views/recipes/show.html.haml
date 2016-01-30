@@ -11,8 +11,10 @@
 	.large-10.large-offset-1.columns
 		%h1.title= @recipe.title
 		%h6.subheader.text-center
+			
+			= "#{@recipe.created_at.strftime('%B %d, %Y')} &nbsp;|&nbsp; In ".html_safe
 			= link_to "#{@recipe.category.name}", category_path(@recipe.category)
-			= " recipe &nbsp;|&nbsp; Published on #{@recipe.created_at.to_date.strftime('%d. %m. %Y.')} &nbsp;|&nbsp; Recipe by ".html_safe
+			= '&nbsp;|&nbsp;Recipe by '.html_safe
 			- if @recipe.original?
 				= "me"
 			- else

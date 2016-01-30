@@ -5,23 +5,33 @@
 	%meta{property: 'og:image', content: ''}
 
 #home-page
-	#code
-		:plain
-			irb(main):001:0> app.get '/' <br>
-			Started GET "/" for 127.0.0.1 at 2016-01-16 17:18:20 +0100<br>
-			&nbsp;&nbsp;ActiveRecord::SchemaMigration Load (0.5ms)  SELECT "schema_migrations".* FROM "schema_migrations"<br>
-			Processing by PagesController#home as HTML<br>
-			Recipe Load (0.4ms)  SELECT  "recipes".* FROM "recipes"  LIMIT 3<br>
-			&nbsp;&nbsp;Rendered pages/home.html.haml within layouts/home_layout (7.7ms)<br>
-			&nbsp;&nbsp;Rendered layouts/_navbar_large.html.haml (15.7ms)<br>
-			&nbsp;&nbsp;Rendered layouts/_navbar_small.html.haml (2.7ms)<br>
-			&nbsp;&nbsp;Rendered layouts/_footer.html.haml (0.9ms)<br>
-			Completed 200 OK in 606ms (Views: 574.1ms | ActiveRecord: 1.8ms)<br>
-			=> 200<br>
-			irb(main):002:0> Recipe.last(4).reverse<br>
-			&nbsp;&nbsp;Recipe Load (0.9ms)  SELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 3<br>
-	#recipes.last-four
-		%ul.medium-block-grid-4.small-block-grid-2
-			= render partial: 'recipes/recipe_list', object: @new_recipes
+	.row
+		.large-6.columns
+			#code
+				:plain
+					cd cuisine<br>
+					git checkout -b edible_experiment<br>
+					git add ingredients/*<br>
+					gem install apricot_jam<br>
+					curl -I lowcalhost:3000<br>
+					brew install food<br>
+					sudo eat root_vegetable<br>
+					rails c<br>
+					food.fetch(:bread, 'brioche') #letthemeatcake <br>
+					raise 'Hungry' rescue :cook<br>
+					flaxseed = Fiber.new { 'Omega 3' } #flaxingwithmyhandsup<br>
+					begin<br>
+					&nbsp;&nbsp;eat<br>
+					rescue => FiberError<br>
+					&nbsp;&nbsp;eat flaxseed<br>
+					end<br>
+					'banana '.chop.freeze<br>
+					'  lemon&nbsp;&nbsp;&nbsp;&nbsp; '.squeeze<br>
+					app.get '/' #someta #wow<br>
+					Recipe.last(4).reverse  #new #ontheblog #enjoy #bonappetit<br>
+		.large-6.columns
+			#recipes
+				%ul.large-block-grid-2.medium-block-grid-4.small-block-grid-2
+					= render partial: 'recipes/recipe_list', object: @new_recipes
 
 	= render 'layouts/footer'

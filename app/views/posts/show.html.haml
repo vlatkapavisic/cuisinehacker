@@ -9,7 +9,9 @@
 .row
 	.large-10.large-offset-1.columns
 		%h1.title= @post.title
-		%h6.subheader.text-center= "Published on #{@post.created_at.to_date.strftime('%d. %m. %Y.')}"
+		%h6.subheader.text-center
+			= "#{@post.created_at.strftime('%B %d, %Y')} &nbsp;|&nbsp; In ".html_safe
+			= link_to 'Posts', posts_archive_path
 		.content 
 			= @post.content.html_safe
 
