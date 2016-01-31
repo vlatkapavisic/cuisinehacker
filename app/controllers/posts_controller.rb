@@ -48,7 +48,7 @@ class PostsController < ApplicationController
     end
 
     def get_posts
-      @posts = Post.all.reverse
+      @posts = Post.order('created_at DESC')
     end
 
     def post_params
