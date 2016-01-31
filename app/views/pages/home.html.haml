@@ -28,7 +28,7 @@
 					'banana '.chop.freeze<br>
 					'  lemon&nbsp;&nbsp;&nbsp;&nbsp; '.squeeze<br>
 					app.get '/' #someta #wow<br>
-					Recipe.last(4).reverse  #new #ontheblog #enjoy #bonappetit<br>
+					Recipe.order('created_at DESC').take(4) #new #ontheblog #enjoy #bonappetit<br>
 		.large-6.columns
 			#recipes
 				%ul.large-block-grid-2.medium-block-grid-4.small-block-grid-2
