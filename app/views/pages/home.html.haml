@@ -3,35 +3,35 @@
 	%meta{property: 'og:title', content: blog_name}
 	%meta{property: 'og:description', content: ''}
 	%meta{property: 'og:image', content: ''}
+- content_for :body_id, 'home-page'
 
-#home-page
-	.row
-		.large-6.columns
-			#code
-				:plain
-					cd cuisine<br>
-					git checkout -b edible_experiment<br>
-					git add ingredients/*<br>
-					gem install apricot_jam<br>
-					curl -I lowcalhost:3000<br>
-					brew install food<br>
-					sudo eat root_vegetable<br>
-					rails c<br>
-					food.fetch(:bread, 'brioche') #letthemeatcake <br>
-					raise 'Hungry' rescue :cook<br>
-					flaxseed = Fiber.new { 'Omega 3' } #flaxingwithmyhandsup<br>
-					begin<br>
-					&nbsp;&nbsp;eat<br>
-					rescue => FiberError<br>
-					&nbsp;&nbsp;eat flaxseed<br>
-					end<br>
-					'banana '.chop.freeze<br>
-					'  lemon&nbsp;&nbsp;&nbsp;&nbsp; '.squeeze<br>
-					app.get '/' #someta #wow<br>
-					Recipe.order('created_at DESC').take(4) #new #ontheblog #enjoy #bonappetit<br>
-		.large-6.columns
-			#recipes
-				%ul.large-block-grid-2.medium-block-grid-4.small-block-grid-2
-					= render partial: 'recipes/recipe_list', object: @new_recipes
+.row
+	.large-6.columns
+		#code
+			:plain
+				cd cuisine<br>
+				git checkout -b edible_experiment<br>
+				git add ingredients/*<br>
+				gem install apricot_jam<br>
+				curl -I lowcalhost:3000<br>
+				brew install food<br>
+				sudo eat root_vegetable<br>
+				rails c<br>
+				food.fetch(:bread, 'brioche') #letthemeatcake <br>
+				raise 'Hungry' rescue :cook<br>
+				flaxseed = Fiber.new { 'Omega 3' } #flaxingwithmyhandsup<br>
+				begin<br>
+				&nbsp;&nbsp;eat<br>
+				rescue => FiberError<br>
+				&nbsp;&nbsp;eat flaxseed<br>
+				end<br>
+				'banana '.chop.freeze<br>
+				'  lemon&nbsp;&nbsp;&nbsp;&nbsp; '.squeeze<br>
+				app.get '/' #someta #wow<br>
+				Recipe.order('created_at DESC').take(4) #new #ontheblog #enjoy #bonappetit<br>
+	.large-6.columns
+		#recipes
+			%ul.large-block-grid-2.medium-block-grid-4.small-block-grid-2
+				= render partial: 'recipes/recipe_list', object: @new_recipes
 
-	= render 'layouts/footer'
+= render 'layouts/footer'
