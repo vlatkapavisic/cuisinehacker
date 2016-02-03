@@ -11,7 +11,7 @@
 						= text_field_tag(:term)
 					.medium-1.columns.end
 						%button{type: 'submit', class: 'postfix button', id:'search-btn'} Search
-		- if params[:term]
+		- if params[:term].present?
 			- if @results.any?
 				%h3.text-center= "Recipes containing #{params[:term]}"
 				#recipes

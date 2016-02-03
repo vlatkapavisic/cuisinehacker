@@ -39,7 +39,7 @@ class RecipesController < ApplicationController
   end
 
   def search
-    @results = Recipe.where("ingredients LIKE ?", "%#{params[:term].downcase}%") if params[:term]
+    @results = Recipe.where("ingredients LIKE ?", "%#{params[:term].downcase}%") if params[:term].present?
   end
 
   private

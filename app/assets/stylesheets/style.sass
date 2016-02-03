@@ -139,13 +139,21 @@ footer
 		border: none
 	#search-form
 		padding-top: 60px
+		input
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset
+			&:hover, &:focus
+				border-color: #b6b6e2
+				box-shadow: 0 0 5px #b6b6e2 inset 
 		#search-btn
-			background-color: #cccccc
+			background-color: #c8c8ea
 			padding: 0 5px 
 			margin-left: 5px
 			transition-timing-function: ease
-			&:hover
-				background-color: #e6e6e6
+			&:hover, &:active
+				background-color: #a3a3db
+			&:focus	
+				outline: 0
+
 	h3
 		padding-top: 60px
 
