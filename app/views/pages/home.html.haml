@@ -1,37 +1,37 @@
 - content_for :meta_tags do
-	%meta{property: 'og:url', content: request.original_url.split('?').first}
-	%meta{property: 'og:title', content: blog_name}
-	%meta{property: 'og:description', content: ''}
-	%meta{property: 'og:image', content: ''}
+  %meta{property: 'og:url', content: request.original_url.split('?').first}
+  %meta{property: 'og:title', content: blog_name}
+  %meta{property: 'og:description', content: 'Francophile programmer\'s healthy food blog &bullet; Developed in Ruby, in Zagreb, Croatia'.html_safe}
+  %meta{property: 'og:image', content: 'https://www.instagram.com/p/BBNrwZ9H2aq/media?size=l'}
 - content_for :body_id, 'home-page'
 
 .row
-	.large-6.columns
-		#code
-			:plain
-				cd cuisine<br>
-				git checkout -b edible_experiment<br>
-				git add ingredients/*<br>
-				gem install apricot_jam<br>
-				curl -I lowcalhost:3000<br>
-				brew install food<br>
-				sudo eat root_vegetable<br>
-				rails c<br>
-				food.fetch(:bread, 'brioche') #letthemeatcake <br>
-				raise 'Hungry' rescue :cook<br>
-				flaxseed = Fiber.new { 'Omega 3' } #flaxingwithmyhandsup<br>
-				begin<br>
-				&nbsp;&nbsp;eat<br>
-				rescue => FiberError<br>
-				&nbsp;&nbsp;eat flaxseed<br>
-				end<br>
-				'banana '.chop.freeze<br>
-				'  lemon&nbsp;&nbsp;&nbsp;&nbsp; '.squeeze<br>
-				app.get '/' #someta #wow<br>
-				Recipe.order('created_at DESC').take(4) #new #ontheblog #enjoy #bonappetit<br>
-	.large-6.columns
-		#recipes
-			%ul.large-block-grid-2.medium-block-grid-4.small-block-grid-2
-				= render partial: 'recipes/recipe_list', object: @new_recipes
+  .large-6.columns
+    %pre#code
+      :preserve
+        cd cuisine
+        git checkout -b edible_experiment
+        git add ingredients/*
+        gem install apricot_jam
+        curl -I lowcalhost:3000
+        brew install food
+        sudo eat root_vegetable
+        rails c
+        food.fetch(:bread, 'brioche') #letthemeatcake
+        raise 'Hungry' rescue :cook
+        flaxseed = Fiber.new { 'Omega 3' } #flaxingwithmyhandsup
+        begin
+          eat
+        rescue => FiberError
+          eat flaxseed
+        end
+        'banana '.chop.freeze
+        '  lemon     '.squeeze
+        app.get '/' #someta #wow
+        Recipe.order(created_at: :desc).take(4) #new #ontheblog #enjoy #bonappetit
 
-= render 'layouts/footer'
+  .large-6.columns
+    #recipes
+      %ul.large-block-grid-2.medium-block-grid-4.small-block-grid-2
+        = render partial: 'recipes/recipe_list', object: @new_recipes
+

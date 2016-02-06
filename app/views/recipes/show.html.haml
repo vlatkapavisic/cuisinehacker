@@ -3,7 +3,7 @@
 	%meta{property: 'og:url', content: request.original_url.split('?').first}
 	%meta{property: 'og:type', content: 'article'}
 	%meta{property: 'og:title', content: @recipe.title}
-	%meta{property: 'og:description', content: truncate(@recipe.description, length: 200, separator: ' ')}
+	%meta{property: 'og:description', content: truncate(strip_tags(@recipe.description), length: 200, separator: ' ')}
 	%meta{property: 'og:image', content: @recipe.photo_url}
 - content_for :body_id, 'recipe-page'
 
@@ -12,9 +12,9 @@
 		%h1.title= @recipe.title
 		%h6.subheader.text-center
 			
-			= "#{@recipe.created_at.strftime('%B %d, %Y')} &nbsp;|&nbsp; In ".html_safe
+			= "#{@recipe.created_at.strftime('%B %d, %Y')} &nbsp;&bullet;&nbsp; In ".html_safe
 			= link_to "#{@recipe.category.name}", category_path(@recipe.category)
-			= '&nbsp;|&nbsp;Recipe by '.html_safe
+			= '&nbsp;&bullet;&nbsp;Recipe by '.html_safe
 			- if @recipe.original?
 				= "me"
 			- else

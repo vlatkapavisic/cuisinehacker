@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @new_recipes = Recipe.order('created_at DESC').take(4)
-  	render layout: 'home_layout'
+    @new_recipes = Recipe.order(created_at: :desc).take(4)
   end
 
   def about

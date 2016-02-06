@@ -9,7 +9,8 @@ body
 		line-height: 1.4
 
 #page-content
-	min-height: calc(100vh - 174px)
+	min-height: calc(100vh - 92px)
+	padding-bottom: 60px
 
 ::selection
 	background-color: $lavander-dark
@@ -65,19 +66,22 @@ h1.title
 footer
 	color: $base
 	text-align: center
-	padding: 50px 0 15px 0
-	hr
-		border-color: $base
+	border-top: 1px solid #aaaaaa
+	padding: 5px 0
 	a
 		font-weight: bold !important
 		color: $monsoon !important
 		&:hover
 			color: $base !important
+		i
+			font-size: 24px
+			margin: 5px
 
 .main-section a
 	color: $lavander-darker
 	&:hover
 		color: $lavander-hover
+	word-wrap: break-word
 
 #recipes
 	padding-top: 60px
@@ -102,15 +106,17 @@ footer
 
 #home-page
 	background-color: rgba(0, 0, 0, 0.9)
-	.row
+	.row:first-of-type
 		margin: 0
 		max-width: none
-		height: calc(100vh - 115px)
+	#page-content
+		padding-bottom: 0 !important
 		#code
 			color: rgba(145, 145, 212, 0.56)
 			font-family: Roboto Mono !important
 			font-size: 14px
 			padding: 15px
+			word-wrap: break-word
 		#recipes
 			padding: 15px
 

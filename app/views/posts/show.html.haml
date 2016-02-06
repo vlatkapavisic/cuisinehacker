@@ -3,14 +3,14 @@
 	%meta{property: 'og:url', content: request.original_url.split('?').first}
 	%meta{property: 'og:type', content: 'article'}
 	%meta{property: 'og:title', content: @post.title}
-	%meta{property: 'og:description', content: truncate(@post.content, length: 200, separator: ' ')}
+	%meta{property: 'og:description', content: truncate(strip_tags(@post.content), length: 200, separator: ' ')}
 - content_for :body_id, 'post-page'
 
 .row
 	.large-10.large-offset-1.columns
 		%h1.title= @post.title
 		%h6.subheader.text-center
-			= "#{@post.created_at.strftime('%B %d, %Y')} &nbsp;|&nbsp; In ".html_safe
+			= "#{@post.created_at.strftime('%B %d, %Y')} &nbsp;&bullet;&nbsp; In ".html_safe
 			= link_to 'Posts', posts_archive_path
 		.content 
 			= @post.content.html_safe

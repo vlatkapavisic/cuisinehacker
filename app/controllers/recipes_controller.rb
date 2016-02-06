@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
   before_action :authenticate_user!, except: [:show, :search]
 
   def index
-    @recipes = Recipe.order('created_at DESC')
+    @recipes = Recipe.order(created_at: :desc)
   end
 
   def show
