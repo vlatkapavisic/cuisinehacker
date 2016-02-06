@@ -1,16 +1,19 @@
 body
 	*
-		font-family: Roboto Condensed !important
-
-.main-section 
-	*
-		line-height: 2 
-	h3
-		line-height: 1.4
+		font-family: Roboto Condensed, sans-serif !important
 
 #page-content
 	min-height: calc(100vh - 92px)
 	padding-bottom: 60px
+	*
+		line-height: 2 
+	h3
+		line-height: 1.4
+	a
+		color: $lavander-darker
+		&:hover
+			color: $lavander-hover
+		word-wrap: break-word
 
 ::selection
 	background-color: $lavander-dark
@@ -18,9 +21,11 @@ body
 .alert-box
 	margin: 20px 0
 
-.top-bar 
-	.name h1 a:hover
-		color: $monsoon
+a.blog-name
+	font-family: Roboto Mono, serif !important
+	color: #6A6AA9 !important
+	&:hover
+		color: #9e9ec7 !important
 
 .top-bar-section 
 	ul 
@@ -32,10 +37,15 @@ body
 			a
 				transition: background 300ms ease
 				
-
 .top-bar-section, .right-off-canvas-menu
 	ul li a 
 		text-transform: uppercase
+
+.tab-bar 
+	.right-small
+		border-left: none
+	.menu-icon span::after, .right-off-canvas-menu .menu-icon span::after
+		box-shadow: 0 0 0 1px #6A6AA9, 0 7px 0 1px #6A6AA9, 0 14px 0 1px #6A6AA9 !important
 
 .tab-bar, .right-off-canvas-menu
 	background: $lavander
@@ -77,12 +87,6 @@ footer
 			font-size: 24px
 			margin: 5px
 
-.main-section a
-	color: $lavander-darker
-	&:hover
-		color: $lavander-hover
-	word-wrap: break-word
-
 #recipes
 	padding-top: 60px
 	.recipe
@@ -113,7 +117,7 @@ footer
 		padding-bottom: 0 !important
 		#code
 			color: rgba(145, 145, 212, 0.56)
-			font-family: Roboto Mono !important
+			font-family: Roboto Mono, serif !important
 			font-size: 14px
 			padding: 15px
 			word-wrap: break-word
@@ -143,6 +147,8 @@ footer
 #search-page
 	button
 		border: none
+	h3
+		padding-top: 60px
 	#search-form
 		padding-top: 60px
 		input
@@ -159,9 +165,7 @@ footer
 				background-color: #a3a3db
 			&:focus	
 				outline: 0
-
-	h3
-		padding-top: 60px
+				
 
 @media only screen and (min-width: 1025px)
 	#home-page #recipes ul li:nth-of-type(n+2)

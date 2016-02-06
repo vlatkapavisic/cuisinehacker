@@ -13,7 +13,7 @@
 						%button{type: 'submit', class: 'postfix button', id:'search-btn'} Search
 		- if params[:term].present?
 			- if @results.any?
-				%h3.text-center= "Recipes containing #{params[:term]}"
+				%h3.text-center= "Voilà les recettes avec du #{params[:term]} !"
 				#recipes
 					%ul.small-block-grid-2.medium-block-grid-3.large-block-grid-4
 						= render partial: 'recipe_list', object: @results
