@@ -16,7 +16,9 @@
 //= require "foundation/foundation.dropdown"
 //= require "foundation/foundation.offcanvas"
 //= require "foundation/foundation.topbar"
-// require turbolinks
+// require turbolinks 
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){ 
+  $(document).foundation(); 
+});
