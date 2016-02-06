@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation
+//= require "foundation/foundation"
+//= require "foundation/foundation.dropdown"
+//= require "foundation/foundation.offcanvas"
+//= require "foundation/foundation.topbar"
 // require turbolinks
 //= require_tree .
 

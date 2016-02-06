@@ -23,9 +23,9 @@ body
 
 a.blog-name
 	font-family: Roboto Mono, serif !important
-	color: #6A6AA9 !important
+	color: $lavander-logo !important
 	&:hover
-		color: #9e9ec7 !important
+		color: $lavander-logo-hover !important
 
 .top-bar-section 
 	ul 
@@ -37,16 +37,14 @@ a.blog-name
 			a
 				transition: background 300ms ease
 				
-.top-bar-section, .right-off-canvas-menu
-	ul li a 
-		text-transform: uppercase
-		
 .tab-bar, .right-off-canvas-menu
 	background: $lavander
+	ul li a 
+		text-transform: uppercase
 	.right-small
 		border-left: none
 	.menu-icon span::after
-		box-shadow: 0 0 0 1px #6A6AA9, 0 7px 0 1px #6A6AA9, 0 14px 0 1px #6A6AA9 
+		box-shadow: 0 0 0 1px $lavander-logo, 0 7px 0 1px $lavander-logo, 0 14px 0 1px $lavander-logo 
 	h1 a
 		color: $jet 
 		&:hover
@@ -101,7 +99,10 @@ footer
 
 
 #home-page
-	background: linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)) fixed
+	background: linear-gradient(315deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)) fixed
+	background: -webkit-linear-gradient(315deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)) fixed
+	background: -o-linear-gradient(315deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)) fixed
+	background: -moz-linear-gradient(315deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)) fixed
 	.row:first-of-type
 		margin: 0
 		max-width: none
@@ -170,10 +171,4 @@ footer
 @media only screen and (max-width: 350px)
 	h1
 		font-size: 24px
-
-
-
-
-
-
-
+		

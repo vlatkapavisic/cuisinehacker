@@ -1,4 +1,4 @@
-- content_for :title, "Sign in"
+- content_for :title, 'Sign in'
 
 %h2.text-center Sign in
 
@@ -15,13 +15,13 @@
 					.large-12.columns
 						%label
 							Password
-							= f.password_field :password, autocomplete: "off"
+							= f.password_field :password, autocomplete: 'off'
 				- if devise_mapping.rememberable?
 					.row
 						.large-12.columns
 							= f.check_box :remember_me
 							= f.label :remember_me
-				%div= f.submit "Sign in", class: 'button secondary expand'
+				%div= f.submit 'Sign in', class: 'button secondary expand'
 
-			= link_to "Forgot your password?", new_password_path(resource_name)
+			= link_to 'Forgot your password?', new_password_path(resource_name)
 
