@@ -1,7 +1,7 @@
 - content_for :meta_tags do
   %meta{property: 'og:url', content: request.original_url.split('?').first}
   %meta{property: 'og:title', content: blog_name}
-  %meta{property: 'og:description', content: 'Francophile programmer\'s healthy food blog &bullet; Developed in Ruby, in Zagreb, Croatia'.html_safe}
+  %meta{property: 'og:description', content: 'Francophile programmer\'s healthy food blog | Developed in Ruby, in Zagreb, Croatia'.html_safe}
   %meta{property: 'og:image', content: 'https://www.instagram.com/p/BBfMb-VH2V8/media?size=l'}
 - content_for :body_id, 'home-page'
 
