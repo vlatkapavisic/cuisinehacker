@@ -7,30 +7,30 @@
     %ul.right
       - if user_signed_in?
         %li.has-dropdown#admin-dropdown
-          = link_to 'Admin', '#'
+          = link_to 'ADMIN', '#'
           %ul.dropdown
             %li
-              = link_to 'Manage recipes', recipes_path
+              = link_to 'MANAGE RECIPES', recipes_path
             %li
-              = link_to 'Manage posts', posts_path
+              = link_to 'MANAGE POSTS', posts_path
             %li
-              = link_to 'Logout', destroy_user_session_path, {'data-method' => :delete}
+              = link_to 'LOGOUT', destroy_user_session_path, {'data-method' => :delete}
         %li.divider
       %li.has-dropdown#recipes-dropdown
-        = link_to 'Recipes', '#'
+        = link_to 'RECIPES', '#'
         %ul.dropdown
           %li
-            = link_to 'Breakfast', category_path('breakfast')
+            = link_to 'BREAKFAST', category_path('breakfast')
           %li
-            = link_to 'Lunch/Dinner', category_path('lunch-dinner')
+            = link_to 'LUNCH/DINNER', category_path('lunch-dinner')
           %li
-            = link_to 'Other', category_path('other')
+            = link_to 'OTHER', category_path('other')
           %li
-            = link_to 'Search', search_path
+            = link_to 'SEARCH', search_path
       %li
-        = link_to 'Posts', posts_archive_path
+        = link_to 'POSTS', posts_archive_path
       %li
-        = link_to 'About', about_path
+        = link_to 'ABOUT', about_path
 
 
 
