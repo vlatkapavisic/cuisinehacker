@@ -1,1 +1,1 @@
-http://cuisinehacker.herokuapp.com/
+http://cuisinehacker.herokuapp.com
