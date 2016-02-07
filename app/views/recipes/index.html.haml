@@ -1,23 +1,23 @@
 - content_for :title, 'Recipes index'
 
 %h1 Recipes
-	
-%a.button.secondary.tiny{href: new_recipe_path}	New
+  
+%a.button.secondary.tiny{href: new_recipe_path} New
 
 %table
-	%thead
-		%tr
-			%td{width: 500}
-				Name
-			%td{width: 170}
-				Actions
-	%tbody
-		- @recipes.each do |recipe|
-			%tr
-				%td
-					= link_to recipe.title, recipe
-				%td
-					%a.button.secondary.tiny{href: edit_recipe_path(recipe)} Edit
-					%a.button.secondary.tiny{href: recipe_path(recipe), data: {confirm: 'Are you sure?', method: :delete}, rel: 'nofollow'} Delete
+  %thead
+    %tr
+      %td{width: 500}
+        Name
+      %td{width: 170}
+        Actions
+  %tbody
+    - @recipes.each do |recipe|
+      %tr
+        %td
+          = link_to recipe.title, recipe
+        %td
+          %a.button.secondary.tiny{href: edit_recipe_path(recipe)} Edit
+          %a.button.secondary.tiny{href: recipe_path(recipe), data: {confirm: 'Are you sure?', method: :delete}, rel: 'nofollow'} Delete
 
 

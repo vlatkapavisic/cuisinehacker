@@ -1,40 +1,40 @@
 = form_for recipe do |f|
-	.row
-		.large-10.columns
-			= f.label :title
-			= f.text_field :title 
-	.row
-		.large-10.columns
-			= f.label :description
-			= f.text_area :description, rows: 10
-	.row
-		.large-10.columns
-			= f.label :ingredients
-			= f.text_area :ingredients, rows: 2
-	.row
-		.large-10.columns
-			= f.label :algorithm
-			= f.text_area :algorithm, rows: 10
-	.row
-		.large-10.columns
-			= f.label :photo_url
-			= f.text_field :photo_url
-	.row
-		.large-10.columns
-			= f.label :author
-			= f.text_field :author
-	.row
-		.large-10.columns
-			= f.label :author_url
-			= f.text_field :author_url
-	.row
-		.large-10.columns
-			= f.label :recipe_url
-			= f.text_field :recipe_url
-	.row
-		.large-10.columns
-			= f.label :category
-			= f.select :category_id, options_from_collection_for_select(Category.all, :id, :name, recipe.category_id)
-	.row
-		.large-10.columns
-			= f.submit nil, class: 'button small secondary'
+  .row
+    .large-10.columns
+      = f.label :title
+      = f.text_field :title 
+  .row
+    .large-10.columns
+      = f.label :description
+      = f.text_area :description, rows: 10
+  .row
+    .large-10.columns
+      = f.label :ingredients
+      = f.text_area :ingredients, rows: 2
+  .row
+    .large-10.columns
+      = f.label :algorithm
+      = f.text_area :algorithm, rows: 10
+  .row
+    .large-10.columns
+      = f.label :photo_url
+      = f.text_field :photo_url
+  .row
+    .large-10.columns
+      = f.label :author
+      = f.text_field :author
+  .row
+    .large-10.columns
+      = f.label :author_url
+      = f.text_field :author_url
+  .row
+    .large-10.columns
+      = f.label :recipe_url
+      = f.text_field :recipe_url
+  .row
+    .large-10.columns
+      = f.label :category
+      = f.select :category_id, options_from_collection_for_select(Category.all, :id, :name, recipe.category_id)
+  .row
+    .large-10.columns
+      = f.submit nil, class: 'button small secondary'

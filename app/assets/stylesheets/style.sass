@@ -1,173 +1,173 @@
 body
-	*
-		font-family: 'Roboto Condensed', sans-serif !important
+  *
+    font-family: 'Roboto Condensed', sans-serif !important
 
 #page-content
-	min-height: calc(100vh - 92px)
-	padding-bottom: 60px
-	*
-		line-height: 2 
-	h3
-		line-height: 1.4
-	a
-		color: $lavander-darker
-		&:hover
-			color: $lavander-hover
-		word-wrap: break-word
+  min-height: calc(100vh - 92px)
+  padding-bottom: 60px
+  *
+    line-height: 2 
+  h3
+    line-height: 1.4
+  a
+    color: $lavander-darker
+    &:hover
+      color: $lavander-hover
+    word-wrap: break-word
 
 ::selection
-	background-color: $lavander-dark
+  background-color: $lavander-dark
 
 .alert-box
-	margin: 20px 0
+  margin: 20px 0
 
 a.blog-name
-	font-family: 'Roboto Mono', serif !important
-	color: $lavander-logo !important
-	&:hover
-		color: $lavander-logo-hover !important
+  font-family: 'Roboto Mono', serif !important
+  color: $lavander-logo !important
+  &:hover
+    color: $lavander-logo-hover !important
 
 .top-bar-section 
-	ul 
-		li
-			&#admin-dropdown
-				width: 125px 
-			&#recipes-dropdown
-				width: 115px
-			a
-				transition: background 300ms ease
-				
+  ul 
+    li
+      &#admin-dropdown
+        width: 125px 
+      &#recipes-dropdown
+        width: 115px
+      a
+        transition: background 300ms ease
+        
 .tab-bar, .right-off-canvas-menu
-	background: $lavander
-	ul li a 
-		text-transform: uppercase
-	.right-small
-		border-left: none
-	.menu-icon span::after
-		box-shadow: 0 0 0 1px $lavander-logo, 0 7px 0 1px $lavander-logo, 0 14px 0 1px $lavander-logo 
-	h1 a
-		color: $jet 
-		&:hover
-			color: $monsoon
-	ul.off-canvas-list 
-		li
-			a
-				color: $jet
-				border: none
-				&:hover
-					background: $lavander-dark
-					color: $monsoon
+  background: $lavander
+  ul li a 
+    text-transform: uppercase
+  .right-small
+    border-left: none
+  .menu-icon span::after
+    box-shadow: 0 0 0 1px $lavander-logo, 0 7px 0 1px $lavander-logo, 0 14px 0 1px $lavander-logo 
+  h1 a
+    color: $jet 
+    &:hover
+      color: $monsoon
+  ul.off-canvas-list 
+    li
+      a
+        color: $jet
+        border: none
+        &:hover
+          background: $lavander-dark
+          color: $monsoon
 
 #logout
-	margin-right: 10px
+  margin-right: 10px
 
 h1.title
-	text-align: center
-	border-bottom: 1px solid #B9B9B9
-	padding: 10px 0
-	margin: 30px 0 20px 0
+  text-align: center
+  border-bottom: 1px solid #B9B9B9
+  padding: 10px 0
+  margin: 30px 0 20px 0
 
 footer
-	color: $base 
-	text-align: center
-	border-top: 1px solid rgba(170, 170, 170, 0.5)
-	padding: 5px 0
-	i
-		font-size: 24px
-		margin: 5px
-		color: $base
+  color: $base 
+  text-align: center
+  border-top: 1px solid rgba(170, 170, 170, 0.5)
+  padding: 5px 0
+  i
+    font-size: 24px
+    margin: 5px
+    color: $base
 
 #recipes
-	padding-top: 60px
-	.recipe
-		position: relative
-		a
-			position: relative
-		#recipe-title
-			position: absolute
-			bottom: -1px
-			background-color: rgba(100, 100, 100, 0.5)
-			text-align: center
-			width: 100%
-			padding: 5px
-			a
-				color: white
-		&:hover
-			opacity: 0.5
-			transition: opacity 300ms ease
-			-webkit-transition: opacity 300ms ease
+  padding-top: 60px
+  .recipe
+    position: relative
+    a
+      position: relative
+    #recipe-title
+      position: absolute
+      bottom: -1px
+      background-color: rgba(100, 100, 100, 0.5)
+      text-align: center
+      width: 100%
+      padding: 5px
+      a
+        color: white
+    &:hover
+      opacity: 0.5
+      transition: opacity 300ms ease
+      -webkit-transition: opacity 300ms ease
 
 
 #home-page
-	background: linear-gradient(315deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)) fixed
-	background: -webkit-linear-gradient(315deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)) fixed
-	background: -o-linear-gradient(315deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)) fixed
-	background: -moz-linear-gradient(315deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)) fixed
-	.row:first-of-type
-		margin: 0
-		max-width: none
-	#page-content
-		padding-bottom: 0 !important
-		#code
-			color: rgba(145, 145, 212, 0.56)
-			font-family: 'Roboto Mono', serif !important
-			font-size: 14px
-			padding: 15px
-			word-wrap: break-word
-		#recipes
-			padding: 15px
+  background: linear-gradient(315deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)) fixed
+  background: -webkit-linear-gradient(315deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)) fixed
+  background: -o-linear-gradient(315deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)) fixed
+  background: -moz-linear-gradient(315deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)) fixed
+  .row:first-of-type
+    margin: 0
+    max-width: none
+  #page-content
+    padding-bottom: 0 !important
+    #code
+      color: rgba(145, 145, 212, 0.56)
+      font-family: 'Roboto Mono', serif !important
+      font-size: 14px
+      padding: 15px
+      word-wrap: break-word
+    #recipes
+      padding: 15px
 
 #recipe-page
-	img
-		padding: 20px 0
+  img
+    padding: 20px 0
 
 #post-page, #about-page
-	.content
-		padding-top: 20px
-		img
-			padding: 20px 0
-		li
-			padding: 10px 0
-		p
-			margin: 20px 0
+  .content
+    padding-top: 20px
+    img
+      padding: 20px 0
+    li
+      padding: 10px 0
+    p
+      margin: 20px 0
 
 #posts-archive-page
-	#posts
-		padding-top: 60px
-		li
-			padding-bottom: 5px
+  #posts
+    padding-top: 60px
+    li
+      padding-bottom: 5px
 
 #search-page
-	button
-		border: none
-	h3
-		padding-top: 60px
-	#search-form
-		padding-top: 60px
-		input
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset
-			&:hover, &:focus
-				border-color: #b6b6e2
-				box-shadow: 0 0 5px #b6b6e2 inset 
-		#search-btn
-			background-color: #c8c8ea
-			padding: 0 5px 
-			margin-left: 5px
-			transition-timing-function: ease
-			&:hover, &:active
-				background-color: #a3a3db
-			&:focus	
-				outline: 0
+  button
+    border: none
+  h3
+    padding-top: 60px
+  #search-form
+    padding-top: 60px
+    input
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset
+      &:hover, &:focus
+        border-color: #b6b6e2
+        box-shadow: 0 0 5px #b6b6e2 inset 
+    #search-btn
+      background-color: #c8c8ea
+      padding: 0 5px 
+      margin-left: 5px
+      transition-timing-function: ease
+      &:hover, &:active
+        background-color: #a3a3db
+      &:focus 
+        outline: 0
 
 
 @media only screen and (min-width: 1025px)
-	#home-page #recipes ul li:nth-of-type(n+2)
-		padding-bottom: 0
+  #home-page #recipes ul li:nth-of-type(n+2)
+    padding-bottom: 0
 
 @media only screen and (max-width: 640px)
-	#search-page #search-form #search-btn
-		margin-left: 0
+  #search-page #search-form #search-btn
+    margin-left: 0
 
 @media only screen and (max-width: 350px)
-	h1
-		font-size: 24px
+  h1
+    font-size: 24px

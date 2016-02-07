@@ -1,7 +1,7 @@
 - recipe_list.each do |recipe|
-	%li
-		.recipe
-			%a{href: recipe_path(recipe)}
-				= image_tag recipe.photo_url
-			#recipe-title
-				= link_to recipe.title, recipe_path(recipe)
+  %li
+    .recipe
+      %a{href: recipe_path(recipe)}
+        = image_tag recipe.photo_url
+      #recipe-title
+        = link_to recipe.title, recipe_path(recipe)

@@ -1,35 +1,35 @@
 - content_for :title, @recipe.title
 - content_for :meta_tags do
-	%meta{property: 'og:url', content: request.original_url.split('?').first}
-	%meta{property: 'og:type', content: 'article'}
-	%meta{property: 'og:title', content: @recipe.title}
-	%meta{property: 'og:description', content: truncate(strip_tags(@recipe.description), length: 200, separator: ' ')}
-	%meta{property: 'og:image', content: @recipe.photo_url}
+  %meta{property: 'og:url', content: request.original_url.split('?').first}
+  %meta{property: 'og:type', content: 'article'}
+  %meta{property: 'og:title', content: @recipe.title}
+  %meta{property: 'og:description', content: truncate(strip_tags(@recipe.description), length: 200, separator: ' ')}
+  %meta{property: 'og:image', content: @recipe.photo_url}
 - content_for :body_id, 'recipe-page'
 
 .row
-	.large-10.large-offset-1.columns
-		%h1.title= @recipe.title
-		%h6.subheader.text-center
-			
-			= "#{@recipe.created_at.strftime('%B %d, %Y')} &nbsp;&bullet;&nbsp; In ".html_safe
-			= link_to "#{@recipe.category.name}", category_path(@recipe.category)
-			= '&nbsp;&bullet;&nbsp;Recipe by '.html_safe
-			- if @recipe.original?
-				= "me"
-			- else
-				= link_to @recipe.author, @recipe.author_url, target: '_blank'
-		%p= image_tag @recipe.photo_url
+  .large-10.large-offset-1.columns
+    %h1.title= @recipe.title
+    %h6.subheader.text-center
+      
+      = "#{@recipe.created_at.strftime('%B %d, %Y')} &nbsp;&bullet;&nbsp; In ".html_safe
+      = link_to "#{@recipe.category.name}", category_path(@recipe.category)
+      = '&nbsp;&bullet;&nbsp;Recipe by '.html_safe
+      - if @recipe.original?
+        = "me"
+      - else
+        = link_to @recipe.author, @recipe.author_url, target: '_blank'
+    %p= image_tag @recipe.photo_url
 
-		%p= @recipe.description.html_safe
-				
-		%h3.subheader Ingredients
-		%p= @recipe.ingredients
+    %p= @recipe.description.html_safe
+        
+    %h3.subheader Ingredients
+    %p= @recipe.ingredients
 
-		- if @recipe.original?
-			%h3.subheader Algorithm
-			%p= @recipe.algorithm.html_safe
-		- else
-			%h3.subheader Recipe
-			= link_to @recipe.recipe_url, @recipe.recipe_url, target: '_blank'
+    - if @recipe.original?
+      %h3.subheader Algorithm
+      %p= @recipe.algorithm.html_safe
+    - else
+      %h3.subheader Recipe
+      = link_to @recipe.recipe_url, @recipe.recipe_url, target: '_blank'
 
