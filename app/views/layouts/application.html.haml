@@ -7,6 +7,7 @@
     = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto+Mono'
     = javascript_include_tag 'application', 'data-turbolinks-track': true
     = javascript_include_tag 'vendor/modernizr'
+    = javascript_include_tag '//assets.pinterest.com/js/pinit.js'
     = favicon_link_tag 'fi-laptop.png'
     = favicon_link_tag 'fi-laptop.png', rel: 'apple-touch-icon', type: 'image/png'
     = csrf_meta_tags
@@ -16,6 +17,25 @@
     = content_for :meta_tags
 
   %body{id: (content_for :body_id if content_for? :body_id)}
+    .fb-root
+    :javascript
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.5&appId=1663416127241482";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      !function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+        if(!d.getElementById(id)){
+          js = d.createElement(s); 
+          js.id = id; 
+          js.src = p + '://platform.twitter.com/widgets.js'; 
+          fjs.parentNode.insertBefore(js,fjs);
+        }
+      }(document, 'script', 'twitter-wjs');
+
     .off-canvas-wrap{'data-offcanvas' => ''}
       .inner-wrap
         = render 'layouts/navbar_large'
