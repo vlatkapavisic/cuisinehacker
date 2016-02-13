@@ -42,3 +42,7 @@
         %a{'data-pin-do' => 'buttonPin', 'data-pin-color' => 'white', 'data-image' => @recipe.photo_url, 'data-description' => @recipe.title, 'href' => "https://www.pinterest.com/pin/create/button/?url#{request.original_url.split('?').first}=&media=#{@recipe.photo_url}"}
           = image_tag '//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_20.png'
 
+:coffee
+  $ ->
+    $('.fb-like').click ->
+      $('.fb-like iframe').remove()
