@@ -35,11 +35,6 @@
           fjs.parentNode.insertBefore(js,fjs);
         }
       }(document, 'script', 'twitter-wjs');
-    :coffee
-      $ ->
-        if ($('#recipe-page').length || $('#post-page').length)
-          $('#fb').click -> 
-            $('.social').height($('.social').height() + $('#fb iframe').height())
 
     .off-canvas-wrap{'data-offcanvas' => ''}
       .inner-wrap
