@@ -41,7 +41,7 @@
           if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) 
             $('#fb').css('bottom', '11px') # brute force Safari hack
           $('.fb-like').click ->
-            $('.fb-like iframe').remove()
+            $('#page-content').css('padding-bottom', '340px')
 
     .off-canvas-wrap{'data-offcanvas' => ''}
       .inner-wrap
