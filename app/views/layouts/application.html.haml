@@ -40,8 +40,11 @@
         if ($('#recipe-page').length || $('#post-page').length)
           if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) 
             $('#fb').css('bottom', '11px') # brute force Safari hack
-          $('.fb-like').click ->
-            $('#page-content').css('padding-bottom', '340px')
+          $('.social-icon#fb').click ->
+            if $('.fb-like iframe').hasClass('fb_iframe_widget_lift')
+              $('#page-content').css('padding-bottom', '340px')
+            else
+              $('#page-content').css('padding-bottom', '60px')
 
     .off-canvas-wrap{'data-offcanvas' => ''}
       .inner-wrap
