@@ -3,11 +3,9 @@
 one:
   title: MyString
   description: MyText
-  preparation: MyText
-  category_id: 
+  category_id:
 
 two:
   title: MyString
   description: MyText
-  preparation: MyText
-  category_id: 
+  category_id:
