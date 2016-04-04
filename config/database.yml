@@ -7,10 +7,13 @@ development:
   <<: *default
   database: dev_db
 
-test:
+test: &test
   <<: *default
   database: test_db
 
 production:
   <<: *default
   database: prod_db
+
+cucumber:
+  <<: *test
