@@ -2,15 +2,17 @@ require 'rails_helper'
 
 RSpec.describe CategoriesController, type: :controller do
 
-  before(:each) do
-    Category.create(name: "breakfast")
-    Recipe.create(category_id: 1, title: "Overnight oats")
-  end
+  describe '#show' do
+    before(:each) do
+      get :show, id: 'breakfast'
+    end
 
-  describe "#show" do
-    it "renders the show template" do
-      get :show, id: "breakfast"
-      expect(response).to render_template("show")
+    it 'renders the show template' do
+      expect(response).to render_template('show')
+    end
+
+    it 'displays a list of recipes' do
+      expect(assigns(:recipes).length).to be > 0
     end
   end
 

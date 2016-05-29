@@ -1,0 +1,32 @@
+chia_pudding:
+  title: Chia pudding 
+  description: Low in calories, high in nutrients!
+  category: breakfast
+  photo_url: http://juli-gold.de/wp-content/uploads/2014/01/chia-pudding-31.jpg
+  ingredients: chia seeds, milk, vanilla, sugar, fruit
+  recipe_url: http://minimalistbaker.com/overnight-chocolate-chia-seed-pudding/
+  author: Minimalist Baker
+  author_url: http://minimalistbaker.com
+
+avocado_pasta:
+  title: Avocado pasta
+  description: Creamy and healthy
+  category: lunch_dinner
+  photo_url: http://s.iamafoodblog.com/wp-content/uploads/2015/08/avocado-pasta-9.jpg
+  ingredients: avocado, eggs, pasta
+  recipe_url: http://iamafoodblog.com/avocado-pasta-recipe/
+  author: I am a food blog
+  author_url: http://iamafoodblog.com
+
+lemon_madeleines:
+  title: Lemon madeleines
+  description: When life gives you lemons, make madeleines and read Proust!
+  category: other
+  photo_url: http://www.loveandlemons.com/wp-content/uploads/2016/02/IMG_2016_02_04_07210-cropped.jpg
+  ingredients: lemons, flour, sugar
+  recipe_url: http://www.loveandlemons.com/meyer-lemon-madeleines/
+  author: Love and lemons
+  author_url: http://www.loveandlemons.com
+
+
+
