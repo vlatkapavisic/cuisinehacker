@@ -13,9 +13,9 @@ gem 'foundation-rails', '~> 5.5.2.1'
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise'
 gem 'foundation-icons-sass-rails'
+gem 'rubocop', require: false
 
 group :development do
-  gem 'rspec-rails', '~> 3.0'
   gem 'spring'
 end
 
@@ -23,6 +23,7 @@ group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'rspec-rails', '~> 3.0'
+  gem 'shoulda-matchers', '~> 3.1'
   gem 'capybara'
   gem 'selenium-webdriver'
 end
