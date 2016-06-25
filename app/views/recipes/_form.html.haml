@@ -2,7 +2,7 @@
   .row
     .large-10.columns
       = f.label :title
-      = f.text_field :title 
+      = f.text_field :title
   .row
     .large-10.columns
       = f.label :description
@@ -17,8 +17,8 @@
       = f.text_area :algorithm, rows: 10
   .row
     .large-10.columns
-      = f.label :photo_url
-      = f.text_field :photo_url
+      = f.label :image
+      = f.file_field :image
   .row
     .large-10.columns
       = f.label :author

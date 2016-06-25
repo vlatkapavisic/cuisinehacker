@@ -14,6 +14,8 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'devise'
 gem 'foundation-icons-sass-rails'
 gem 'rubocop', require: false
+gem 'carrierwave'
+gem 'fog-aws'
 
 group :development do
   gem 'spring'

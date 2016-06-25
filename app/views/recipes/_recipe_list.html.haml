@@ -2,6 +2,6 @@
   %li
     .recipe
       %a{href: recipe_path(recipe)}
-        = image_tag recipe.photo_url
+        = image_tag recipe.image.url
       #recipe-title
         = link_to recipe.title, recipe_path(recipe)

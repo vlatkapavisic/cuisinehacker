@@ -18,10 +18,10 @@
         = "me"
       - else
         = link_to @recipe.author, @recipe.author_url, target: '_blank'
-    %p= image_tag @recipe.photo_url
+    %p= image_tag @recipe.image.url
 
     %p= @recipe.description.html_safe
-        
+
     %h3.subheader Ingredients
     %p= @recipe.ingredients
 
