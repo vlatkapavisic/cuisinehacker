@@ -29,16 +29,16 @@
       !function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
         if(!d.getElementById(id)){
-          js = d.createElement(s); 
-          js.id = id; 
-          js.src = p + '://platform.twitter.com/widgets.js'; 
+          js = d.createElement(s);
+          js.id = id;
+          js.src = p + '://platform.twitter.com/widgets.js';
           fjs.parentNode.insertBefore(js,fjs);
         }
       }(document, 'script', 'twitter-wjs');
     :coffee
       $ ->
         if ($('#recipe-page').length || $('#post-page').length)
-          if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) 
+          if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)
             $('#fb').css('bottom', '11px') # brute force Safari hack
 
     .off-canvas-wrap{'data-offcanvas' => ''}

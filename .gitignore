@@ -9,3 +9,4 @@
 /log/*.log
 /tmp
 /public/uploads/tmp
+.DS_Store

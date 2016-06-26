@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :get_posts, only: [:index, :archive]
+  before_action :set_posts, only: [:index, :archive]
   before_action :authenticate_user!, except: [:show, :archive]
 
   def index
@@ -47,7 +47,7 @@ class PostsController < ApplicationController
       @post = Post.friendly.find(params[:id])
     end
 
-    def get_posts
+    def set_posts
       @posts = Post.order(created_at: :desc)
     end
 

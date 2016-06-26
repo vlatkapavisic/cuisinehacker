@@ -1,0 +1,21 @@
+- content_for :title, 'Places index'
+
+%h1 Places
+
+%a.button.secondary.tiny{href: new_place_path} New
+
+%table
+  %thead
+    %tr
+      %td{width: 500}
+        Name
+      %td{width: 170}
+        Actions
+  %tbody
+    - @places.each do |place|
+      %tr
+        %td
+          = link_to place.name, place
+        %td
+          %a.button.secondary.tiny{href: edit_place_path(recipe)} Edit
+          %a.button.secondary.tiny{href: place_path(place), data: {confirm: 'Are you sure?', method: :delete}, rel: 'nofollow'} Delete

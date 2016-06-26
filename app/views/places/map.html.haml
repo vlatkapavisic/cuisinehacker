@@ -1,0 +1,21 @@
+- content_for :title, 'Places'
+- content_for :meta_tags do
+  %meta{property: 'og:url', content: request.original_url.split('?').first}
+  %meta{property: 'og:title', content: 'Places'}
+  %meta{property: 'og:description', content: 'My favourite food-related places in Paris.'}
+  %meta{property: 'og:image', content: ''}
+- content_for :body_id, 'places-map-page'
+
+.row
+  .large-10.large-offset-1.columns
+    %h1.title= 'A moveable feast'
+    %h2.text-center
+      %small
+        My favourite food-related places in Paris.
+
+.row
+  .large-6.large-offset-3.columns
+    #places
+      %ul.no-bullet.text-center
+        - @places.each do |place|
+          %li= link_to place.name, place

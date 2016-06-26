@@ -8,7 +8,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'haml'
+gem 'haml-rails'
 gem 'foundation-rails', '~> 5.5.2.1'
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise'
@@ -16,6 +16,7 @@ gem 'foundation-icons-sass-rails'
 gem 'rubocop', require: false
 gem 'carrierwave'
 gem 'fog-aws'
+gem 'geocoder'
 
 group :development do
   gem 'spring'

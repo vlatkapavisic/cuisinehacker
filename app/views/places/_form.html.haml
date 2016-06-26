@@ -1,0 +1,20 @@
+= form_for @place do |f|
+  .row
+    .large-10.columns
+    = f.label :name
+    = f.text_field :name
+  .row
+    .large-10.columns
+    = f.label :review
+    = f.text_area :review
+  .row
+    .large-10.columns
+    = f.label :address
+    = f.text_field :address
+  .row
+    .large-10.columns
+    = f.label :image
+    = f.file_field :image
+  .row
+    .large-10.columns
+    = f.submit nil, class: 'button small secondary'
