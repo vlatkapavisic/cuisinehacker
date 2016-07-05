@@ -13,56 +13,35 @@
       About this blog
     .content
       %p
-        Salut ! Je suis Vlatka. J'ai 25 ans et j'habite à Paris, France. 
+        Salut, je suis Vlatka. J'ai 25 ans et j'habite à Paris, France (je viens de Croatie).
       = image_tag 'https://www.instagram.com/p/BBNrX4JH2Zj/media?size=l'
       %p
-        Famous French signer Josephine Baker (whose name inspired me to name this blog Cuisine Hacker)
-        = succeed '.' do
-          = link_to 'has deux amours', 'https://www.youtube.com/watch?v=yQVmsSCj2Fg', target: '_blank'
-        I have trois: 
-      %p
-        %ol
-          %li
-            Programming. I graduated Computer Science and work as a full stack web developer. I love being immersed in a programming task, learning new technologies, seeing my code in production. 
-          %li
-            Cooking. I cook two times a day, at least. I'm into healthy, natural food, and the only option to obtain it on a daily basis in Croatia is to rely on yourself and your stove. In more modern countries, there are a lot of healthy restaurants with delivery service. Here we only have a few, and the meals are overpriced. But good news is that locally grown organic food is very much available and affordable. So you can exploit that benefit and profit both financially and health-wise. 
-          %li
-            French. J'adore cette langue. I studied it briefly in high school and got back to it once I graduated form college. I'm studying it by myself, because I don't have time to go to language schools and I prefer to have my own pace. I borrow schoolbooks at 
-            = link_to 'Médiathèque Française', 'http://institutfrancais.hr/category/zagreb-fr/mediatheque/?lang=fr', target: '_blank'
-            and study from them when I find an extra hour in my day. French movies, musique, magazines and websites also help beaucoup. 
-      = image_tag 'https://www.instagram.com/p/BBNrwZ9H2aq/media?size=l'
-      %p
-        The idea to create a food blog came to me spontaneously one day during coffee break at work. I was a junior developer and wanted to get better in the technologies I'm using at work. In programming, the best way to learn is by doing. So I made some wireframes and handed them to our design team lead at 
-        = succeed '.' do
-          = link_to 'Five', 'http://five.agency/', target: '_blank'
-        He gave me some feedback and also a big list of his favourite food blogs, to check them out for inspiration. And that's when I REALLY started to cook. 
+        This blog is a project that combines my two biggest interests, programming and cooking.
+        When I was starting my career as a Ruby on Rails developer, I decided to create a personal project on which I could practice my coding skills and improve my knowledge of the technologies I use at work. I also wanted a channel through which I could share my cooking adventures.
+        I made some sketches, got some feedback from my designer colleagues, and started coding.
       = image_tag 'https://www.instagram.com/p/BBO_p-sn2d8/media?size=l'
       %p
-        Food blogging community is flourishing these days. Instagram is a great platform that made it easy to share one's ideas and edible implementations. So when I discovered food blogging superstars like 
-        = succeed ',' do
-          = link_to 'iamafoodblog', 'http://iamafoodblog.com/', target: '_blank'
-        = link_to 'Minimalist Baker', 'http://minimalistbaker.com/', target: '_blank'
-        and 
-        = succeed ',' do
-          = link_to 'Love & Lemons', 'http://loveandlemons.com', target: '_blank'
-        I spent a lot of time browsing and bookmarking, grocery shopping and developing dans la cuisine. 
-        When something turned out a success, I took a photo of it and wrote a short review. It was inevitable that I soon started creating my own recipes, because I got the "ingredients pairing intuition".
-      %p
-        Cuisine Hacker is a result of numerous weekend coding sessions, brainstorming and collaborating with my colleagues. My company is design-driven, so we have great experts in that domain. I'd ping them for feedback, and they helped me to fine-tune the look of the page. 
-        %br
-        Both a website and a CMS, it's developed using Ruby on Rails, JavaScript, SASS, HAML and Foundation. 
-      %p
-        It is also a work in progress. It’s very simple and can be upgraded in numerous ways.
-      %p
-        Apart form professional development, my motivation for this blog is sharing the cooking experience. I'd like to get more people interested in cooking and crash the prejudices that healthy food is boring and tasteless. 
+        It's built using Ruby on Rails, SASS, HAML and Foundation frontend framework. It's actually a combination of a CMS and a blog. In it, you can find:
+      %ul
+        %li
+          recipes - mostly reviews of the recipes that I like and would recommend. The internet is full of all kinds of recipes; it takes time to find the ones worth repeating. I also post some of my recipes. Recipes are classified in three categories: breakfast, lunch/dinner and other (desserts, snacks) and can be searched by ingredients.
+        %li
+          places - the recommendations of my favourite food-related places in Paris. Just like the internet full of recipes, my dear city is full of various restaurants. I write reviews of my favourite and mark them on a Google map (TODO) so you have a visual overview of my favourite spots. I'm planning to feature restaurants, cafes, food stores...
+        %li
+          posts - my essays on food and healthy lifestyle
       = image_tag 'https://www.instagram.com/p/BBfMb-VH2V8/media?size=l'
       %p
-        Recipes that I came up with have the preparation steps (algorithm) and approximate ingredients' quantities for one slim short person :D You can modify the amounts by intuition. I rarely follow the amounts in the recipes. 
+        As you can notice, I'm into healthy, organic, natural food, prepared with creativity. With this blog, my goal is to crash the prejudices that healthy food is plain, tasteless, or even expensive, and cooking is hard.
       %p
-        On this blog you can also find posts, my essays on themes related to cooking and healthy lifestyle. I'm planning to feature my favourite restaurants and shops and share my tips & tricks e.g. for shopping at Dolac, cooking for a party...
-      %p
-        For the time being, Instagram is my only "followable" platform. 
+        You can take a look "behind the scenes" at the
+        = succeed ',' do
+          = link_to 'GitHub repo', 'https://github.com/vlatkapavisic/cuisinehacker', target: '_blank'
+        and I invite you to follow the updates on
         = succeed '.' do
-          = link_to 'So feel free to show your support there', 'https://www.instagram.com/cuisinehacker/', target: '_blank'
+          = link_to 'Instagram', 'https://www.instagram.com/cuisinehacker/', target: '_blank'
       %p
-        Bienvenue to my open-source kitchen diary et happy cooking! 
+        Happy cooking !
+      = image_tag 'https://www.instagram.com/p/BBNrwZ9H2aq/media?size=l'
+
+
+
