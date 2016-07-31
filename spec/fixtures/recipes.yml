@@ -1,9 +1,8 @@
 chia_pudding:
-  title: Chia pudding 
+  title: Chia pudding
   slug: chia-pudding
   description: Low in calories, high in nutrients!
   category: breakfast
-  photo_url: http://juli-gold.de/wp-content/uploads/2014/01/chia-pudding-31.jpg
   ingredients: chia seeds, milk, vanilla, sugar, fruit
   recipe_url: http://minimalistbaker.com/overnight-chocolate-chia-seed-pudding/
   author: Minimalist Baker
@@ -14,7 +13,6 @@ avocado_pasta:
   slug: avocado-pasta
   description: Creamy and healthy
   category: lunch_dinner
-  photo_url: http://s.iamafoodblog.com/wp-content/uploads/2015/08/avocado-pasta-9.jpg
   ingredients: avocado, eggs, pasta
   recipe_url: http://iamafoodblog.com/avocado-pasta-recipe/
   author: I am a food blog
@@ -25,7 +23,6 @@ lemon_madeleines:
   slug: lemon-madeleines
   description: When life gives you lemons, make madeleines and read Proust!
   category: other
-  photo_url: http://www.loveandlemons.com/wp-content/uploads/2016/02/IMG_2016_02_04_07210-cropped.jpg
   ingredients: lemons, flour, sugar
   recipe_url: http://www.loveandlemons.com/meyer-lemon-madeleines/
   author: Love and lemons
@@ -36,7 +33,6 @@ citrus_chia_bowl:
   slug: citrus-chia-bowl
   description: This citrusy version of chia pudding is refreshing and very light.
   category: breakfast
-  photo_url: https://www.instagram.com/p/BBNi9iQn2TF/media?size=l
   ingredients: chia seeds, milk, maple syrup, lemon juice and zest, salt
   recipe_url: http://www.loveandlemons.com/2016/01/20/sunshine-citrus-chia-bowls/
   author: Love and lemons
@@ -45,9 +41,8 @@ citrus_chia_bowl:
 mango_bean_tortilla:
   title: Mango bean tortilla
   slug: mango-bean-tortilla
-  description: An unusual combination of neutral, sweet, acidic and spicy.  
+  description: An unusual combination of neutral, sweet, acidic and spicy.
   category: lunch_dinner
-  photo_url: https://www.instagram.com/p/BBNch9pn2QX/media?size=l
   ingredients: swiss chard, mango, black beans, jalapeno, white onion, gauda cheese, lime, pepper, tortilla
   recipe_url:  http://www.loveandlemons.com/2012/05/03/black-bean-mango-chard-quesadillas/
   author: Love and lemons

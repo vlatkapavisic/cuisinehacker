@@ -1,0 +1,10 @@
+.nested-fields
+  .field
+    = f.label :address
+    %br
+    = f.text_field :address
+  .field
+    = f.label :working_hours
+    %br
+    = f.text_field :working_hours
+  = link_to_remove_association '-', f, class: 'button tiny secondary'

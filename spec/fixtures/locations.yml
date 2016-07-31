@@ -1,0 +1,9 @@
+season_1:
+  address: 1 rue Dupuis, 75003 Paris
+  working_hours: 10AM - 11PM
+  place: season
+
+season_2:
+  address: 8 rue Dupetit Thouars, 75003 Paris
+  working_hours: 10AM - 11PM
+  place: season

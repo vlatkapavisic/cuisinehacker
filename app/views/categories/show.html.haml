@@ -3,7 +3,7 @@
   %meta{property: 'og:url', content: request.original_url.split('?').first}
   %meta{property: 'og:title', content: @category.name}
   %meta{property: 'og:description', content: "#{@category.name} recipes"}
-  %meta{property: 'og:image', content: @recipes.last.image.url}
+  %meta{property: 'og:image', content: @recipes.last&.image&.url}
 - content_for :body_id, 'category-page'
 
 %h1.title= @category.name

@@ -17,5 +17,5 @@
         %td
           = link_to place.name, place
         %td
-          %a.button.secondary.tiny{href: edit_place_path(recipe)} Edit
+          %a.button.secondary.tiny{href: edit_place_path(place)} Edit
           %a.button.secondary.tiny{href: place_path(place), data: {confirm: 'Are you sure?', method: :delete}, rel: 'nofollow'} Delete

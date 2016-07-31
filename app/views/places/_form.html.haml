@@ -9,8 +9,16 @@
     = f.text_area :review
   .row
     .large-10.columns
-    = f.label :address
-    = f.text_field :address
+    = f.label :website
+    = f.text_field :website
+  .row
+    .large-10.columns
+      #locations
+        = f.label :locations
+        = f.fields_for :locations do |location|
+          = render 'location_fields', f: location
+        .links
+          = link_to_add_association '+', f, :locations, class: 'button tiny secondary'
   .row
     .large-10.columns
     = f.label :image

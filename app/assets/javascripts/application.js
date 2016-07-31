@@ -16,6 +16,9 @@
 //= require "foundation/foundation.dropdown"
 //= require "foundation/foundation.offcanvas"
 //= require "foundation/foundation.topbar"
+//= require underscore
+//= require gmaps/google
+//= require cocoon
 // require turbolinks
 //= require_tree .
 

@@ -5,7 +5,7 @@ RSpec.describe RecipesController, type: :controller do
 
   describe '#show' do
     before(:each) do
-      get :show, id: 'chia-pudding'
+      get :show, params: { id: 'chia-pudding' }
     end
 
     it 'renders the show template' do
@@ -34,14 +34,14 @@ RSpec.describe RecipesController, type: :controller do
     context 'perform the search' do
       context 'with some results' do
         it 'provides the search results' do
-          get :search, term: 'sugar'
+          get :search, params: { term: 'sugar' }
           expect(assigns(:results).length).to eq(2)
         end
       end
 
       context 'without results' do
         it 'provides no search results' do
-          get :search, term: 'white flour'
+          get :search, params: { term: 'white flour' }
           expect(assigns(:results).length).to eq(0)
         end
       end

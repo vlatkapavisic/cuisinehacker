@@ -1,21 +1,32 @@
-- content_for :title, 'Places'
+- content_for :title, 'A moveable feast'
 - content_for :meta_tags do
   %meta{property: 'og:url', content: request.original_url.split('?').first}
-  %meta{property: 'og:title', content: 'Places'}
-  %meta{property: 'og:description', content: 'My favourite food-related places in Paris.'}
+  %meta{property: 'og:title', content: 'A moveable feast'}
+  %meta{property: 'og:description', content: 'My favourite healthy food-related places in Paris.'}
   %meta{property: 'og:image', content: ''}
 - content_for :body_id, 'places-map-page'
 
 .row
   .large-10.large-offset-1.columns
-    %h1.title= 'A moveable feast'
-    %h2.text-center
-      %small
-        My favourite food-related places in Paris.
+    %h1.title
+      A moveable feast
+    %p#description
+      Hemingway wrote: "If you are lucky enough to have lived in Paris as a young man, then wherever you go for the rest of your life, it stays with you, for Paris is a moveable feast." From the gastronomic point of view, Paris is a feast indeed. On every corner, you can find charming places that offer tasty food.Lately, a lot of #healthy #bio #vegan restaurants emerged. To balance things out, there are traditional decadent bakeries. Everything with a great attention to detail and savoir-faire.
+      %br
+      Here's an overview of my favourite food-related places in Paris: restaurants, cafés, pâtisseries, épiceries...
 
-.row
-  .large-6.large-offset-3.columns
+    #map-container
+      #map
+
     #places
       %ul.no-bullet.text-center
         - @places.each do |place|
           %li= link_to place.name, place
+
+:javascript
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers(#{raw @hash.to_json});
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });

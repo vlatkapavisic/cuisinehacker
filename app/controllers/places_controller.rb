@@ -1,7 +1,7 @@
 class PlacesController < ApplicationController
   before_action :set_place, only: [:show, :edit, :update, :destroy]
   before_action :set_places, only: [:index, :map]
-  before_action :authenticate_user!, except: :show
+  before_action :authenticate_user!, except: [:map, :show]
 
   def index
   end
@@ -39,6 +39,12 @@ class PlacesController < ApplicationController
   end
 
   def map
+    @locations = Location.all
+    @hash = Gmaps4rails.build_markers(@locations) do |location, marker|
+      marker.lat location.latitude
+      marker.lng location.longitude
+      marker.infowindow "<a href='#{place_url(location.place)}'>#{location.place.name}</a>"
+    end
   end
 
   private
@@ -51,6 +57,6 @@ class PlacesController < ApplicationController
     end
 
     def place_params
-      params.require(:place).permit(:name, :review, :address, :image)
+      params.require(:place).permit(:name, :review, :image, :website, locations_attributes: [:id, :address, :working_hours, :_destroy])
     end
 end
