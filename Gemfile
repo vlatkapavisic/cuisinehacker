@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
-gem 'rails', '>= 5.0.0.rc1', '< 5.1'
+gem 'rails', '4.1.8'
 gem 'pg'
 gem 'sass-rails'
-gem 'uglifier'
-gem 'coffee-rails'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'haml-rails'
-gem 'foundation-rails'
-gem 'friendly_id'
-gem 'devise', github: 'plataformatec/devise'
+gem 'foundation-rails', '~> 5.5.2.1'
+gem 'friendly_id', '~> 5.1.0'
+gem 'devise'
 gem 'foundation-icons-sass-rails'
 gem 'rubocop', require: false
 gem 'carrierwave'
@@ -27,11 +27,11 @@ end
 
 group :test do
   gem 'cucumber-rails', require: false
-  gem 'rspec-rails'
-  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'shoulda-matchers', '~> 3.1'
   gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'rails-controller-testing'
 end
 
 group :production do

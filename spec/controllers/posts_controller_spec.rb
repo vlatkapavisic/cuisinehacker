@@ -16,7 +16,7 @@ RSpec.describe PostsController, type: :controller do
   end
 
   describe '#show' do
-    before(:each) { get :show, params: { id: 'patisseries-favoris' } }
+    before(:each) { get :show, id: 'patisseries-favoris' }
 
     it 'renders the show template' do
       expect(response).to render_template('show')
