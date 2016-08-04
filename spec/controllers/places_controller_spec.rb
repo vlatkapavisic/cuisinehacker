@@ -16,7 +16,7 @@ RSpec.describe PlacesController, type: :controller do
   end
 
   describe '#show' do
-    before(:each) { get :show, params: { id: 'season' } }
+    before(:each) { get :show, id: 'season' }
 
     it 'renders the show template' do
       expect(response).to render_template('show')

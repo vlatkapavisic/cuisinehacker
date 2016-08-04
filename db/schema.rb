@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160717145836) do
+ActiveRecord::Schema.define(version: 20160626125147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,26 +38,16 @@ ActiveRecord::Schema.define(version: 20160717145836) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
-  create_table "locations", force: true do |t|
-    t.string   "address"
-    t.string   "working_hours"
-    t.integer  "place_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.float    "latitude"
-    t.float    "longitude"
-  end
-
-  add_index "locations", ["place_id"], name: "index_locations_on_place_id", using: :btree
-
   create_table "places", force: true do |t|
     t.string   "name"
     t.text     "review"
+    t.string   "address"
     t.string   "image"
+    t.float    "latitude"
+    t.float    "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
-    t.string   "website"
   end
 
   add_index "places", ["slug"], name: "index_places_on_slug", unique: true, using: :btree

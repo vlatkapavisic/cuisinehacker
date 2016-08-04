@@ -1,4 +1,4 @@
-class Recipe < ApplicationRecord
+class Recipe < ActiveRecord::Base
   include HasSluggedTitle
   mount_uploader :image, ImageUploader
 

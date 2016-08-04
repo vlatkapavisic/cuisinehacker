@@ -4,7 +4,7 @@ RSpec.describe CategoriesController, type: :controller do
   fixtures :categories
 
   describe '#show' do
-    before(:each) { get :show, params: { id: 'breakfast' } }
+    before(:each) { get :show, id: 'breakfast' }
 
     it 'renders the show template' do
       expect(response).to render_template('show')

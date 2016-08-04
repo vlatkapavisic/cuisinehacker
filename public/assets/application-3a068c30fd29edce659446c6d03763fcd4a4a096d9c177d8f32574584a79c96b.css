@@ -1,0 +1,2046 @@
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.2.3
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+/* line 2, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+body * {
+  font-family: "Roboto Condensed", sans-serif !important;
+}
+
+/* line 5, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#page-content {
+  min-height: calc(100vh - 92px);
+  padding-bottom: 60px;
+}
+/* line 8, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#page-content * {
+  line-height: 2;
+}
+/* line 10, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#page-content h3 {
+  line-height: 1.4;
+}
+/* line 12, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#page-content a {
+  color: #6e6ec4;
+  word-wrap: break-word;
+}
+/* line 14, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#page-content a:hover {
+  color: #a4a4da;
+}
+
+/* line 18, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+::selection {
+  background-color: #dbdbf0;
+}
+
+/* line 21, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+.alert-box {
+  margin: 20px 0;
+}
+
+/* line 24, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+a.blog-name {
+  font-family: "Lobster Two", cursive !important;
+  font-size: 20px;
+  color: #6A6AA9 !important;
+}
+/* line 28, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+a.blog-name:hover {
+  color: #9e9ec7 !important;
+}
+
+/* line 34, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+.top-bar-section ul li#admin-dropdown {
+  width: 125px;
+}
+/* line 36, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+.top-bar-section ul li#recipes-dropdown {
+  width: 115px;
+}
+/* line 38, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+.top-bar-section ul li a {
+  transition: background 300ms ease;
+}
+
+/* line 41, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+.tab-bar, .right-off-canvas-menu {
+  background: #ededf8;
+}
+/* line 43, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+.tab-bar .right-small, .right-off-canvas-menu .right-small {
+  border-left: none;
+}
+/* line 45, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+.tab-bar .menu-icon span::after, .right-off-canvas-menu .menu-icon span::after {
+  box-shadow: 0 0 0 1px #6A6AA9, 0 7px 0 1px #6A6AA9, 0 14px 0 1px #6A6AA9;
+}
+/* line 47, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+.tab-bar h1 a, .right-off-canvas-menu h1 a {
+  color: #222222;
+}
+/* line 49, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+.tab-bar h1 a:hover, .right-off-canvas-menu h1 a:hover {
+  color: #777777;
+}
+/* line 53, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+.tab-bar ul.off-canvas-list li a, .right-off-canvas-menu ul.off-canvas-list li a {
+  color: #222222;
+  border: none;
+}
+/* line 56, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+.tab-bar ul.off-canvas-list li a:hover, .right-off-canvas-menu ul.off-canvas-list li a:hover {
+  background: #dbdbf0;
+  color: #777777;
+}
+
+/* line 60, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#logout {
+  margin-right: 10px;
+}
+
+/* line 63, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+h1.title {
+  text-align: center;
+  border-bottom: 1px solid #B9B9B9;
+  padding: 10px 0;
+  margin: 30px 0 20px 0;
+}
+
+/* line 69, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+footer {
+  color: #AAAAAA;
+  text-align: center;
+  border-top: 1px solid rgba(170, 170, 170, 0.5);
+  padding: 5px 0;
+}
+/* line 74, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+footer i {
+  font-size: 24px;
+  margin: 5px;
+  color: #AAAAAA;
+}
+
+/* line 79, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#recipes {
+  padding-top: 60px;
+}
+/* line 81, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#recipes .recipe {
+  position: relative;
+}
+/* line 83, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#recipes .recipe a {
+  position: relative;
+}
+/* line 85, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#recipes .recipe #recipe-title {
+  position: absolute;
+  bottom: -1px;
+  background-color: rgba(100, 100, 100, 0.5);
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+}
+/* line 92, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#recipes .recipe #recipe-title a {
+  color: white;
+}
+/* line 94, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#recipes .recipe:hover {
+  opacity: 0.5;
+  transition: opacity 300ms ease;
+  -webkit-transition: opacity 300ms ease;
+}
+
+/* line 99, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+.social {
+  padding-top: 40px;
+}
+/* line 101, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+.social .social-icon {
+  display: inline;
+  position: relative;
+  padding-right: 5px;
+}
+/* line 105, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+.social .social-icon .fb-like {
+  overflow: hidden !important;
+}
+
+/* line 108, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#home-page {
+  background: linear-gradient(135deg, black, rgba(0, 0, 0, 0.5)) fixed;
+}
+/* line 110, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#home-page .row:first-of-type {
+  margin: 0;
+  max-width: none;
+}
+/* line 113, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#home-page #page-content {
+  padding-bottom: 0 !important;
+}
+/* line 115, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#home-page #page-content #code {
+  color: rgba(145, 145, 212, 0.56);
+  font-family: "Roboto Mono", serif !important;
+  font-size: 14px;
+  padding: 15px;
+  word-wrap: break-word;
+}
+/* line 121, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#home-page #page-content #recipes {
+  padding: 15px;
+}
+
+/* line 125, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#recipe-page img, #place-page img {
+  padding: 20px 0;
+}
+
+/* line 129, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#post-page .content, #about-page .content {
+  padding-top: 20px;
+}
+/* line 131, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#post-page .content img, #about-page .content img {
+  padding: 20px 0;
+}
+/* line 133, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#post-page .content li, #about-page .content li {
+  padding: 10px 0;
+}
+/* line 135, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#post-page .content p, #about-page .content p {
+  margin: 20px 0;
+}
+
+/* line 139, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#posts-archive-page #posts li, #posts-archive-page #places li, #map-page #posts li, #map-page #places li {
+  padding-bottom: 5px;
+}
+
+/* line 143, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#search-page button {
+  border: none;
+}
+/* line 145, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#search-page h3 {
+  padding-top: 60px;
+}
+/* line 147, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#search-page #search-form {
+  padding-top: 60px;
+}
+/* line 149, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#search-page #search-form input {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
+}
+/* line 151, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#search-page #search-form input:hover, #search-page #search-form input:focus {
+  border-color: #b6b6e2;
+  box-shadow: 0 0 5px #b6b6e2 inset;
+}
+/* line 154, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#search-page #search-form #search-btn {
+  background-color: #c8c8ea;
+  padding: 0 5px;
+  margin-left: 5px;
+  transition-timing-function: ease;
+}
+/* line 159, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#search-page #search-form #search-btn:hover, #search-page #search-form #search-btn:active {
+  background-color: #a3a3db;
+}
+/* line 161, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#search-page #search-form #search-btn:focus {
+  outline: 0;
+}
+
+/* line 165, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#places-map-page #description {
+  padding-top: 20px;
+}
+/* line 167, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#places-map-page #map-container {
+  width: 800px;
+  padding-bottom: 20px;
+}
+/* line 170, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#places-map-page #map-container #map {
+  width: 800px;
+  height: 400px;
+}
+
+/* line 175, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#place-page img {
+  width: 100%;
+}
+/* line 177, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+#place-page ul.vcard {
+  margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 1025px) {
+  /* line 182, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+  #home-page #recipes ul li:nth-of-type(n+2) {
+    padding-bottom: 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  /* line 186, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+  #search-page #search-form #search-btn {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 350px) {
+  /* line 190, /Users/vlatkapavisic/cuisinehacker/app/assets/stylesheets/style.sass */
+  h1 {
+    font-size: 24px;
+  }
+}
+/*
+ * Foundation Icons v 3.0
+ * Made by ZURB 2013 http://zurb.com/playground/foundation-icon-fonts-3
+ * MIT License
+ */
+@font-face {
+  font-family: "foundation-icons";
+  src: url(/assets/foundation-icons-9189cd8788a2d42f89ecb72f08d55cc366a3abc441c3413d9ceca66ec3144e46.eot);
+  src: url(/assets/foundation-icons-9189cd8788a2d42f89ecb72f08d55cc366a3abc441c3413d9ceca66ec3144e46.eot?#iefix) format("embedded-opentype"), url(/assets/foundation-icons-8c44c3feedae5331a281278ea3ba91d2255928a2f3010d316d6fbb9052e0c2ec.woff) format("woff"), url(/assets/foundation-icons-7e1dd03dd4ce90b658052554cd7459df16716717389a552fa4c6d56a5f8933e6.ttf) format("truetype"), url(/assets/foundation-icons-ba2d122321cfede034deb120f35abc790a023d29065c36bd53e57039897ad052.svg#fontcustom) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 18, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-address-book:before,
+.fi-alert:before,
+.fi-align-center:before,
+.fi-align-justify:before,
+.fi-align-left:before,
+.fi-align-right:before,
+.fi-anchor:before,
+.fi-annotate:before,
+.fi-archive:before,
+.fi-arrow-down:before,
+.fi-arrow-left:before,
+.fi-arrow-right:before,
+.fi-arrow-up:before,
+.fi-arrows-compress:before,
+.fi-arrows-expand:before,
+.fi-arrows-in:before,
+.fi-arrows-out:before,
+.fi-asl:before,
+.fi-asterisk:before,
+.fi-at-sign:before,
+.fi-background-color:before,
+.fi-battery-empty:before,
+.fi-battery-full:before,
+.fi-battery-half:before,
+.fi-bitcoin-circle:before,
+.fi-bitcoin:before,
+.fi-blind:before,
+.fi-bluetooth:before,
+.fi-bold:before,
+.fi-book-bookmark:before,
+.fi-book:before,
+.fi-bookmark:before,
+.fi-braille:before,
+.fi-burst-new:before,
+.fi-burst-sale:before,
+.fi-burst:before,
+.fi-calendar:before,
+.fi-camera:before,
+.fi-check:before,
+.fi-checkbox:before,
+.fi-clipboard-notes:before,
+.fi-clipboard-pencil:before,
+.fi-clipboard:before,
+.fi-clock:before,
+.fi-closed-caption:before,
+.fi-cloud:before,
+.fi-comment-minus:before,
+.fi-comment-quotes:before,
+.fi-comment-video:before,
+.fi-comment:before,
+.fi-comments:before,
+.fi-compass:before,
+.fi-contrast:before,
+.fi-credit-card:before,
+.fi-crop:before,
+.fi-crown:before,
+.fi-css3:before,
+.fi-database:before,
+.fi-die-five:before,
+.fi-die-four:before,
+.fi-die-one:before,
+.fi-die-six:before,
+.fi-die-three:before,
+.fi-die-two:before,
+.fi-dislike:before,
+.fi-dollar-bill:before,
+.fi-dollar:before,
+.fi-download:before,
+.fi-eject:before,
+.fi-elevator:before,
+.fi-euro:before,
+.fi-eye:before,
+.fi-fast-forward:before,
+.fi-female-symbol:before,
+.fi-female:before,
+.fi-filter:before,
+.fi-first-aid:before,
+.fi-flag:before,
+.fi-folder-add:before,
+.fi-folder-lock:before,
+.fi-folder:before,
+.fi-foot:before,
+.fi-foundation:before,
+.fi-graph-bar:before,
+.fi-graph-horizontal:before,
+.fi-graph-pie:before,
+.fi-graph-trend:before,
+.fi-guide-dog:before,
+.fi-hearing-aid:before,
+.fi-heart:before,
+.fi-home:before,
+.fi-html5:before,
+.fi-indent-less:before,
+.fi-indent-more:before,
+.fi-info:before,
+.fi-italic:before,
+.fi-key:before,
+.fi-laptop:before,
+.fi-layout:before,
+.fi-lightbulb:before,
+.fi-like:before,
+.fi-link:before,
+.fi-list-bullet:before,
+.fi-list-number:before,
+.fi-list-thumbnails:before,
+.fi-list:before,
+.fi-lock:before,
+.fi-loop:before,
+.fi-magnifying-glass:before,
+.fi-mail:before,
+.fi-male-female:before,
+.fi-male-symbol:before,
+.fi-male:before,
+.fi-map:before,
+.fi-marker:before,
+.fi-megaphone:before,
+.fi-microphone:before,
+.fi-minus-circle:before,
+.fi-minus:before,
+.fi-mobile-signal:before,
+.fi-mobile:before,
+.fi-monitor:before,
+.fi-mountains:before,
+.fi-music:before,
+.fi-next:before,
+.fi-no-dogs:before,
+.fi-no-smoking:before,
+.fi-page-add:before,
+.fi-page-copy:before,
+.fi-page-csv:before,
+.fi-page-delete:before,
+.fi-page-doc:before,
+.fi-page-edit:before,
+.fi-page-export-csv:before,
+.fi-page-export-doc:before,
+.fi-page-export-pdf:before,
+.fi-page-export:before,
+.fi-page-filled:before,
+.fi-page-multiple:before,
+.fi-page-pdf:before,
+.fi-page-remove:before,
+.fi-page-search:before,
+.fi-page:before,
+.fi-paint-bucket:before,
+.fi-paperclip:before,
+.fi-pause:before,
+.fi-paw:before,
+.fi-paypal:before,
+.fi-pencil:before,
+.fi-photo:before,
+.fi-play-circle:before,
+.fi-play-video:before,
+.fi-play:before,
+.fi-plus:before,
+.fi-pound:before,
+.fi-power:before,
+.fi-previous:before,
+.fi-price-tag:before,
+.fi-pricetag-multiple:before,
+.fi-print:before,
+.fi-prohibited:before,
+.fi-projection-screen:before,
+.fi-puzzle:before,
+.fi-quote:before,
+.fi-record:before,
+.fi-refresh:before,
+.fi-results-demographics:before,
+.fi-results:before,
+.fi-rewind-ten:before,
+.fi-rewind:before,
+.fi-rss:before,
+.fi-safety-cone:before,
+.fi-save:before,
+.fi-share:before,
+.fi-sheriff-badge:before,
+.fi-shield:before,
+.fi-shopping-bag:before,
+.fi-shopping-cart:before,
+.fi-shuffle:before,
+.fi-skull:before,
+.fi-social-500px:before,
+.fi-social-adobe:before,
+.fi-social-amazon:before,
+.fi-social-android:before,
+.fi-social-apple:before,
+.fi-social-behance:before,
+.fi-social-bing:before,
+.fi-social-blogger:before,
+.fi-social-delicious:before,
+.fi-social-designer-news:before,
+.fi-social-deviant-art:before,
+.fi-social-digg:before,
+.fi-social-dribbble:before,
+.fi-social-drive:before,
+.fi-social-dropbox:before,
+.fi-social-evernote:before,
+.fi-social-facebook:before,
+.fi-social-flickr:before,
+.fi-social-forrst:before,
+.fi-social-foursquare:before,
+.fi-social-game-center:before,
+.fi-social-github:before,
+.fi-social-google-plus:before,
+.fi-social-hacker-news:before,
+.fi-social-hi5:before,
+.fi-social-instagram:before,
+.fi-social-joomla:before,
+.fi-social-lastfm:before,
+.fi-social-linkedin:before,
+.fi-social-medium:before,
+.fi-social-myspace:before,
+.fi-social-orkut:before,
+.fi-social-path:before,
+.fi-social-picasa:before,
+.fi-social-pinterest:before,
+.fi-social-rdio:before,
+.fi-social-reddit:before,
+.fi-social-skillshare:before,
+.fi-social-skype:before,
+.fi-social-smashing-mag:before,
+.fi-social-snapchat:before,
+.fi-social-spotify:before,
+.fi-social-squidoo:before,
+.fi-social-stack-overflow:before,
+.fi-social-steam:before,
+.fi-social-stumbleupon:before,
+.fi-social-treehouse:before,
+.fi-social-tumblr:before,
+.fi-social-twitter:before,
+.fi-social-vimeo:before,
+.fi-social-windows:before,
+.fi-social-xbox:before,
+.fi-social-yahoo:before,
+.fi-social-yelp:before,
+.fi-social-youtube:before,
+.fi-social-zerply:before,
+.fi-social-zurb:before,
+.fi-sound:before,
+.fi-star:before,
+.fi-stop:before,
+.fi-strikethrough:before,
+.fi-subscript:before,
+.fi-superscript:before,
+.fi-tablet-landscape:before,
+.fi-tablet-portrait:before,
+.fi-target-two:before,
+.fi-target:before,
+.fi-telephone-accessible:before,
+.fi-telephone:before,
+.fi-text-color:before,
+.fi-thumbnails:before,
+.fi-ticket:before,
+.fi-torso-business:before,
+.fi-torso-female:before,
+.fi-torso:before,
+.fi-torsos-all-female:before,
+.fi-torsos-all:before,
+.fi-torsos-female-male:before,
+.fi-torsos-male-female:before,
+.fi-torsos:before,
+.fi-trash:before,
+.fi-trees:before,
+.fi-trophy:before,
+.fi-underline:before,
+.fi-universal-access:before,
+.fi-unlink:before,
+.fi-unlock:before,
+.fi-upload-cloud:before,
+.fi-upload:before,
+.fi-usb:before,
+.fi-video:before,
+.fi-volume-none:before,
+.fi-volume-strike:before,
+.fi-volume:before,
+.fi-web:before,
+.fi-wheelchair:before,
+.fi-widget:before,
+.fi-wrench:before,
+.fi-x-circle:before,
+.fi-x:before,
+.fi-yen:before,
+.fi-zoom-in:before,
+.fi-zoom-out:before {
+  font-family: "foundation-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+/* line 312, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-address-book:before {
+  content: "\f100";
+}
+
+/* line 313, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-alert:before {
+  content: "\f101";
+}
+
+/* line 314, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-align-center:before {
+  content: "\f102";
+}
+
+/* line 315, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-align-justify:before {
+  content: "\f103";
+}
+
+/* line 316, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-align-left:before {
+  content: "\f104";
+}
+
+/* line 317, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-align-right:before {
+  content: "\f105";
+}
+
+/* line 318, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-anchor:before {
+  content: "\f106";
+}
+
+/* line 319, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-annotate:before {
+  content: "\f107";
+}
+
+/* line 320, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-archive:before {
+  content: "\f108";
+}
+
+/* line 321, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-arrow-down:before {
+  content: "\f109";
+}
+
+/* line 322, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-arrow-left:before {
+  content: "\f10a";
+}
+
+/* line 323, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-arrow-right:before {
+  content: "\f10b";
+}
+
+/* line 324, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-arrow-up:before {
+  content: "\f10c";
+}
+
+/* line 325, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-arrows-compress:before {
+  content: "\f10d";
+}
+
+/* line 326, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-arrows-expand:before {
+  content: "\f10e";
+}
+
+/* line 327, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-arrows-in:before {
+  content: "\f10f";
+}
+
+/* line 328, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-arrows-out:before {
+  content: "\f110";
+}
+
+/* line 329, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-asl:before {
+  content: "\f111";
+}
+
+/* line 330, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-asterisk:before {
+  content: "\f112";
+}
+
+/* line 331, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-at-sign:before {
+  content: "\f113";
+}
+
+/* line 332, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-background-color:before {
+  content: "\f114";
+}
+
+/* line 333, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-battery-empty:before {
+  content: "\f115";
+}
+
+/* line 334, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-battery-full:before {
+  content: "\f116";
+}
+
+/* line 335, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-battery-half:before {
+  content: "\f117";
+}
+
+/* line 336, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-bitcoin-circle:before {
+  content: "\f118";
+}
+
+/* line 337, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-bitcoin:before {
+  content: "\f119";
+}
+
+/* line 338, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-blind:before {
+  content: "\f11a";
+}
+
+/* line 339, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-bluetooth:before {
+  content: "\f11b";
+}
+
+/* line 340, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-bold:before {
+  content: "\f11c";
+}
+
+/* line 341, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-book-bookmark:before {
+  content: "\f11d";
+}
+
+/* line 342, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-book:before {
+  content: "\f11e";
+}
+
+/* line 343, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-bookmark:before {
+  content: "\f11f";
+}
+
+/* line 344, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-braille:before {
+  content: "\f120";
+}
+
+/* line 345, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-burst-new:before {
+  content: "\f121";
+}
+
+/* line 346, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-burst-sale:before {
+  content: "\f122";
+}
+
+/* line 347, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-burst:before {
+  content: "\f123";
+}
+
+/* line 348, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-calendar:before {
+  content: "\f124";
+}
+
+/* line 349, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-camera:before {
+  content: "\f125";
+}
+
+/* line 350, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-check:before {
+  content: "\f126";
+}
+
+/* line 351, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-checkbox:before {
+  content: "\f127";
+}
+
+/* line 352, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-clipboard-notes:before {
+  content: "\f128";
+}
+
+/* line 353, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-clipboard-pencil:before {
+  content: "\f129";
+}
+
+/* line 354, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-clipboard:before {
+  content: "\f12a";
+}
+
+/* line 355, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-clock:before {
+  content: "\f12b";
+}
+
+/* line 356, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-closed-caption:before {
+  content: "\f12c";
+}
+
+/* line 357, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-cloud:before {
+  content: "\f12d";
+}
+
+/* line 358, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-comment-minus:before {
+  content: "\f12e";
+}
+
+/* line 359, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-comment-quotes:before {
+  content: "\f12f";
+}
+
+/* line 360, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-comment-video:before {
+  content: "\f130";
+}
+
+/* line 361, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-comment:before {
+  content: "\f131";
+}
+
+/* line 362, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-comments:before {
+  content: "\f132";
+}
+
+/* line 363, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-compass:before {
+  content: "\f133";
+}
+
+/* line 364, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-contrast:before {
+  content: "\f134";
+}
+
+/* line 365, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-credit-card:before {
+  content: "\f135";
+}
+
+/* line 366, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-crop:before {
+  content: "\f136";
+}
+
+/* line 367, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-crown:before {
+  content: "\f137";
+}
+
+/* line 368, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-css3:before {
+  content: "\f138";
+}
+
+/* line 369, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-database:before {
+  content: "\f139";
+}
+
+/* line 370, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-die-five:before {
+  content: "\f13a";
+}
+
+/* line 371, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-die-four:before {
+  content: "\f13b";
+}
+
+/* line 372, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-die-one:before {
+  content: "\f13c";
+}
+
+/* line 373, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-die-six:before {
+  content: "\f13d";
+}
+
+/* line 374, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-die-three:before {
+  content: "\f13e";
+}
+
+/* line 375, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-die-two:before {
+  content: "\f13f";
+}
+
+/* line 376, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-dislike:before {
+  content: "\f140";
+}
+
+/* line 377, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-dollar-bill:before {
+  content: "\f141";
+}
+
+/* line 378, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-dollar:before {
+  content: "\f142";
+}
+
+/* line 379, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-download:before {
+  content: "\f143";
+}
+
+/* line 380, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-eject:before {
+  content: "\f144";
+}
+
+/* line 381, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-elevator:before {
+  content: "\f145";
+}
+
+/* line 382, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-euro:before {
+  content: "\f146";
+}
+
+/* line 383, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-eye:before {
+  content: "\f147";
+}
+
+/* line 384, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-fast-forward:before {
+  content: "\f148";
+}
+
+/* line 385, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-female-symbol:before {
+  content: "\f149";
+}
+
+/* line 386, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-female:before {
+  content: "\f14a";
+}
+
+/* line 387, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-filter:before {
+  content: "\f14b";
+}
+
+/* line 388, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-first-aid:before {
+  content: "\f14c";
+}
+
+/* line 389, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-flag:before {
+  content: "\f14d";
+}
+
+/* line 390, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-folder-add:before {
+  content: "\f14e";
+}
+
+/* line 391, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-folder-lock:before {
+  content: "\f14f";
+}
+
+/* line 392, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-folder:before {
+  content: "\f150";
+}
+
+/* line 393, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-foot:before {
+  content: "\f151";
+}
+
+/* line 394, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-foundation:before {
+  content: "\f152";
+}
+
+/* line 395, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-graph-bar:before {
+  content: "\f153";
+}
+
+/* line 396, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-graph-horizontal:before {
+  content: "\f154";
+}
+
+/* line 397, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-graph-pie:before {
+  content: "\f155";
+}
+
+/* line 398, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-graph-trend:before {
+  content: "\f156";
+}
+
+/* line 399, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-guide-dog:before {
+  content: "\f157";
+}
+
+/* line 400, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-hearing-aid:before {
+  content: "\f158";
+}
+
+/* line 401, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-heart:before {
+  content: "\f159";
+}
+
+/* line 402, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-home:before {
+  content: "\f15a";
+}
+
+/* line 403, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-html5:before {
+  content: "\f15b";
+}
+
+/* line 404, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-indent-less:before {
+  content: "\f15c";
+}
+
+/* line 405, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-indent-more:before {
+  content: "\f15d";
+}
+
+/* line 406, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-info:before {
+  content: "\f15e";
+}
+
+/* line 407, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-italic:before {
+  content: "\f15f";
+}
+
+/* line 408, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-key:before {
+  content: "\f160";
+}
+
+/* line 409, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-laptop:before {
+  content: "\f161";
+}
+
+/* line 410, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-layout:before {
+  content: "\f162";
+}
+
+/* line 411, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-lightbulb:before {
+  content: "\f163";
+}
+
+/* line 412, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-like:before {
+  content: "\f164";
+}
+
+/* line 413, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-link:before {
+  content: "\f165";
+}
+
+/* line 414, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-list-bullet:before {
+  content: "\f166";
+}
+
+/* line 415, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-list-number:before {
+  content: "\f167";
+}
+
+/* line 416, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-list-thumbnails:before {
+  content: "\f168";
+}
+
+/* line 417, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-list:before {
+  content: "\f169";
+}
+
+/* line 418, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-lock:before {
+  content: "\f16a";
+}
+
+/* line 419, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-loop:before {
+  content: "\f16b";
+}
+
+/* line 420, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-magnifying-glass:before {
+  content: "\f16c";
+}
+
+/* line 421, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-mail:before {
+  content: "\f16d";
+}
+
+/* line 422, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-male-female:before {
+  content: "\f16e";
+}
+
+/* line 423, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-male-symbol:before {
+  content: "\f16f";
+}
+
+/* line 424, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-male:before {
+  content: "\f170";
+}
+
+/* line 425, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-map:before {
+  content: "\f171";
+}
+
+/* line 426, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-marker:before {
+  content: "\f172";
+}
+
+/* line 427, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-megaphone:before {
+  content: "\f173";
+}
+
+/* line 428, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-microphone:before {
+  content: "\f174";
+}
+
+/* line 429, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-minus-circle:before {
+  content: "\f175";
+}
+
+/* line 430, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-minus:before {
+  content: "\f176";
+}
+
+/* line 431, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-mobile-signal:before {
+  content: "\f177";
+}
+
+/* line 432, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-mobile:before {
+  content: "\f178";
+}
+
+/* line 433, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-monitor:before {
+  content: "\f179";
+}
+
+/* line 434, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-mountains:before {
+  content: "\f17a";
+}
+
+/* line 435, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-music:before {
+  content: "\f17b";
+}
+
+/* line 436, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-next:before {
+  content: "\f17c";
+}
+
+/* line 437, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-no-dogs:before {
+  content: "\f17d";
+}
+
+/* line 438, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-no-smoking:before {
+  content: "\f17e";
+}
+
+/* line 439, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page-add:before {
+  content: "\f17f";
+}
+
+/* line 440, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page-copy:before {
+  content: "\f180";
+}
+
+/* line 441, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page-csv:before {
+  content: "\f181";
+}
+
+/* line 442, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page-delete:before {
+  content: "\f182";
+}
+
+/* line 443, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page-doc:before {
+  content: "\f183";
+}
+
+/* line 444, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page-edit:before {
+  content: "\f184";
+}
+
+/* line 445, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page-export-csv:before {
+  content: "\f185";
+}
+
+/* line 446, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page-export-doc:before {
+  content: "\f186";
+}
+
+/* line 447, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page-export-pdf:before {
+  content: "\f187";
+}
+
+/* line 448, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page-export:before {
+  content: "\f188";
+}
+
+/* line 449, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page-filled:before {
+  content: "\f189";
+}
+
+/* line 450, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page-multiple:before {
+  content: "\f18a";
+}
+
+/* line 451, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page-pdf:before {
+  content: "\f18b";
+}
+
+/* line 452, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page-remove:before {
+  content: "\f18c";
+}
+
+/* line 453, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page-search:before {
+  content: "\f18d";
+}
+
+/* line 454, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-page:before {
+  content: "\f18e";
+}
+
+/* line 455, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-paint-bucket:before {
+  content: "\f18f";
+}
+
+/* line 456, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-paperclip:before {
+  content: "\f190";
+}
+
+/* line 457, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-pause:before {
+  content: "\f191";
+}
+
+/* line 458, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-paw:before {
+  content: "\f192";
+}
+
+/* line 459, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-paypal:before {
+  content: "\f193";
+}
+
+/* line 460, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-pencil:before {
+  content: "\f194";
+}
+
+/* line 461, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-photo:before {
+  content: "\f195";
+}
+
+/* line 462, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-play-circle:before {
+  content: "\f196";
+}
+
+/* line 463, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-play-video:before {
+  content: "\f197";
+}
+
+/* line 464, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-play:before {
+  content: "\f198";
+}
+
+/* line 465, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-plus:before {
+  content: "\f199";
+}
+
+/* line 466, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-pound:before {
+  content: "\f19a";
+}
+
+/* line 467, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-power:before {
+  content: "\f19b";
+}
+
+/* line 468, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-previous:before {
+  content: "\f19c";
+}
+
+/* line 469, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-price-tag:before {
+  content: "\f19d";
+}
+
+/* line 470, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-pricetag-multiple:before {
+  content: "\f19e";
+}
+
+/* line 471, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-print:before {
+  content: "\f19f";
+}
+
+/* line 472, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-prohibited:before {
+  content: "\f1a0";
+}
+
+/* line 473, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-projection-screen:before {
+  content: "\f1a1";
+}
+
+/* line 474, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-puzzle:before {
+  content: "\f1a2";
+}
+
+/* line 475, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-quote:before {
+  content: "\f1a3";
+}
+
+/* line 476, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-record:before {
+  content: "\f1a4";
+}
+
+/* line 477, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-refresh:before {
+  content: "\f1a5";
+}
+
+/* line 478, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-results-demographics:before {
+  content: "\f1a6";
+}
+
+/* line 479, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-results:before {
+  content: "\f1a7";
+}
+
+/* line 480, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-rewind-ten:before {
+  content: "\f1a8";
+}
+
+/* line 481, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-rewind:before {
+  content: "\f1a9";
+}
+
+/* line 482, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-rss:before {
+  content: "\f1aa";
+}
+
+/* line 483, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-safety-cone:before {
+  content: "\f1ab";
+}
+
+/* line 484, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-save:before {
+  content: "\f1ac";
+}
+
+/* line 485, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-share:before {
+  content: "\f1ad";
+}
+
+/* line 486, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-sheriff-badge:before {
+  content: "\f1ae";
+}
+
+/* line 487, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-shield:before {
+  content: "\f1af";
+}
+
+/* line 488, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-shopping-bag:before {
+  content: "\f1b0";
+}
+
+/* line 489, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-shopping-cart:before {
+  content: "\f1b1";
+}
+
+/* line 490, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-shuffle:before {
+  content: "\f1b2";
+}
+
+/* line 491, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-skull:before {
+  content: "\f1b3";
+}
+
+/* line 492, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-500px:before {
+  content: "\f1b4";
+}
+
+/* line 493, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-adobe:before {
+  content: "\f1b5";
+}
+
+/* line 494, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-amazon:before {
+  content: "\f1b6";
+}
+
+/* line 495, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-android:before {
+  content: "\f1b7";
+}
+
+/* line 496, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-apple:before {
+  content: "\f1b8";
+}
+
+/* line 497, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-behance:before {
+  content: "\f1b9";
+}
+
+/* line 498, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-bing:before {
+  content: "\f1ba";
+}
+
+/* line 499, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-blogger:before {
+  content: "\f1bb";
+}
+
+/* line 500, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-delicious:before {
+  content: "\f1bc";
+}
+
+/* line 501, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-designer-news:before {
+  content: "\f1bd";
+}
+
+/* line 502, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-deviant-art:before {
+  content: "\f1be";
+}
+
+/* line 503, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-digg:before {
+  content: "\f1bf";
+}
+
+/* line 504, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-dribbble:before {
+  content: "\f1c0";
+}
+
+/* line 505, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-drive:before {
+  content: "\f1c1";
+}
+
+/* line 506, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-dropbox:before {
+  content: "\f1c2";
+}
+
+/* line 507, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-evernote:before {
+  content: "\f1c3";
+}
+
+/* line 508, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-facebook:before {
+  content: "\f1c4";
+}
+
+/* line 509, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-flickr:before {
+  content: "\f1c5";
+}
+
+/* line 510, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-forrst:before {
+  content: "\f1c6";
+}
+
+/* line 511, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-foursquare:before {
+  content: "\f1c7";
+}
+
+/* line 512, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-game-center:before {
+  content: "\f1c8";
+}
+
+/* line 513, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-github:before {
+  content: "\f1c9";
+}
+
+/* line 514, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-google-plus:before {
+  content: "\f1ca";
+}
+
+/* line 515, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-hacker-news:before {
+  content: "\f1cb";
+}
+
+/* line 516, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-hi5:before {
+  content: "\f1cc";
+}
+
+/* line 517, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-instagram:before {
+  content: "\f1cd";
+}
+
+/* line 518, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-joomla:before {
+  content: "\f1ce";
+}
+
+/* line 519, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-lastfm:before {
+  content: "\f1cf";
+}
+
+/* line 520, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-linkedin:before {
+  content: "\f1d0";
+}
+
+/* line 521, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-medium:before {
+  content: "\f1d1";
+}
+
+/* line 522, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-myspace:before {
+  content: "\f1d2";
+}
+
+/* line 523, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-orkut:before {
+  content: "\f1d3";
+}
+
+/* line 524, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-path:before {
+  content: "\f1d4";
+}
+
+/* line 525, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-picasa:before {
+  content: "\f1d5";
+}
+
+/* line 526, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-pinterest:before {
+  content: "\f1d6";
+}
+
+/* line 527, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-rdio:before {
+  content: "\f1d7";
+}
+
+/* line 528, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-reddit:before {
+  content: "\f1d8";
+}
+
+/* line 529, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-skillshare:before {
+  content: "\f1d9";
+}
+
+/* line 530, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-skype:before {
+  content: "\f1da";
+}
+
+/* line 531, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-smashing-mag:before {
+  content: "\f1db";
+}
+
+/* line 532, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-snapchat:before {
+  content: "\f1dc";
+}
+
+/* line 533, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-spotify:before {
+  content: "\f1dd";
+}
+
+/* line 534, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-squidoo:before {
+  content: "\f1de";
+}
+
+/* line 535, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-stack-overflow:before {
+  content: "\f1df";
+}
+
+/* line 536, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-steam:before {
+  content: "\f1e0";
+}
+
+/* line 537, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-stumbleupon:before {
+  content: "\f1e1";
+}
+
+/* line 538, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-treehouse:before {
+  content: "\f1e2";
+}
+
+/* line 539, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-tumblr:before {
+  content: "\f1e3";
+}
+
+/* line 540, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-twitter:before {
+  content: "\f1e4";
+}
+
+/* line 541, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-vimeo:before {
+  content: "\f1e5";
+}
+
+/* line 542, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-windows:before {
+  content: "\f1e6";
+}
+
+/* line 543, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-xbox:before {
+  content: "\f1e7";
+}
+
+/* line 544, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-yahoo:before {
+  content: "\f1e8";
+}
+
+/* line 545, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-yelp:before {
+  content: "\f1e9";
+}
+
+/* line 546, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-youtube:before {
+  content: "\f1ea";
+}
+
+/* line 547, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-zerply:before {
+  content: "\f1eb";
+}
+
+/* line 548, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-social-zurb:before {
+  content: "\f1ec";
+}
+
+/* line 549, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-sound:before {
+  content: "\f1ed";
+}
+
+/* line 550, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-star:before {
+  content: "\f1ee";
+}
+
+/* line 551, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-stop:before {
+  content: "\f1ef";
+}
+
+/* line 552, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-strikethrough:before {
+  content: "\f1f0";
+}
+
+/* line 553, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-subscript:before {
+  content: "\f1f1";
+}
+
+/* line 554, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-superscript:before {
+  content: "\f1f2";
+}
+
+/* line 555, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-tablet-landscape:before {
+  content: "\f1f3";
+}
+
+/* line 556, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-tablet-portrait:before {
+  content: "\f1f4";
+}
+
+/* line 557, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-target-two:before {
+  content: "\f1f5";
+}
+
+/* line 558, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-target:before {
+  content: "\f1f6";
+}
+
+/* line 559, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-telephone-accessible:before {
+  content: "\f1f7";
+}
+
+/* line 560, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-telephone:before {
+  content: "\f1f8";
+}
+
+/* line 561, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-text-color:before {
+  content: "\f1f9";
+}
+
+/* line 562, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-thumbnails:before {
+  content: "\f1fa";
+}
+
+/* line 563, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-ticket:before {
+  content: "\f1fb";
+}
+
+/* line 564, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-torso-business:before {
+  content: "\f1fc";
+}
+
+/* line 565, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-torso-female:before {
+  content: "\f1fd";
+}
+
+/* line 566, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-torso:before {
+  content: "\f1fe";
+}
+
+/* line 567, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-torsos-all-female:before {
+  content: "\f1ff";
+}
+
+/* line 568, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-torsos-all:before {
+  content: "\f200";
+}
+
+/* line 569, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-torsos-female-male:before {
+  content: "\f201";
+}
+
+/* line 570, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-torsos-male-female:before {
+  content: "\f202";
+}
+
+/* line 571, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-torsos:before {
+  content: "\f203";
+}
+
+/* line 572, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-trash:before {
+  content: "\f204";
+}
+
+/* line 573, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-trees:before {
+  content: "\f205";
+}
+
+/* line 574, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-trophy:before {
+  content: "\f206";
+}
+
+/* line 575, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-underline:before {
+  content: "\f207";
+}
+
+/* line 576, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-universal-access:before {
+  content: "\f208";
+}
+
+/* line 577, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-unlink:before {
+  content: "\f209";
+}
+
+/* line 578, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-unlock:before {
+  content: "\f20a";
+}
+
+/* line 579, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-upload-cloud:before {
+  content: "\f20b";
+}
+
+/* line 580, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-upload:before {
+  content: "\f20c";
+}
+
+/* line 581, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-usb:before {
+  content: "\f20d";
+}
+
+/* line 582, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-video:before {
+  content: "\f20e";
+}
+
+/* line 583, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-volume-none:before {
+  content: "\f20f";
+}
+
+/* line 584, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-volume-strike:before {
+  content: "\f210";
+}
+
+/* line 585, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-volume:before {
+  content: "\f211";
+}
+
+/* line 586, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-web:before {
+  content: "\f212";
+}
+
+/* line 587, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-wheelchair:before {
+  content: "\f213";
+}
+
+/* line 588, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-widget:before {
+  content: "\f214";
+}
+
+/* line 589, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-wrench:before {
+  content: "\f215";
+}
+
+/* line 590, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-x-circle:before {
+  content: "\f216";
+}
+
+/* line 591, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-x:before {
+  content: "\f217";
+}
+
+/* line 592, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-yen:before {
+  content: "\f218";
+}
+
+/* line 593, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-zoom-in:before {
+  content: "\f219";
+}
+
+/* line 594, /Users/vlatkapavisic/.rvm/gems/ruby-2.3.0/gems/foundation-icons-sass-rails-3.0.0/app/assets/stylesheets/foundation-icons.scss */
+.fi-zoom-out:before {
+  content: "\f21a";
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+//= require foundation_and_overrides
+
+ *= require foundation_and_overrides
+
+/* Add imports of custom sass/scss files here */
