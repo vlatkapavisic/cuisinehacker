@@ -12,7 +12,6 @@ gem 'haml-rails'
 gem 'foundation-rails', '~> 5.5.2.1'
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise'
-gem 'foundation-icons-sass-rails'
 gem 'rubocop', require: false
 gem 'carrierwave'
 gem 'fog-aws'
