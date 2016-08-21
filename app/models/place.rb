@@ -1,9 +1,7 @@
 class Place < ActiveRecord::Base
   extend FriendlyId
-  mount_uploader :image, ImageUploader
+  mount_uploaders :images, ImageUploader
   friendly_id :name, use: :slugged
-  geocoded_by :address
-  after_validation :geocode
 
   has_many :locations
   accepts_nested_attributes_for :locations, allow_destroy: true

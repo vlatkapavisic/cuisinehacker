@@ -4,7 +4,7 @@
   %meta{property: 'og:type', content: 'article'}
   %meta{property: 'og:title', content: @place.name}
   %meta{property: 'og:description', content: truncate(strip_tags(@place.review), length: 200, separator: ' ')}
-  %meta{property: 'og:image', content: @place.image.url}
+  %meta{property: 'og:image', content: @place.images.first.url}
 - content_for :body_id, 'place-page'
 
 .row
@@ -13,7 +13,8 @@
     %h6.subheader.text-center
       = "#{@place.created_at.strftime('%B %d, %Y')} &nbsp;&bullet;&nbsp; In ".html_safe
       = link_to 'Places', places_map_path
-    = image_tag @place.image.url
+    - @place.images.each do |image|
+      = image_tag image.url
     %p= @place.review
     %h3.subheader Website
     %p= link_to @place.website, target: '_blank'

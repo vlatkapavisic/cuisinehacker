@@ -13,12 +13,13 @@ gem 'foundation-rails', '~> 5.5.2.1'
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise'
 gem 'rubocop', require: false
-gem 'carrierwave'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'fog-aws'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'cocoon'
+gem 'awesome_print'
 
 group :development do
   gem 'spring'

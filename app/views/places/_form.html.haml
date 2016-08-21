@@ -21,8 +21,8 @@
           = link_to_add_association '+', f, :locations, class: 'button tiny secondary'
   .row
     .large-10.columns
-    = f.label :image
-    = f.file_field :image
+    = f.label :images
+    = f.file_field :images, multiple: true
   .row
     .large-10.columns
     = f.submit nil, class: 'button small secondary'
