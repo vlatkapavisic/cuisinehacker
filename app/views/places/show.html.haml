@@ -15,7 +15,7 @@
       = link_to 'Places', places_map_path
     - @place.images.each do |image|
       = image_tag image.url
-    %p= @place.review
+    %p= @place.review.html_safe
     %h3.subheader Website
     %p= link_to @place.website, target: '_blank'
     %h3.subheader Locations

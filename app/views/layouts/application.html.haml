@@ -40,7 +40,7 @@
       }(document, 'script', 'twitter-wjs');
     :coffee
       $ ->
-        if ($('#recipe-page').length || $('#post-page').length)
+        if $('.social').length
           if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)
             $('#fb').css('bottom', '11px') # brute force Safari hack
 
