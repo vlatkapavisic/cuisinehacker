@@ -14,12 +14,11 @@
         git add ingredients/*
         gem install apricot_jam
         curl -I lowcalhost:3000
-        brew install food
         sudo eat root_vegetable
         rails c
         food.fetch(:bread, 'brioche') #letthemeatcake
         raise 'Hungry' rescue :cook
-        flaxseed = Fiber.new { 'Omega 3' } #flaxingwithmyhandsup
+        flaxseed = Fiber.new { 'Omega 3' }
         begin
           eat
         rescue => FiberError
@@ -27,8 +26,9 @@
         end
         'banana '.chop.freeze
         '  lemon     '.squeeze
+        Digest::SHA256.digest(secret_ingredient + salt)
         app.get '/' #someta #wow
-        Recipe.order(created_at: :desc).take(4) #new #ontheblog #enjoy #bonappetit
+        Recipe.order(created_at: :desc).take(4) #new #ontheblog #bonappetit
 
   .large-6.columns
     #recipes
