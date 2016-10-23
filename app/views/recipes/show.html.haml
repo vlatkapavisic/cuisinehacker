@@ -30,7 +30,7 @@
       %p= @recipe.algorithm.html_safe
     - else
       %h3.subheader Recipe
-      = link_to @recipe.recipe_url, @recipe.recipe_url, target: '_blank'
+      = link_to nil, @recipe.recipe_url, target: '_blank'
 
     .social
       .social-icon#fb
