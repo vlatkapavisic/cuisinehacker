@@ -10,11 +10,11 @@
     %li
       = link_to 'SEARCH', search_path
     %li
-      = link_to 'BREAKFAST', category_path('breakfast')
+      = link_to 'BREAKFAST', recipes_category_path(category: 'breakfast')
     %li
-      = link_to 'LUNCH/DINNER', category_path('lunch-dinner')
+      = link_to 'LUNCH/DINNER', recipes_category_path(category: 'lunch-dinner')
     %li
-      = link_to 'OTHER', category_path('other')
+      = link_to 'OTHER', recipes_category_path(category: 'other')
     %li
       = link_to 'PLACES', places_map_path
     %li

@@ -1,7 +1,7 @@
 - content_for :title, 'Recipes index'
 
 %h1 Recipes
-  
+
 %a.button.secondary.tiny{href: new_recipe_path} New
 
 %table
@@ -19,5 +19,7 @@
         %td
           %a.button.secondary.tiny{href: edit_recipe_path(recipe)} Edit
           %a.button.secondary.tiny{href: recipe_path(recipe), data: {confirm: 'Are you sure?', method: :delete}, rel: 'nofollow'} Delete
+
+= will_paginate @recipes, renderer: FoundationPagination::Rails, page_links: false
 
 

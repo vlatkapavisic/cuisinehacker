@@ -7,3 +7,8 @@ season_2:
   address: 8 rue Du petit Thouars, 75003 Paris
   working_hours: 10AM - 11PM
   place: season
+
+juice_it_1:
+  address: 8 rue de la Vrilliere, 75001 Paris
+  working_hours: 8AM - 4PM
+  place: juice_it

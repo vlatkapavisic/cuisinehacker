@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get '/recipes/category/:category' => 'recipes#category_show', as: 'recipes_category'
 
   resources :recipes
-  resources :categories, only: :show
   resources :posts
   resources :places
 end
