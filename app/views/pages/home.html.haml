@@ -37,12 +37,12 @@
           %li
             .recipe
               - if content_item.instance_of? Place
-                %a{href: content_item}
+                %a{href: place_path(content_item)}
                   = image_tag content_item.images.first.url
                 #recipe-title
-                  = link_to content_item.name, content_item
+                  = link_to content_item.name, place_path(content_item)
               - else
-                %a{href: content_item}
+                %a{href: recipe_path(content_item)}
                   = image_tag content_item.image.url
                 #recipe-title
-                  = link_to content_item.title, content_item
+                  = link_to content_item.title, recipe_path(content_item)
