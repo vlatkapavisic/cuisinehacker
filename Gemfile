@@ -21,6 +21,8 @@ gem 'underscore-rails'
 gem 'cocoon'
 gem 'awesome_print'
 gem 'simple_form'
+gem 'will_paginate'
+gem 'will_paginate-foundation'
 
 group :development do
   gem 'spring'

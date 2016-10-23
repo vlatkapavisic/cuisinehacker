@@ -1,7 +1,7 @@
 - content_for :meta_tags do
   %meta{property: 'og:url', content: request.original_url.split('?').first}
   %meta{property: 'og:title', content: blog_name}
-  %meta{property: 'og:description', content: 'Francophile programmer\'s healthy food blog • Developed in Ruby, in Zagreb, Croatia'.html_safe}
+  %meta{property: 'og:description', content: 'Programmer\'s food blog • Developed in Ruby on Rails • Recipe and restaurant reviews • Paris, France'.html_safe}
   %meta{property: 'og:image', content: 'https://www.instagram.com/p/BBfMb-VH2V8/media?size=l'}
 - content_for :body_id, 'home-page'
 
@@ -27,10 +27,22 @@
         '  lemon     '.squeeze
         Digest::SHA256.digest(secret_ingredient + salt)
         app.get '/' #someta #wow
-        Recipe.order(created_at: :desc).take(4) #new #ontheblog #bonappetit
+        Place.last(2).reverse + Recipe.last(2).reverse #new #ontheblog
+
 
   .large-6.columns
     #recipes
       %ul.large-block-grid-2.medium-block-grid-4.small-block-grid-2
-        = render partial: 'recipes/recipe_list', object: @new_recipes
-
+        - @new_content.each do |content_item|
+          %li
+            .recipe
+              - if content_item.instance_of? Place
+                %a{href: content_item}
+                  = image_tag content_item.images.first.url
+                #recipe-title
+                  = link_to content_item.name, content_item
+              - else
+                %a{href: content_item}
+                  = image_tag content_item.image.url
+                #recipe-title
+                  = link_to content_item.title, content_item

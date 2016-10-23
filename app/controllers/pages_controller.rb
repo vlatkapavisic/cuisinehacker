@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @new_recipes = Recipe.order(created_at: :desc).take(4)
+    @new_content = Place.last(2).reverse + Recipe.last(2).reverse
   end
 
   def about
