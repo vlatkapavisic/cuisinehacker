@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe PagesController, type: :controller do
-  fixtures :recipes, :categories
+  fixtures :recipes
 
   describe '#home' do
     before(:each) { get :home }

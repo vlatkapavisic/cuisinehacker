@@ -11,19 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160821155236) do
+ActiveRecord::Schema.define(version: 20161023170009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "slug"
+  create_table "ar_internal_metadata", primary_key: "key", force: true do |t|
+    t.string   "value",      limit: nil
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
-
-  add_index "categories", ["slug"], name: "index_categories_on_slug", unique: true, using: :btree
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -58,6 +55,7 @@ ActiveRecord::Schema.define(version: 20160821155236) do
     t.string   "slug"
     t.string   "website"
     t.json     "images"
+    t.integer  "locations_count", default: 0
   end
 
   add_index "places", ["slug"], name: "index_places_on_slug", unique: true, using: :btree
@@ -75,7 +73,6 @@ ActiveRecord::Schema.define(version: 20160821155236) do
   create_table "recipes", force: true do |t|
     t.string   "title"
     t.text     "description"
-    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "ingredients"
@@ -85,9 +82,9 @@ ActiveRecord::Schema.define(version: 20160821155236) do
     t.string   "author"
     t.string   "author_url"
     t.string   "image"
+    t.integer  "category",    default: 0
   end
 
-  add_index "recipes", ["category_id"], name: "index_recipes_on_category_id", using: :btree
   add_index "recipes", ["slug"], name: "index_recipes_on_slug", unique: true, using: :btree
 
   create_table "users", force: true do |t|

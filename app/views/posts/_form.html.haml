@@ -1,12 +1,6 @@
-= form_for @post do |f|
-  .row
-    .large-10.columns
-      = f.label :title
-      = f.text_field :title
-  .row
-    .large-10.columns
-      = f.label :content
-      = f.text_area :content, rows: 50
-  .row
-    .large-10.columns
-      = f.submit nil, class: 'button small secondary'
+.row
+  .large-10.columns
+    = simple_form_for @post do |f|
+      = f.input :title
+      = f.input :content, as: :text, input_html: { rows: 20 }
+      = f.button :submit, class: 'button small secondary'

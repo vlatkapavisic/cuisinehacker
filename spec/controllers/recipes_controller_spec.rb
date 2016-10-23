@@ -47,4 +47,16 @@ RSpec.describe RecipesController, type: :controller do
       end
     end
   end
+
+  describe '#category_show' do
+    before(:each) { get :category_show, category: 'breakfast' }
+
+    it 'renders the show template' do
+      expect(response).to render_template('category_show')
+    end
+
+    it 'displays a list of recipes' do
+      expect(assigns(:recipes).length).to be > 0
+    end
+  end
 end

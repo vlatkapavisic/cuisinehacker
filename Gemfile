@@ -20,6 +20,7 @@ gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'cocoon'
 gem 'awesome_print'
+gem 'simple_form'
 
 group :development do
   gem 'spring'

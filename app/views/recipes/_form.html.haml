@@ -1,40 +1,15 @@
-= form_for @recipe do |f|
-  .row
-    .large-10.columns
-      = f.label :title
-      = f.text_field :title
-  .row
-    .large-10.columns
-      = f.label :description
-      = f.text_area :description, rows: 10
-  .row
-    .large-10.columns
-      = f.label :ingredients
-      = f.text_area :ingredients, rows: 2
-  .row
-    .large-10.columns
-      = f.label :algorithm
-      = f.text_area :algorithm, rows: 10
-  .row
-    .large-10.columns
-      = f.label :image
-      = f.file_field :image
-  .row
-    .large-10.columns
-      = f.label :author
-      = f.text_field :author
-  .row
-    .large-10.columns
-      = f.label :author_url
-      = f.text_field :author_url
-  .row
-    .large-10.columns
-      = f.label :recipe_url
-      = f.text_field :recipe_url
-  .row
-    .large-10.columns
-      = f.label :category
-      = f.select :category_id, options_from_collection_for_select(Category.all, :id, :name, @recipe.category_id)
-  .row
-    .large-10.columns
-      = f.submit nil, class: 'button small secondary'
+.row
+  .large-10.columns
+    = simple_form_for @recipe do |f|
+      = f.input :title
+      = f.input :description, as: :text, input_html: { rows: 10 }
+      = f.input :ingredients, as: :text, input_html: { rows: 2 }
+      = f.input :algorithm, as: :text, input_html: { rows: 10 }
+      = f.input :image, as: :file
+      = f.input :author
+      = f.input :author_url
+      = f.input :recipe_url
+      = f.input :category, as: :select, collection: Recipe.categories.keys, include_blank: false
+      = f.button :submit, class: 'button small secondary'
+
+

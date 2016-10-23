@@ -1,14 +1,13 @@
-- content_for :title, @category.name
+- content_for :title, @category_name
 - content_for :meta_tags do
   %meta{property: 'og:url', content: request.original_url.split('?').first}
-  %meta{property: 'og:title', content: @category.name}
-  %meta{property: 'og:description', content: "#{@category.name} recipes"}
+  %meta{property: 'og:title', content: @category_name}
+  %meta{property: 'og:description', content: "#{@category_name} recipes"}
   %meta{property: 'og:image', content: @recipes.last&.image&.url}
 - content_for :body_id, 'category-page'
 
-%h1.title= @category.name
+%h1.title= @category_name
 
 #recipes
   %ul.small-block-grid-2.medium-block-grid-3.large-block-grid-4
     = render partial: 'recipes/recipe_list', object: @recipes
-
