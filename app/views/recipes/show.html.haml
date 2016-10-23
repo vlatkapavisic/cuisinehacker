@@ -12,10 +12,10 @@
     %h1.title= @recipe.title
     %h6.subheader.text-center
       = "#{@recipe.created_at.strftime('%B %d, %Y')} &nbsp;&bullet;&nbsp; In ".html_safe
-      = link_to "#{@recipe.category_pretty_name}", category_path(@recipe.category)
+      = link_to "#{@recipe.category_pretty_name}", recipes_category_path(category: @recipe.category.dasherize)
       = '&nbsp;&bullet;&nbsp;Recipe by '.html_safe
       - if @recipe.original?
-        = "me"
+        = 'me'
       - else
         = link_to @recipe.author, @recipe.author_url, target: '_blank'
     %p= image_tag @recipe.image.url
