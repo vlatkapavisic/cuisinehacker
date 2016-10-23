@@ -1,28 +1,15 @@
-= form_for @place do |f|
-  .row
-    .large-10.columns
-    = f.label :name
-    = f.text_field :name
-  .row
-    .large-10.columns
-    = f.label :review
-    = f.text_area :review
-  .row
-    .large-10.columns
-    = f.label :website
-    = f.text_field :website
-  .row
-    .large-10.columns
-      #locations
+.row
+  .large-10.columns
+    = simple_form_for @place do |f|
+      = f.input :name
+      = f.input :review, as: :text, input_html: { rows: 20 }
+      = f.input :website
+      #locations.panel
         = f.label :locations
-        = f.fields_for :locations do |location|
+        = f.simple_fields_for :locations do |location|
           = render 'location_fields', f: location
         .links
           = link_to_add_association '+', f, :locations, class: 'button tiny secondary'
-  .row
-    .large-10.columns
-    = f.label :images
-    = f.file_field :images, multiple: true
-  .row
-    .large-10.columns
-    = f.submit nil, class: 'button small secondary'
+
+      = f.input :images, as: :file, input_html: { multiple: true }
+      = f.button :submit, class: 'button small secondary'

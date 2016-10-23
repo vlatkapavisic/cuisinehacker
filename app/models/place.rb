@@ -3,7 +3,7 @@ class Place < ActiveRecord::Base
   mount_uploaders :images, ImageUploader
   friendly_id :name, use: :slugged
 
-  has_many :locations, dependent: :destroy
+  has_many :locations
   accepts_nested_attributes_for :locations, allow_destroy: true
 
   def should_generate_new_friendly_id?

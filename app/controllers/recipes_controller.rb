@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show, :search]
+  before_action :authenticate_user!, except: [:show, :search, :category_show]
 
   def index
     @recipes = Recipe.order(created_at: :desc)
@@ -42,6 +42,11 @@ class RecipesController < ApplicationController
     @results = Recipe.where("ingredients LIKE ?", "%#{params[:term].downcase}%") if params[:term].present?
   end
 
+  def category_show
+    @recipes = Recipe.send(params[:category].underscore).order(created_at: :desc)
+    @category_name = @recipes.first.category_pretty_name
+  end
+
   private
 
     def set_recipe
@@ -49,6 +54,6 @@ class RecipesController < ApplicationController
     end
 
     def recipe_params
-      params.require(:recipe).permit(:title, :description, :ingredients, :algorithm, :recipe_url, :author, :author_url, :category_id, :image)
+      params.require(:recipe).permit(:title, :description, :ingredients, :algorithm, :recipe_url, :author, :author_url, :category, :image)
     end
 end

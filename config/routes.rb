@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/search' => 'recipes#search', as: 'search'
   get '/posts-archive' => 'posts#archive', as: 'posts_archive'
   get '/a-moveable-feast' => 'places#map', as: 'places_map'
+  get '/recipes/category/:category' => 'recipes#category_show', as: 'recipes_category'
 
   resources :recipes
   resources :categories, only: :show
