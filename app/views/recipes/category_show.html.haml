@@ -1,12 +1,12 @@
-- content_for :title, @category_name
+- content_for :title, @page_title
 - content_for :meta_tags do
-  %meta{property: 'og:url', content: request.original_url.split('?').first}
-  %meta{property: 'og:title', content: @category_name}
-  %meta{property: 'og:description', content: "#{@category_name} recipes"}
-  %meta{property: 'og:image', content: @recipes.last&.image&.url}
+  %meta{ property: 'og:url', content: og_url }
+  %meta{ property: 'og:title', content: @page_title }
+  %meta{ property: 'og:description', content: @page_title }
+  %meta{ property: 'og:image', content: @recipes.last&.image&.url }
 - content_for :body_id, 'category-page'
 
-%h1.title= @category_name
+%h1.title= @page_title
 
 #recipes
   %ul.small-block-grid-2.medium-block-grid-3.large-block-grid-4

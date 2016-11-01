@@ -1,10 +1,10 @@
 - content_for :title, @recipe.title
 - content_for :meta_tags do
-  %meta{property: 'og:url', content: request.original_url.split('?').first}
-  %meta{property: 'og:type', content: 'article'}
-  %meta{property: 'og:title', content: @recipe.title}
-  %meta{property: 'og:description', content: truncate(strip_tags(@recipe.description), length: 200, separator: ' ')}
-  %meta{property: 'og:image', content: @recipe.image.url}
+  %meta{ property: 'og:url', content: og_url }
+  %meta{ property: 'og:type', content: 'article' }
+  %meta{ property: 'og:title', content: @recipe.title }
+  %meta{ property: 'og:description', content: truncate(strip_tags(@recipe.description), length: 200, separator: ' ') }
+  %meta{ property: 'og:image', content: @recipe.image.url }
 - content_for :body_id, 'recipe-page'
 
 .row
@@ -40,3 +40,9 @@
       .social-icon
         %a{'data-pin-do' => 'buttonPin', 'data-pin-color' => 'white', 'data-pin-count' => 'above', 'data-image' => @recipe.image.url, 'data-description' => @recipe.title, 'href' => "https://www.pinterest.com/pin/create/button/?url#{request.original_url.split('?').first}=&media=#{@recipe.image.url}"}
           = image_tag '//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_20.png'
+
+
+    #disqus_thread
+
+= render partial: 'shared/disqus', locals: { page_identifier: @recipe.slug }
+

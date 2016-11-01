@@ -49,7 +49,7 @@ RSpec.describe RecipesController, type: :controller do
   end
 
   describe '#category_show' do
-    context 'with good parameter' do
+    context 'with good category parameter' do
       before(:each) { get :category_show, category: 'breakfast' }
 
       it 'renders the show template' do
@@ -61,7 +61,7 @@ RSpec.describe RecipesController, type: :controller do
       end
     end
 
-    context 'wrong category parameter' do
+    context 'with wrong category parameter' do
       it 'doesn\'t display a list of recipes' do
         get :category_show, category: 'breakdance'
         expect(assigns(:recipes)).to be_nil
