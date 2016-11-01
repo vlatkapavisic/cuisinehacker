@@ -1,0 +1,16 @@
+:javascript
+  var disqus_config = function () {
+  this.page.url = "#{og_url}";
+  this.page.identifier = "#{page_identifier}";
+  };
+  (function() {
+  var d = document, s = d.createElement('script');
+  s.src = '//cuisinehacker.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+
+%noscript
+  Please enable JavaScript to view the
+  = succeed '.' do
+    = link_to 'comments powered by Disqus', 'https://disqus.com/?ref_noscript'

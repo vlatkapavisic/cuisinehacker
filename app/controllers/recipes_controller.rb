@@ -45,7 +45,7 @@ class RecipesController < ApplicationController
   def category_show
     if Recipe.categories.keys.include? params[:category].underscore
       @recipes = Recipe.send(params[:category].underscore).order(created_at: :desc)
-      @category_name = @recipes.first.category_pretty_name
+      @page_title = @recipes.first.category_pretty_name + ' recipes'
     end
   end
 

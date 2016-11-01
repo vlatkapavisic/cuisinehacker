@@ -1,9 +1,9 @@
 - content_for :title, 'A moveable feast'
 - content_for :meta_tags do
-  %meta{property: 'og:url', content: request.original_url.split('?').first}
-  %meta{property: 'og:title', content: 'A moveable feast'}
-  %meta{property: 'og:description', content: 'My favourite healthy food-related places in Paris.'}
-  %meta{property: 'og:image', content: ''}
+  %meta{ property: 'og:url', content: og_url }
+  %meta{ property: 'og:title', content: 'A moveable feast' }
+  %meta{ property: 'og:description', content: 'My favourite healthy food-related places in Paris.' }
+  %meta{ property: 'og:image', content: '' }
 - content_for :body_id, 'places-map-page'
 
 .row
@@ -12,7 +12,7 @@
       A moveable feast
     %p#description
       Food is one of the things Paris is most famous for, a crucial thing of the French culture and lifestyle. A buttery flaky croissant in the morning, cauliflower-beets-raspberry soup and an organic lunchbox in the afternoon, a cold-pressed juice for le goûter... Here, one can want his cake and eat it too. Healthy/bio/vegan food is very popular, and combined with the creativity and savoir-faire of the parisian chefs, eating healthy feels (and looks) like a feast. On the other hand, traditional bakeries (some founded in the 19th century) and bistros offer a decadent balance to the popular "clean eating" trend.
-      Besides that, there are restaurants with international cuisine. A food blogger's wonderland.
+      Besides that, there are restaurants with international cuisine.
       %br
       Here's an overview of my favourite food-related places in Paris: restaurants, cafés, pâtisseries, épiceries...
 
@@ -30,6 +30,6 @@
     markers = handler.addMarkers(#{raw @hash.to_json});
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
-    handler.getMap().setZoom(13);
+    handler.getMap().setZoom(13p);
   });
 

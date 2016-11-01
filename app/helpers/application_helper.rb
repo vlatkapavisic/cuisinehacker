@@ -6,4 +6,8 @@ module ApplicationHelper
   def blog_name
     'Cuisine Hacker'
   end
+
+  def og_url
+    request.original_url.split('?').first
+  end
 end
