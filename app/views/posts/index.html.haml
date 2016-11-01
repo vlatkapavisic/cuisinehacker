@@ -1,15 +1,15 @@
 - content_for :title, 'Posts index'
 
 %h1 Posts
-  
-%a.button.secondary.tiny{href: new_post_path} New
+
+%a.button.secondary.tiny{ href: new_post_path } New
 
 %table
   %thead
     %tr
-      %td{width: 500}
+      %td{ width: 500 }
         Name
-      %td{width: 170}
+      %td{ width: 170 }
         Actions
   %tbody
     - @posts.each do |post|
@@ -17,5 +17,5 @@
         %td
           = link_to post.title, post
         %td
-          %a.button.secondary.tiny{href: edit_post_path(post)} Edit
-          %a.button.secondary.tiny{href: post_path(post), data: {confirm: 'Are you sure?', method: :delete}, rel: 'nofollow'} Delete
+          %a.button.secondary.tiny{ href: edit_post_path(post) } Edit
+          %a.button.secondary.tiny{ href: post_path(post), data: { confirm: 'Are you sure?', method: :delete }, rel: 'nofollow' } Delete

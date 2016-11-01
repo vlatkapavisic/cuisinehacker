@@ -11,16 +11,16 @@
     = favicon_link_tag 'fi-laptop.png'
     = favicon_link_tag 'fi-laptop.png', rel: 'apple-touch-icon', type: 'image/png'
     = csrf_meta_tags
-    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
-    %meta{property: 'fb:app_id', content: '1663416127241482'}
-    %meta{property: 'og:site_name', content: "#{blog_name}"}
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+    %meta{ property: 'fb:app_id', content: '1663416127241482' }
+    %meta{ property: 'og:site_name', content: "#{blog_name}" }
     %link{ rel: 'canonical', href: og_url }
     = content_for :meta_tags
     = javascript_include_tag "//maps.google.com/maps/api/js?v=3.25&key=#{ENV['GMAPS_KEY']}"
     = javascript_include_tag '//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js'
     = javascript_include_tag '//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js'
 
-  %body{id: (content_for :body_id if content_for? :body_id)}
+  %body{ id: (content_for :body_id if content_for? :body_id) }
     .fb-root
     :javascript
       (function(d, s, id) {
@@ -45,7 +45,7 @@
           if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)
             $('#fb').css('bottom', '11px') # brute force Safari hack
 
-    .off-canvas-wrap{'data-offcanvas' => ''}
+    .off-canvas-wrap{ 'data-offcanvas' => '' }
       .inner-wrap
         = render 'layouts/navbar_large'
         = render 'layouts/navbar_small'
@@ -53,9 +53,9 @@
           .row
             .large-12.columns
               - if flash[:notice]
-                .alert-box.info.radius{data: {alert: ''}}
+                .alert-box.info.radius{ data: { alert: '' } }
                   = flash[:notice]
-                  %a.close{href: '#'} &times;
+                  %a.close{ href: '#' } &times;
               %section.main-section
                 = yield
         = render 'layouts/footer'

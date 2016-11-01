@@ -5,12 +5,12 @@
   .large-10.large-offset-1.columns
     %h1.title Search recipes by ingredient
     #search-form
-      = form_tag('/search', method: 'get') do 
+      = form_tag('/search', method: 'get') do
         .row.collapse
           .medium-3.medium-offset-4.columns
             = text_field_tag(:term)
           .medium-1.columns.end
-            %button{type: 'submit', class: 'postfix button', id:'search-btn'} Search
+            %button{ type: 'submit', class: 'postfix button', id:'search-btn' } Search
     - if params[:term].present?
       - if @results.any?
         %h3.text-center= "Voilà les recettes avec #{params[:term]} !"
@@ -18,5 +18,5 @@
           %ul.small-block-grid-2.medium-block-grid-3.large-block-grid-4
             = render partial: 'recipe_list', object: @results
       - else
-        %h3.text-center= "Désolé, there aren't any recipes containing #{params[:term]} yet."
+        %h3.text-center= "Désolée, there aren't any recipes containing #{params[:term]} yet."
 
