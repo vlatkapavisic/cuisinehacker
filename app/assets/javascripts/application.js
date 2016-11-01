@@ -20,9 +20,9 @@
 //= require underscore
 //= require gmaps/google
 //= require cocoon
-// require turbolinks
+//= require turbolinks
 //= require_tree .
 
-$(function(){
-  $(document).foundation();
+$(document).on('turbolinks:load', function(){
+  $(this).foundation();
 });

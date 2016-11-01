@@ -43,8 +43,10 @@ class RecipesController < ApplicationController
   end
 
   def category_show
-    @recipes = Recipe.send(params[:category].underscore).order(created_at: :desc)
-    @category_name = @recipes.first.category_pretty_name
+    if Recipe.categories.keys.include? params[:category].underscore
+      @recipes = Recipe.send(params[:category].underscore).order(created_at: :desc)
+      @category_name = @recipes.first.category_pretty_name
+    end
   end
 
   private

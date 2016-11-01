@@ -49,14 +49,23 @@ RSpec.describe RecipesController, type: :controller do
   end
 
   describe '#category_show' do
-    before(:each) { get :category_show, category: 'breakfast' }
+    context 'with good parameter' do
+      before(:each) { get :category_show, category: 'breakfast' }
 
-    it 'renders the show template' do
-      expect(response).to render_template('category_show')
+      it 'renders the show template' do
+        expect(response).to render_template('category_show')
+      end
+
+      it 'displays a list of recipes' do
+        expect(assigns(:recipes).length).to be > 0
+      end
     end
 
-    it 'displays a list of recipes' do
-      expect(assigns(:recipes).length).to be > 0
+    context 'wrong category parameter' do
+      it 'doesn\'t display a list of recipes' do
+        get :category_show, category: 'breakdance'
+        expect(assigns(:recipes)).to be_nil
+      end
     end
   end
 end
