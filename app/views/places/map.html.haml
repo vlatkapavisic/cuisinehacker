@@ -2,7 +2,7 @@
 - content_for :meta_tags do
   %meta{ property: 'og:url', content: og_url }
   %meta{ property: 'og:title', content: 'A moveable feast' }
-  %meta{ property: 'og:description', content: 'My favourite healthy food-related places in Paris.' }
+  %meta{ property: 'og:description', content: 'Map of my favourite (mostly healhty) restaurants in Paris.' }
   %meta{ property: 'og:image', content: '' }
 - content_for :body_id, 'places-map-page'
 
@@ -30,6 +30,6 @@
     markers = handler.addMarkers(#{raw @hash.to_json});
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
-    handler.getMap().setZoom(13p);
+    handler.getMap().setZoom(13);
   });
 

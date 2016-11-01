@@ -2,14 +2,14 @@
 
 %h1 Recipes
 
-%a.button.secondary.tiny{href: new_recipe_path} New
+%a.button.secondary.tiny{ href: new_recipe_path } New
 
 %table
   %thead
     %tr
-      %td{width: 500}
+      %td{ width: 500 }
         Name
-      %td{width: 170}
+      %td{ width: 170 }
         Actions
   %tbody
     - @recipes.each do |recipe|
@@ -17,8 +17,8 @@
         %td
           = link_to recipe.title, recipe
         %td
-          %a.button.secondary.tiny{href: edit_recipe_path(recipe)} Edit
-          %a.button.secondary.tiny{href: recipe_path(recipe), data: {confirm: 'Are you sure?', method: :delete}, rel: 'nofollow'} Delete
+          %a.button.secondary.tiny{ href: edit_recipe_path(recipe) } Edit
+          %a.button.secondary.tiny{ href: recipe_path(recipe), data: { confirm: 'Are you sure?', method: :delete }, rel: 'nofollow' } Delete
 
 = will_paginate @recipes, renderer: FoundationPagination::Rails, page_links: false
 

@@ -1,4 +1,4 @@
-%nav.show-for-medium-up.top-bar{'data-topbar' => '', role: 'navigation', 'data-options' => 'is_hover: true'}
+%nav.show-for-medium-up.top-bar{ 'data-topbar' => '', role: 'navigation', 'data-options' => 'is_hover: true' }
   %ul.title-area
     %li.name
       %h1= link_to "#{blog_name}", root_path, class: 'blog-name'
@@ -16,7 +16,7 @@
             %li
               = link_to 'MANAGE POSTS', posts_path
             %li
-              = link_to 'LOGOUT', destroy_user_session_path, {'data-method' => :delete}
+              = link_to 'LOGOUT', destroy_user_session_path, { 'data-method' => :delete }
         %li.divider
       %li.has-dropdown#recipes-dropdown
         = link_to 'RECIPES', '#'
