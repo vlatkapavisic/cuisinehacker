@@ -36,5 +36,4 @@
         %a{ 'data-pin-do' => 'buttonPin', 'data-pin-color' => 'white', 'data-pin-count' => 'above', 'data-description' => @place.name, 'href' => "https://www.pinterest.com/pin/create/button/?url#{request.original_url.split('?').first}" }
           = image_tag '//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_20.png'
 
-= render partial: 'shared/disqus', locals: { page_identifier: @place.slug }
 
