@@ -7,7 +7,6 @@
     = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto+Mono|Lobster+Two'
     = javascript_include_tag 'application', 'data-turbolinks-track': true
     = javascript_include_tag 'vendor/modernizr'
-    = javascript_include_tag '//assets.pinterest.com/js/pinit.js'
     = favicon_link_tag 'fi-laptop.png'
     = favicon_link_tag 'fi-laptop.png', rel: 'apple-touch-icon', type: 'image/png'
     = csrf_meta_tags
@@ -27,7 +26,7 @@
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.5&appId=1663416127241482";
+        js.src = '//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8'
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
       !function(d, s, id) {
@@ -39,6 +38,7 @@
           fjs.parentNode.insertBefore(js,fjs);
         }
       }(document, 'script', 'twitter-wjs');
+
     :coffee
       $ ->
         if $('.social').length
@@ -61,4 +61,3 @@
         = render 'layouts/footer'
 
         %a.exit-off-canvas
-
