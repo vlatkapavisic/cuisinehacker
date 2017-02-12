@@ -12,9 +12,7 @@
         cd cuisine
         git checkout -b edible_experiment
         git add ingredients/*
-        gem install apricot_jam
         sudo eat root_vegetable
-        rails c
         food.fetch(:bread, 'brioche') #letthemeatcake
         raise 'Hungry' rescue :cook
         flaxseed = Fiber.new { 'Omega 3' }
@@ -26,6 +24,8 @@
         'banana '.chop.freeze
         '  lemon     '.squeeze
         Digest::SHA256.digest(secret_ingredient + salt)
+        %w(breakfast lunch gouter dinner).cycle { |meal| eat meal }
+        INSERT INTO mouth (food, quantity) VALUES ('croissant', 2);
         app.get '/' #someta #wow
         Place.last(2).reverse + Recipe.last(2).reverse #new #ontheblog
 
