@@ -23,6 +23,10 @@ gem 'awesome_print'
 gem 'simple_form'
 gem 'will_paginate'
 gem 'will_paginate-foundation'
+gem 'actionpack-page_caching'
+gem 'rails-observers'
+gem 'actionpack-action_caching'
+gem 'newrelic_rpm'
 
 group :development do
   gem 'spring'
