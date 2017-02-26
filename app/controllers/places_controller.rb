@@ -1,7 +1,7 @@
 class PlacesController < ApplicationController
   before_action :set_place, only: [:show, :edit, :update, :destroy]
   before_action :set_places, only: [:index, :map]
-  before_action :authenticate_user!, except: [:map, :show]
+  before_action :authenticate_user!, except: [:show, :map]
 
   def index
   end
