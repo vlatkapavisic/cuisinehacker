@@ -39,11 +39,11 @@
             .recipe
               - if content_item.instance_of? Place
                 %a{href: place_path(content_item)}
-                  = image_tag content_item.images.first.url
+                  = image_tag content_item.images.first.small.url
                 #recipe-title
                   = link_to content_item.name, place_path(content_item)
               - else
                 %a{href: recipe_path(content_item)}
-                  = image_tag content_item.image.url
+                  = image_tag content_item.image.small.url
                 #recipe-title
                   = link_to content_item.title, recipe_path(content_item)
