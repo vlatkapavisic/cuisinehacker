@@ -13,7 +13,7 @@
         git checkout -b edible_experiment
         git add ingredients/*
         sudo eat root_vegetable
-        food.fetch(:bread, 'brioche') #letthemeatcake
+        food.fetch(:bread, 'brioche') # Qu'ils mangent de la brioche
         raise 'Hungry' rescue :cook
         flaxseed = Fiber.new { 'Omega 3' }
         begin
@@ -22,11 +22,11 @@
           eat flaxseed
         end
         'banana '.chop.freeze
-        '  lemon     '.squeeze
+        'lemoooon'.squeeze
         Digest::SHA256.digest(secret_ingredient + salt)
         %w(breakfast lunch gouter dinner).cycle { |meal| eat meal }
         INSERT INTO mouth (food, quantity) VALUES ('croissant', 2);
-        app.get '/' #someta #wow
+        app.get '/'
         Place.last(2).reverse + Recipe.last(2).reverse #new #ontheblog
 
 
@@ -39,11 +39,11 @@
             .recipe
               - if content_item.instance_of? Place
                 %a{href: place_path(content_item)}
-                  = image_tag content_item.images.first.small.url
+                  = image_tag content_item.images.first.url
                 #recipe-title
                   = link_to content_item.name, place_path(content_item)
               - else
                 %a{href: recipe_path(content_item)}
-                  = image_tag content_item.image.small.url
+                  = image_tag content_item.image.url
                 #recipe-title
                   = link_to content_item.title, recipe_path(content_item)
