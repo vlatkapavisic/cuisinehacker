@@ -8,6 +8,8 @@ class Recipe < ActiveRecord::Base
 
   scope :original, -> { where(recipe_url: '') }
 
+  update_index('recipes') { self }
+
   def should_generate_new_friendly_id?
     title_changed?
   end

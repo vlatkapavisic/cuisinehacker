@@ -20,6 +20,6 @@ module Blog
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.action_controller.page_cache_directory = "#{Rails.root}/public/cached_pages"
-    config.autoload_paths += %W(#{config.root}/app/sweepers)
+    config.autoload_paths += %W(#{config.root}/app/sweepers #{config.root}/app/chewy)
   end
 end

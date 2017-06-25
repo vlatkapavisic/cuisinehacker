@@ -53,6 +53,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    chewy (0.9.0)
+      activesupport (>= 3.2)
+      elasticsearch (>= 1.0.0)
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
     cocoon (1.2.9)
@@ -89,9 +92,19 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    elasticsearch (5.0.4)
+      elasticsearch-api (= 5.0.4)
+      elasticsearch-transport (= 5.0.4)
+    elasticsearch-api (5.0.4)
+      multi_json
+    elasticsearch-transport (5.0.4)
+      faraday
+      multi_json
     erubis (2.7.0)
     excon (0.51.0)
     execjs (2.7.0)
+    faraday (0.12.1)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.14)
     fog-aws (0.11.0)
       fog-core (~> 1.38)
@@ -146,6 +159,7 @@ GEM
     minitest (5.9.0)
     multi_json (1.12.1)
     multi_test (0.1.2)
+    multipart-post (2.0.0)
     newrelic_rpm (3.11.2.286)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -268,6 +282,7 @@ DEPENDENCIES
   awesome_print
   capybara
   carrierwave!
+  chewy
   cocoon
   coffee-rails (~> 4.0.0)
   cucumber-rails
@@ -304,4 +319,4 @@ RUBY VERSION
    ruby 2.3.0p0
 
 BUNDLED WITH
-   1.13.6
+   1.15.1
