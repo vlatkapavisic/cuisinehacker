@@ -31,18 +31,18 @@
 
 
   .large-6.columns
-    -# TODO : refactor
     #recipes
       %ul.large-block-grid-2.medium-block-grid-4.small-block-grid-2
         - @new_content.each do |content_item|
           %li
             .recipe
-              - if content_item.instance_of? Place
+              - case content_item
+              - when Place
                 %a{href: place_path(content_item)}
                   = image_tag content_item.images.first.url
                 #recipe-title
                   = link_to content_item.name, place_path(content_item)
-              - else
+              - when Recipe
                 %a{href: recipe_path(content_item)}
                   = image_tag content_item.image.url
                 #recipe-title
