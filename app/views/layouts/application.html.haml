@@ -26,7 +26,7 @@
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
-        js.src = '//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8'
+        js.src = '//connect.facebook.net/en_US /sdk.js#xfbml=1&version=v2.8'
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
       !function(d, s, id) {
@@ -58,6 +58,13 @@
                   %a.close{ href: '#' } &times;
               %section.main-section
                 = yield
+                #social-links
+                  = link_to 'https://www.instagram.com/cuisinehacker/', target: '_blank' do
+                    = image_tag 'fi-social-instagram.png'
+                  = link_to 'https://www.facebook.com/cuisinehacker/', target: '_blank' do
+                    = image_tag 'fi-social-facebook.png'
+                  = link_to 'https://github.com/vlatkapavisic/cuisinehacker', target: '_blank' do
+                    = image_tag 'fi-social-github.png'
         = render 'layouts/footer'
 
         %a.exit-off-canvas
