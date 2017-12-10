@@ -3,7 +3,7 @@ body
     font-family: 'Roboto Condensed', sans-serif !important
 
 #page-content
-  min-height: calc(100vh - 90px)
+  min-height: calc(100vh - 95px)
   padding-bottom: 60px
   *
     line-height: 2
@@ -67,16 +67,18 @@ h1.title
   margin: 30px 0 20px 0
 
 footer
-  color: $base
   text-align: center
-  border-top: 1px solid rgba(170, 170, 170, 0.5)
-  height: 45px
-  padding: 11px 0
+  border-top: 1px solid $jet
+  height: 50px
+  padding: 13px 0
+  display: none
   a
-    color: $base
-    padding-right: 4px
-    &:hover
-      color: $gainsboro
+    display: inline
+    padding: 10px
+    color
+
+  body#home-page &
+    display: block
 
 #recipes
   padding-top: 60px
@@ -194,8 +196,24 @@ footer
     img
       padding: 10px
 
+  body#home-page &
+    display: none
 
-@media only screen and (min-width: 1025px)
+
+@media only screen and (max-width: 1024px)
+  #social-links
+    display: none
+  footer
+    display: block
+    margin-bottom: 5px
+    height: 60px
+    padding: 0
+    body#home-page &
+      height: 50px
+      padding: 13px 0
+      margin: 0
+
+@media only screen and (min-width: 1024px)
   #home-page #recipes ul li:nth-of-type(n+2)
     padding-bottom: 0
 
