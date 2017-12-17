@@ -1,27 +1,26 @@
-- content_for :title, 'A moveable feast'
+- content_for :title, 'Bonnes adresses parisiennes'
 - content_for :meta_tags do
   %meta{ property: 'og:url', content: og_url }
-  %meta{ property: 'og:title', content: 'A moveable feast' }
-  %meta{ property: 'og:description', content: 'Map of my favourite (mostly healhty) restaurants in Paris.' }
+  %meta{ property: 'og:title', content: 'Bonnes adresses parisiennes' }
+  %meta{ property: 'og:description', content: 'A map of my favourite restaurants, cafes, bakeries and bars in Paris.' }
   %meta{ property: 'og:image', content: '' }
 - content_for :body_id, 'places-map-page'
 
 .row
   .large-10.large-offset-1.columns
     %h1.title
-      A moveable feast
-    %p#description
-      Food is one of the things Paris is most famous for, a crucial thing of the French culture and lifestyle. A buttery flaky croissant in the morning, cauliflower-beets-raspberry soup and an organic lunchbox in the afternoon, a cold-pressed juice for le goûter... Here, one can want his cake and eat it too. Healthy/bio/vegan food is very popular, and combined with the creativity and savoir-faire of the parisian chefs, eating healthy feels (and looks) like a feast. On the other hand, traditional bakeries and bistros offer a decadent balance to the popular "clean eating" trend.
-      %br
-      Here's an overview of my favourite food-related places in Paris: restaurants, cafés, pâtisseries...
+      Bonnes adresses parisiennes
+
+    %p#description.text-center
+      My favourite restaurants, bakeries, cafés and bars in Paris.
+
+    #places
+      %ul.inline-list
+        - @places.each do |place|
+          %li= link_to place.name, place
 
     #map-container
       #map
-
-    #places
-      %ul.no-bullet.text-center
-        - @places.each do |place|
-          %li= link_to place.name, place
 
 :javascript
   handler = Gmaps.build('Google');
