@@ -40,7 +40,7 @@ class PlacesController < ApplicationController
 
   def map
     @locations = Location.all
-    @hash = Gmaps4rails.build_markers(@locations) do |location, marker|
+    @markers = Gmaps4rails.build_markers(@locations) do |location, marker|
       marker.lat location.latitude
       marker.lng location.longitude
       marker.infowindow "<a href='#{place_url(location.place)}'>#{location.place.name}</a>"

@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
+gem 'dotenv-rails', groups: [:development, :test]
 gem 'rails', '4.1.8'
 gem 'pg'
 gem 'sass-rails'
@@ -28,6 +29,7 @@ gem 'rails-observers'
 gem 'actionpack-action_caching'
 gem 'newrelic_rpm'
 gem 'mini_magick'
+gem 'pry', '~> 0.12.2'
 
 group :development do
   gem 'spring'

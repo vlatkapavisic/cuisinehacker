@@ -16,9 +16,9 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.create(recipe_params)
     if @recipe.save
-      redirect_to recipes_path, notice: "Recipe was successfully created."
+      redirect_to recipes_path, notice: 'Recipe was successfully created.'
     else
-      render "new"
+      render 'new'
     end
   end
 
@@ -27,19 +27,19 @@ class RecipesController < ApplicationController
 
   def update
     if @recipe.update(recipe_params)
-      redirect_to recipes_path, notice: "Recipe was successfully edited."
+      redirect_to recipes_path, notice: 'Recipe was successfully edited.'
     else
-      render "edit"
+      render 'edit'
     end
   end
 
   def destroy
     @recipe.destroy
-    redirect_to recipes_path, notice: "Recipe was successfully deleted."
+    redirect_to recipes_path, notice: 'Recipe was successfully deleted.'
   end
 
   def search
-    @results = Recipe.where("ingredients LIKE ?", "%#{params[:term].downcase}%") if params[:term].present?
+    @results = Recipe.where('ingredients LIKE ?', '%#{params[:term].downcase}%') if params[:term].present?
   end
 
   def category_show

@@ -11,3 +11,5 @@
 /public/uploads/tmp
 .DS_Store
 
+.env
+
