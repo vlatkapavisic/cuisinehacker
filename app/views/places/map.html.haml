@@ -1,4 +1,4 @@
-- content_for :title, 'Bonnes adresses parisiennes'
+- content_for :title, 'Bonnes adresses'
 - content_for :meta_tags do
   %meta{ property: 'og:url', content: og_url }
   %meta{ property: 'og:title', content: 'Bonnes adresses parisiennes' }
@@ -12,13 +12,14 @@
       Bonnes adresses
 
     %p#description.text-center
-      "Bonne adresse" in French literally means "a good address", and it's what I'm passionate about. I love to discover and frequent good restaurants, cafés, bakeries and bars. I discover them in various ways: online research, Instagram, walking, recommendations from friends, Google maps...
+      "Bonne adresse" in French literally means "a good address", and it's what I'm passionate about. I love to discover and frequent good restaurants, cafés, bakeries and bars. I discover them in various ways: online research, Instagram, walking, recommendations from friends, Google Maps...
       Here's my collection of foodie bookmarks, mostly in Paris, but also in New York, London, Berlin, Barcelona, Vienna, Marrakech, Zagreb...
-      %ul
-        %li= link_to 'https://goo.gl/maps/FYxKmJWKKZP231Xv7', 'Restaurants',target: '_blank'
-        %li= link_to 'https://goo.gl/maps/2ZHQXFxz5vC7KouP8', 'Cafés', target: '_blank'
-        %li= link_to 'https://goo.gl/maps/JZrZ5tSevpkdZZxY7', 'Boulangeries Patisseries', target: '_blank'
-        %li= link_to 'https://goo.gl/maps/Ja2h1zD7rqgZ9sVKA', 'Bars', target: '_blank'
+      %p
+        %ul
+          %li= link_to 'Restaurants', 'https://goo.gl/maps/FYxKmJWKKZP231Xv7', target: '_blank'
+          %li= link_to 'Cafés', 'https://goo.gl/maps/2ZHQXFxz5vC7KouP8', target: '_blank'
+          %li= link_to 'Boulangeries Patisseries', 'https://goo.gl/maps/JZrZ5tSevpkdZZxY7', target: '_blank'
+          %li= link_to 'Bars', 'https://goo.gl/maps/Ja2h1zD7rqgZ9sVKA', target: '_blank'
 
 
       For some of those places I wrote reviews:
