@@ -3,14 +3,14 @@ ruby '2.7.0'
 
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'rails', '5.2.4'
-gem 'pg'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'haml-rails'
-gem 'foundation-rails'
+gem 'foundation-rails', '~> 5.5.3.2'
+gem 'autoprefixer-rails'
 gem 'friendly_id'
 gem 'devise'
 gem 'rubocop', require: false
@@ -45,6 +45,7 @@ group :test do
 end
 
 group :production do
+  gem 'pg'
   gem 'puma'
   gem 'rails_12factor'
 end
