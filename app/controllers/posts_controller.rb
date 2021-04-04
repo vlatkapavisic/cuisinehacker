@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 
   def show
     # Quick hack code. If I wanted to do this properly, I'd extract it to a service object.
-    instagram_response = HTTParty.get("https://graph.facebook.com/v10.0/instagram_oembed?url=#{@post.photo_url}&access_token=ENV['FACEBOOK_ACCESS_TOKEN']")
+    instagram_response = HTTParty.get("https://graph.facebook.com/v10.0/instagram_oembed?url=#{@post.photo_url}&access_token=#{ENV['FACEBOOK_ACCESS_TOKEN']}")
     @photo_html = JSON.parse(instagram_response.body)['html']
   end
 
@@ -55,6 +55,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title, :content, :photo_url)
     end
 end
