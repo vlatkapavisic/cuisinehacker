@@ -30,6 +30,7 @@ gem 'actionpack-action_caching'
 gem 'newrelic_rpm'
 gem 'mini_magick'
 gem 'pry'
+gem 'httparty'
 
 group :development do
   gem 'spring'
