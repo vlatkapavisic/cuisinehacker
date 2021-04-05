@@ -13,7 +13,7 @@
       = "#{@post.created_at.strftime('%B %d, %Y')} &nbsp;&bullet;&nbsp; In ".html_safe
       = link_to 'Posts', posts_archive_path
     .content
-      = raw @photo_html
+      = raw @post.photo_embed_code
       = @post.content.html_safe
 
     = render 'shared/share_buttons'

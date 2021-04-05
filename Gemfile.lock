@@ -168,9 +168,6 @@ GEM
       haml (>= 4.0, < 6)
       nokogiri (>= 1.6.0)
       ruby_parser (~> 3.5)
-    httparty (0.18.1)
-      mime-types (~> 3.0)
-      multi_xml (>= 0.5.2)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     image_processing (1.10.3)
@@ -200,7 +197,6 @@ GEM
     minitest (5.14.0)
     multi_json (1.14.1)
     multi_test (0.1.2)
-    multi_xml (0.6.0)
     newrelic_rpm (6.9.0.363)
     nio4r (2.5.2)
     nokogiri (1.10.9)
@@ -362,7 +358,6 @@ DEPENDENCIES
   geocoder
   gmaps4rails
   haml-rails
-  httparty
   jquery-rails
   mini_magick
   newrelic_rpm

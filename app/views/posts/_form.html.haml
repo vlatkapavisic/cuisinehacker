@@ -3,5 +3,5 @@
     = simple_form_for @post do |f|
       = f.input :title
       = f.input :content, as: :text, input_html: { rows: 20 }
-      = f.input :photo_url
+      = f.input :photo_embed_code, as: :text, input_html: { rows: 30 }
       = f.button :submit, class: 'button small secondary'
